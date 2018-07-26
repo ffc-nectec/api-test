@@ -11,3 +11,6 @@ test_script:
   - node --version
   - npm --version
   - node_modules/.bin/newman run postman/ffc-api-requirement-path.postman_collection.json -e postman/ffc-api-test.postman_environment.json
+
+# Turn of MSBuild
+build: off
