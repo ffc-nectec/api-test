@@ -1,0 +1,12 @@
+environment:
+  nodejs_version: "8"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install newman
+
+# Post-install test scripts.
+test_script:
+  - node --version
+  - npm --version
+  - node_modules/.bin/newman run postman/ffc-api-requirement-path.postman_collection.json -e postman/ffc-api-test.postman_environment.json
