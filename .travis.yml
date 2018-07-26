@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "8.2.1"
+
+install:
+  - npm install newman
+
+before_script:
+  - node --version
+  - npm --version
+  - node_modules/.bin/newman --version
+
+script:
+  - node_modules/.bin/newman run ffc-api-happy-path.postman_collection.json -e ffc-api-test.postman_environment.json
+  
