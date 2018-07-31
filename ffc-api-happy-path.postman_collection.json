@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"_postman_id": "fe9b1ef4-e080-45a4-90ee-a4c082e7ebee",
+			"_postman_id": "7dff2514-adb5-429c-bc47-08f5b1bf4261",
 			"name": "Register Org",
 			"event": [
 				{
@@ -109,7 +109,7 @@
 			},
 			"response": [
 				{
-					"id": "b3b43324-24a0-4ec7-a6ee-47c2d49360a1",
+					"id": "026589b9-4cb2-433f-bdcc-051afd71ea3c",
 					"name": "Register Org",
 					"originalRequest": {
 						"method": "POST",
@@ -143,7 +143,7 @@
 			]
 		},
 		{
-			"_postman_id": "66cc05fa-9263-4127-b6c9-28c430df0d32",
+			"_postman_id": "c07110f2-3699-4feb-b093-8c9b950661a6",
 			"name": "Org Login",
 			"event": [
 				{
@@ -209,7 +209,7 @@
 			},
 			"response": [
 				{
-					"id": "3ec151a5-f717-4be9-8381-abf89c36f226",
+					"id": "8e0e8d2e-8d70-4917-a40d-a27bca829a30",
 					"name": "Login success",
 					"originalRequest": {
 						"method": "POST",
@@ -328,7 +328,7 @@
 					"body": "{\n\t\"token\": \"123abcdef\"\n}"
 				},
 				{
-					"id": "ad0c3422-1690-4f0c-b6ef-89226f79017b",
+					"id": "9fc49b1b-f73a-459a-8363-79216af93553",
 					"name": "Login not success",
 					"originalRequest": {
 						"method": "POST",
@@ -365,7 +365,7 @@
 			]
 		},
 		{
-			"_postman_id": "f62104e4-1d90-4480-bc17-8d451d6a7574",
+			"_postman_id": "68e59558-38de-4843-a561-b4cd145c87b5",
 			"name": "Register User",
 			"event": [
 				{
@@ -423,7 +423,7 @@
 			},
 			"response": [
 				{
-					"id": "fef50460-2279-4e87-b5bf-1e9093822c53",
+					"id": "34a29b61-7db2-4b5f-bfa3-3ca6356ae0b4",
 					"name": "Register User",
 					"originalRequest": {
 						"method": "POST",
@@ -538,7 +538,7 @@
 			]
 		},
 		{
-			"_postman_id": "21133500-dcd8-422f-8efa-3a1920f5e352",
+			"_postman_id": "e07c14a6-9735-4990-80e9-a8d462094046",
 			"name": "Find my Org",
 			"event": [
 				{
@@ -591,7 +591,7 @@
 			},
 			"response": [
 				{
-					"id": "4f94f9b4-b95e-4fc3-82e4-891e6b694775",
+					"id": "543c9bbf-4b8f-498a-98e1-1fc716430cfb",
 					"name": "Find my Org",
 					"originalRequest": {
 						"method": "GET",
@@ -705,7 +705,7 @@
 			]
 		},
 		{
-			"_postman_id": "3776cce9-5938-4a90-8616-4aadcec55c2d",
+			"_postman_id": "bab19f2b-f728-4f6a-aeab-cecc31197073",
 			"name": "Find all Org",
 			"event": [
 				{
@@ -744,7 +744,7 @@
 			},
 			"response": [
 				{
-					"id": "d4c4668d-3384-4307-aced-fad7d9e16245",
+					"id": "85a27f5e-852d-41ae-92dd-ef3b71e8b700",
 					"name": "Find my Org",
 					"originalRequest": {
 						"method": "GET",
@@ -858,7 +858,7 @@
 			]
 		},
 		{
-			"_postman_id": "81e4c460-c319-4c48-9830-ec870b7aaafb",
+			"_postman_id": "045060b4-d8d3-48db-a84b-997a63b822bb",
 			"name": "Mobile Login",
 			"event": [
 				{
@@ -946,7 +946,7 @@
 			},
 			"response": [
 				{
-					"id": "15e9edfc-cfc8-40c0-96d2-264ba380bcb3",
+					"id": "d1eb1b2b-033c-4fe4-b70e-717e48613e8a",
 					"name": "Login not success",
 					"originalRequest": {
 						"method": "POST",
@@ -981,7 +981,7 @@
 					"body": ""
 				},
 				{
-					"id": "bf3d2995-2ad4-44c6-9da0-c57df89c7b3d",
+					"id": "e13a5fb4-26fe-4b36-833a-7599a827961f",
 					"name": "Login success",
 					"originalRequest": {
 						"method": "POST",
@@ -1102,7 +1102,7 @@
 			]
 		},
 		{
-			"_postman_id": "90b5399d-0633-4dc8-84b8-27fcb8b9db7e",
+			"_postman_id": "8dd9415d-fd86-4503-9e2f-b19060af21c6",
 			"name": "Mobile Login by Register User",
 			"event": [
 				{
@@ -1182,7 +1182,7 @@
 			},
 			"response": [
 				{
-					"id": "013febd6-b035-494d-a3bc-1e440dd80b09",
+					"id": "ad12599e-4eff-45e4-b4d8-47b1079c23c0",
 					"name": "Login not success",
 					"originalRequest": {
 						"method": "POST",
@@ -1217,7 +1217,7 @@
 					"body": ""
 				},
 				{
-					"id": "f64d2afe-cf91-479a-856f-8bb011abe04b",
+					"id": "f2704a7f-b1ea-48c3-ac1d-af23f441903a",
 					"name": "Login success",
 					"originalRequest": {
 						"method": "POST",
@@ -1338,7 +1338,7 @@
 			]
 		},
 		{
-			"_postman_id": "e3be870a-fa2d-458e-af25-cea51172aad9",
+			"_postman_id": "a449b121-db06-4b33-8aa0-ee1cd4a01175",
 			"name": "New Houses by org (Array)-haveLocation",
 			"event": [
 				{
@@ -1453,7 +1453,7 @@
 			},
 			"response": [
 				{
-					"id": "d97f22c1-f79b-490e-9dcf-0571262b001c",
+					"id": "740f6a1d-7090-42b2-9ef9-d33658d14fb5",
 					"name": "New Place",
 					"originalRequest": {
 						"method": "POST",
@@ -1491,7 +1491,7 @@
 			]
 		},
 		{
-			"_postman_id": "c4c08e1d-861c-4ce2-a1a9-21ce504a9ad0",
+			"_postman_id": "0913e978-c2d5-4aff-9c8b-b62f142b6a23",
 			"name": "New House by org-haveNotLocation",
 			"event": [
 				{
@@ -1591,7 +1591,7 @@
 			},
 			"response": [
 				{
-					"id": "a16acab1-2a0a-4225-851e-174d4220a65a",
+					"id": "df3e89d1-866a-4c3e-a7ec-33a949ff3b93",
 					"name": "New Place",
 					"originalRequest": {
 						"method": "POST",
@@ -1629,7 +1629,7 @@
 			]
 		},
 		{
-			"_postman_id": "84363503-df98-4489-806a-a7dff6a6b661",
+			"_postman_id": "44e23b73-1ec6-428b-932a-6b27e8d9a945",
 			"name": "Find all House GeoJSON",
 			"event": [
 				{
@@ -1750,7 +1750,7 @@
 			},
 			"response": [
 				{
-					"id": "29f050d1-9f97-4392-8283-bc8cc7115114",
+					"id": "1e3681b9-c09b-4ab5-9ebe-b8db00dfbcb7",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -1887,7 +1887,7 @@
 			]
 		},
 		{
-			"_postman_id": "58dc523e-41d9-4c43-ba14-0b9f301b294f",
+			"_postman_id": "bcae63b7-77a0-4b3e-853b-335b1a612e70",
 			"name": "Find all House JSON",
 			"event": [
 				{
@@ -2015,7 +2015,7 @@
 			},
 			"response": [
 				{
-					"id": "900a9a6c-9b31-4b6f-bd19-1e277365f140",
+					"id": "94806ece-e004-4978-ab40-9dc64b0badbe",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -2152,7 +2152,7 @@
 			]
 		},
 		{
-			"_postman_id": "322f9dfe-8922-427a-9efb-e87dcd8a1f36",
+			"_postman_id": "20b990ea-a079-446e-86ed-5dd5ac681914",
 			"name": "Find all House JSON haveLocation=true",
 			"event": [
 				{
@@ -2267,7 +2267,7 @@
 			},
 			"response": [
 				{
-					"id": "70ddad3a-8e55-4247-beea-4816832d4ac8",
+					"id": "bd518c5e-ae77-41ce-8305-ac9b4ee7cb6d",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -2404,7 +2404,7 @@
 			]
 		},
 		{
-			"_postman_id": "fe7dd16c-a2d3-4cad-8af1-9fd5d6562c79",
+			"_postman_id": "8e80273a-ad9f-47e5-83a5-15452198c922",
 			"name": "Find all House JSON haveLocation=false",
 			"event": [
 				{
@@ -2520,7 +2520,7 @@
 			},
 			"response": [
 				{
-					"id": "0b2fc485-f64b-41ba-861d-c45fbff54f9f",
+					"id": "3d59b944-94ae-494c-b4c1-45e6fe93a240",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -2657,7 +2657,7 @@
 			]
 		},
 		{
-			"_postman_id": "4843124d-a8c0-405a-992e-638a26e90a26",
+			"_postman_id": "8990c1ca-0745-4be3-bc18-2c36214f2fd7",
 			"name": "Find all House JSON ?haveLocation=",
 			"event": [
 				{
@@ -2726,7 +2726,7 @@
 			},
 			"response": [
 				{
-					"id": "dc42faaa-6030-439d-a61f-b4d016dddb43",
+					"id": "71cc1196-a0cd-43b9-a79c-5692b7a1bf94",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -2863,7 +2863,7 @@
 			]
 		},
 		{
-			"_postman_id": "94fde239-76f2-42a6-a05c-c3daa16ff564",
+			"_postman_id": "5e944f59-4af9-421a-8437-b567f8510999",
 			"name": "Find all House JSON ?haveLocation",
 			"event": [
 				{
@@ -2936,7 +2936,7 @@
 			},
 			"response": [
 				{
-					"id": "c48e4efa-8472-4d98-b473-6eb65b667129",
+					"id": "5cdff7a9-fa0f-439f-9474-731898f0a750",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -3073,7 +3073,7 @@
 			]
 		},
 		{
-			"_postman_id": "8cb627c1-9270-4c6c-9900-3edcfbbae1af",
+			"_postman_id": "4636e155-e206-4789-9dcf-13fc9f5a3b1f",
 			"name": "Find my House GeoJSON",
 			"event": [
 				{
@@ -3186,7 +3186,7 @@
 			},
 			"response": [
 				{
-					"id": "a5cfcef7-6313-4459-9c7e-c8450c6643aa",
+					"id": "2be7b208-6140-4ee8-bb3f-85e2d65cabf0",
 					"name": "Find my house GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -3323,7 +3323,7 @@
 			]
 		},
 		{
-			"_postman_id": "31fcb207-61fb-413a-b23f-5722b5ff9d7e",
+			"_postman_id": "d009a8a5-fd24-450f-ae11-601898eb3c8c",
 			"name": "Edit House by mobile",
 			"event": [
 				{
@@ -3379,7 +3379,7 @@
 			},
 			"response": [
 				{
-					"id": "82ce2606-cf61-483c-9089-0082999abcef",
+					"id": "22bb9fd1-8793-4f69-800c-382b17d4cd95",
 					"name": "New Place",
 					"originalRequest": {
 						"method": "PUT",
@@ -3418,7 +3418,7 @@
 			]
 		},
 		{
-			"_postman_id": "6c0a0f64-d159-4132-a4d4-761a34e47f20",
+			"_postman_id": "cf4b06a2-741f-4495-a326-c4cb2a18edf6",
 			"name": "Find my House GeoJSON _isSynced=false",
 			"event": [
 				{
@@ -3487,7 +3487,7 @@
 			},
 			"response": [
 				{
-					"id": "ed5d5fc5-571f-4d7e-a060-1065bed6b046",
+					"id": "3b059fbb-1f77-4921-a5d9-aabd0134dec4",
 					"name": "Find my house GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -3624,7 +3624,7 @@
 			]
 		},
 		{
-			"_postman_id": "59df4e05-34a5-4c65-b7a6-35f713d5a6d4",
+			"_postman_id": "7e76fda8-292a-41e5-ab98-f6b8e719517e",
 			"name": "Edit House by org",
 			"event": [
 				{
@@ -3681,7 +3681,7 @@
 			},
 			"response": [
 				{
-					"id": "a29384ba-ee9c-4038-8342-2dac522f6664",
+					"id": "64232657-574e-46e6-967c-0aab0ec00213",
 					"name": "New Place",
 					"originalRequest": {
 						"method": "PUT",
@@ -3720,7 +3720,7 @@
 			]
 		},
 		{
-			"_postman_id": "9b5840ec-6bc3-4139-9e8a-88d48b81b551",
+			"_postman_id": "f1f7c84c-b2f0-43d1-b590-df4fe88375d1",
 			"name": "Find my House GeoJSON _isSynced=true",
 			"event": [
 				{
@@ -3789,7 +3789,7 @@
 			},
 			"response": [
 				{
-					"id": "5569db02-7787-420b-95e2-b80e14f02a12",
+					"id": "86a6ea54-466a-4721-8b73-9e374bffd777",
 					"name": "Find my house GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -3926,106 +3926,7 @@
 			]
 		},
 		{
-			"_postman_id": "4440f864-feff-4ff6-9856-72226a35879c",
-			"name": "Edit House by mobile format JSON coordinate incorrect",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "7cdacbaa-52e5-4270-bc35-5d6656543af8",
-						"type": "text/javascript",
-						"exec": [
-							"pm.test(\"Status code is 400\", function () {",
-							"    pm.response.to.have.status(400);",
-							"});",
-							"",
-							"pm.test(\"Response have no message \", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"message\");",
-							"});",
-							""
-						]
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{mobile_token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"id\": \"{{house_id}}\",\n    \"link\": {\n\t    \"isSynced\": true,\n\t    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n\t    \"system\": \"JHICS\",\n\t    \"keys\": {\n\t      \"hid\": \"22\"\n\t    }\n    },\n    \"identity\": {\n      \"type\": \"thailand-household-id\",\n      \"id\": \"54520015001\"\n    },\n    \"haveChronics\": true,\n    \"type\": \"House\",\n    \"no\": \"510/45\",\n    \"tambon\": \"คลองหนึ่ง\",\n    \"ampur\": \"คลองหลวง\",\n    \"changwat\": \"ปุทมธานี\",\n     \"location\" : {\n    \t\"type\": \"Point\",\n\t\t\"coordinates\": [\n\t\t  \"1oa.6027656\",\n\t\t  \"1b.0805834\"\n\t\t]\n    }\n}\n"
-				},
-				"url": {
-					"raw": "{{url}}/org/{{org_id}}/place/house/{{house_id}}",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"org",
-						"{{org_id}}",
-						"place",
-						"house",
-						"{{house_id}}"
-					]
-				},
-				"description": "ดักค่าcoordinate ผิด format return 400 พร้อมบอกว่า JSON error"
-			},
-			"response": [
-				{
-					"id": "9aed3d93-1591-4d73-874b-9be6676c76e0",
-					"name": "New Place",
-					"originalRequest": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"_id\": \"aaaaaavvvvffffffgga2f5c1\",\n    \"_shortId\": \"a2f5c1\",\n    \"hid\": \"22\",\n    \"identity\": {\n      \"type\": \"thailand-household-id\",\n      \"id\": \"54520015001\"\n    },\n    \"haveChronics\": true,\n    \"type\": \"House\",\n    \"no\": \"510/45\",\n    \"tambon\": \"คลองหนึ่ง\",\n    \"ampur\": \"คลองหลวง\",\n    \"changwat\": \"ปุทมธานี\",\n    \"coordinates\": [\n      100.6027656,\n      14.0805834\n    ],\n    \"people\": [\n      {\n        \"pid\": 3000214,\n        \"name\": \"นายพิรุณ พานิชผล\"\n      },\n      {\n        \"pid\": 3000215,\n        \"name\": \"นางสาวพรทิพา โชคสูงเนิน\"\n      },\n      {\n        \"pid\": 3000216,\n        \"name\": \"นายธนชัย ทองคำ\"\n      }\n    ]\n}\n"
-						},
-						"url": {
-							"raw": "{{url}}/org/1/place/house/5b03d2280e38a200040d102b",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"org",
-								"1",
-								"place",
-								"house",
-								"5b03d2280e38a200040d102b"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [],
-					"cookie": [],
-					"body": ""
-				}
-			]
-		},
-		{
-			"_postman_id": "c8d8af2f-8d55-498f-8d31-1feee89f6a24",
+			"_postman_id": "c9cd5004-fe77-4ff1-9265-0346ae42a70a",
 			"name": "Delete ข้อมูลของ org status 200",
 			"event": [
 				{
