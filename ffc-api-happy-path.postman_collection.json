@@ -6,7 +6,458 @@
 	},
 	"item": [
 		{
-			"_postman_id": "7dff2514-adb5-429c-bc47-08f5b1bf4261",
+			"name": "Lookup",
+			"item": [
+				{
+					"name": "homehealth",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "810c6cab-30ee-4524-b4e7-561363dbe4b7",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/homehealth",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							]
+						},
+						"description": "แสดงรายการประเภทการเยี่ยมทั้งหมด"
+					},
+					"response": []
+				},
+				{
+					"name": "homehealthSearchTH q=เสื่อม",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2e8eaf15-1416-49d8-84d1-7d91d3d30799",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have เยี่ยมผู้ป่วยโรคสมองเสื่อม\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"เยี่ยมผู้ป่วยโรคสมองเสื่อม\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/homehealth?query=เสื่อม",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "เสื่อม"
+								}
+							]
+						},
+						"description": "ค้นหาประภทการเยี่ยมที่มีคำว่าเสื่อมได้สำเร็จ"
+					},
+					"response": []
+				},
+				{
+					"name": "homehealthSearchById q=1106",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "20034976-d757-4545-a018-5a2f38942c0d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have translation\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"1106\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/homehealth?query=1106",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "1106"
+								}
+							]
+						},
+						"description": "ค้นหาประเภทการเยี่ยมโดยใช้ id"
+					},
+					"response": []
+				},
+				{
+					"name": "homehealthSearch q=",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "02e5a648-56b1-4b1c-801f-0fdb4e102db5",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/homehealth?query=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": ""
+								}
+							]
+						},
+						"description": "ค้นหาประเภทการเยี่ยมแต่ไม่ใส่ค่าต้องตอบ 200"
+					},
+					"response": []
+				},
+				{
+					"name": "homehealthSearchNotfound",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e2867e8-8710-4955-b77a-9ea90619c58f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/homehealth?query=aaaa",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "aaaa"
+								}
+							]
+						},
+						"description": "ค้นหาประเภทการเยี่ยมโดยใช้ id"
+					},
+					"response": []
+				},
+				{
+					"name": "disease",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bf2ead31-71a5-416c-b30c-3711230aa967",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/disease",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"disease"
+							]
+						},
+						"description": "ค้นหาทุกโรคที่มีในฐาน"
+					},
+					"response": []
+				},
+				{
+					"name": "diseaseSearch q=ค๊อกคัส",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f8ae75ad-6c4b-4315-9e92-c01cd39189f9",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have translation\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ค๊อกคัส\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/disease?query=ค๊อกคัส",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"disease"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "ค๊อกคัส"
+								}
+							]
+						},
+						"description": "ค้นหาโรคด้วยชื่อภาษาไทยสำเร็จ"
+					},
+					"response": []
+				},
+				{
+					"name": "diseaseSearch q=fever C",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "20a93047-e1aa-4612-8dba-5e07e0560d9b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have Paratyphoid fever C\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Paratyphoid fever C\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/disease?query=fever C",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"disease"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "fever C"
+								}
+							]
+						},
+						"description": "ค้นหาโรคด้วยชื่อภาษาอังกฤษสำเร็จ"
+					},
+					"response": []
+				},
+				{
+					"name": "diseaseSearchById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "302738bc-4ed5-4a6e-a35d-5828b987cd91",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have A01.3\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"A01.3\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/disease?query=A01.3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"disease"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "A01.3"
+								}
+							]
+						},
+						"description": "ค้นหาโรคด้วย Id สำเร็จ"
+					},
+					"response": []
+				},
+				{
+					"name": "diseaseSearch q=",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b922ebe7-42ff-4a38-a2ae-3a7d9c0dff83",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/disease?query=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"disease"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": ""
+								}
+							]
+						},
+						"description": "ค้นหาประเภทการเยี่ยมแต่ไม่ใส่ค่าต้องตอบ 200"
+					},
+					"response": []
+				},
+				{
+					"name": "diseaseSearchNotfound",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e2867e8-8710-4955-b77a-9ea90619c58f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/homehealth?query=aaaa",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "aaaa"
+								}
+							]
+						},
+						"description": "ค้นหาโรคไม่พบต้องตอบ 404"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Register Org",
 			"event": [
 				{
@@ -109,7 +560,6 @@
 			},
 			"response": [
 				{
-					"id": "026589b9-4cb2-433f-bdcc-051afd71ea3c",
 					"name": "Register Org",
 					"originalRequest": {
 						"method": "POST",
@@ -143,7 +593,6 @@
 			]
 		},
 		{
-			"_postman_id": "c07110f2-3699-4feb-b093-8c9b950661a6",
 			"name": "Org Login",
 			"event": [
 				{
@@ -209,7 +658,6 @@
 			},
 			"response": [
 				{
-					"id": "8e0e8d2e-8d70-4917-a40d-a27bca829a30",
 					"name": "Login success",
 					"originalRequest": {
 						"method": "POST",
@@ -328,7 +776,6 @@
 					"body": "{\n\t\"token\": \"123abcdef\"\n}"
 				},
 				{
-					"id": "9fc49b1b-f73a-459a-8363-79216af93553",
 					"name": "Login not success",
 					"originalRequest": {
 						"method": "POST",
@@ -365,7 +812,6 @@
 			]
 		},
 		{
-			"_postman_id": "68e59558-38de-4843-a561-b4cd145c87b5",
 			"name": "Register User",
 			"event": [
 				{
@@ -423,7 +869,6 @@
 			},
 			"response": [
 				{
-					"id": "34a29b61-7db2-4b5f-bfa3-3ca6356ae0b4",
 					"name": "Register User",
 					"originalRequest": {
 						"method": "POST",
@@ -538,7 +983,6 @@
 			]
 		},
 		{
-			"_postman_id": "e07c14a6-9735-4990-80e9-a8d462094046",
 			"name": "Find my Org",
 			"event": [
 				{
@@ -591,7 +1035,6 @@
 			},
 			"response": [
 				{
-					"id": "543c9bbf-4b8f-498a-98e1-1fc716430cfb",
 					"name": "Find my Org",
 					"originalRequest": {
 						"method": "GET",
@@ -705,7 +1148,6 @@
 			]
 		},
 		{
-			"_postman_id": "bab19f2b-f728-4f6a-aeab-cecc31197073",
 			"name": "Find all Org",
 			"event": [
 				{
@@ -744,7 +1186,6 @@
 			},
 			"response": [
 				{
-					"id": "85a27f5e-852d-41ae-92dd-ef3b71e8b700",
 					"name": "Find my Org",
 					"originalRequest": {
 						"method": "GET",
@@ -858,7 +1299,6 @@
 			]
 		},
 		{
-			"_postman_id": "045060b4-d8d3-48db-a84b-997a63b822bb",
 			"name": "Mobile Login",
 			"event": [
 				{
@@ -946,7 +1386,6 @@
 			},
 			"response": [
 				{
-					"id": "d1eb1b2b-033c-4fe4-b70e-717e48613e8a",
 					"name": "Login not success",
 					"originalRequest": {
 						"method": "POST",
@@ -981,7 +1420,6 @@
 					"body": ""
 				},
 				{
-					"id": "e13a5fb4-26fe-4b36-833a-7599a827961f",
 					"name": "Login success",
 					"originalRequest": {
 						"method": "POST",
@@ -1102,7 +1540,6 @@
 			]
 		},
 		{
-			"_postman_id": "8dd9415d-fd86-4503-9e2f-b19060af21c6",
 			"name": "Mobile Login by Register User",
 			"event": [
 				{
@@ -1182,7 +1619,6 @@
 			},
 			"response": [
 				{
-					"id": "ad12599e-4eff-45e4-b4d8-47b1079c23c0",
 					"name": "Login not success",
 					"originalRequest": {
 						"method": "POST",
@@ -1217,7 +1653,6 @@
 					"body": ""
 				},
 				{
-					"id": "f2704a7f-b1ea-48c3-ac1d-af23f441903a",
 					"name": "Login success",
 					"originalRequest": {
 						"method": "POST",
@@ -1338,13 +1773,12 @@
 			]
 		},
 		{
-			"_postman_id": "a449b121-db06-4b33-8aa0-ee1cd4a01175",
 			"name": "New Houses by org (Array)-haveLocation",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "46adab05-0cf1-42e8-9842-fcb605f7fadc",
+						"id": "bd067d22-c00a-4d2c-8fd5-caf230872792",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {",
@@ -1409,8 +1843,7 @@
 							"",
 							"pm.test(\"Response have timestamp\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"timestamp\");",
-							"});",
-							""
+							"});"
 						]
 					}
 				}
@@ -1453,7 +1886,6 @@
 			},
 			"response": [
 				{
-					"id": "740f6a1d-7090-42b2-9ef9-d33658d14fb5",
 					"name": "New Place",
 					"originalRequest": {
 						"method": "POST",
@@ -1491,7 +1923,6 @@
 			]
 		},
 		{
-			"_postman_id": "0913e978-c2d5-4aff-9c8b-b62f142b6a23",
 			"name": "New House by org-haveNotLocation",
 			"event": [
 				{
@@ -1591,7 +2022,6 @@
 			},
 			"response": [
 				{
-					"id": "df3e89d1-866a-4c3e-a7ec-33a949ff3b93",
 					"name": "New Place",
 					"originalRequest": {
 						"method": "POST",
@@ -1629,7 +2059,6 @@
 			]
 		},
 		{
-			"_postman_id": "44e23b73-1ec6-428b-932a-6b27e8d9a945",
 			"name": "Find all House GeoJSON",
 			"event": [
 				{
@@ -1750,7 +2179,6 @@
 			},
 			"response": [
 				{
-					"id": "1e3681b9-c09b-4ab5-9ebe-b8db00dfbcb7",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -1862,23 +2290,23 @@
 						{
 							"key": "rel",
 							"value": "next",
+							"name": "rel",
 							"description": "",
-							"type": "text",
-							"name": "rel"
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						}
 					],
 					"cookie": [],
@@ -1887,7 +2315,6 @@
 			]
 		},
 		{
-			"_postman_id": "bcae63b7-77a0-4b3e-853b-335b1a612e70",
 			"name": "Find all House JSON",
 			"event": [
 				{
@@ -2015,7 +2442,6 @@
 			},
 			"response": [
 				{
-					"id": "94806ece-e004-4978-ab40-9dc64b0badbe",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -2127,23 +2553,23 @@
 						{
 							"key": "rel",
 							"value": "next",
+							"name": "rel",
 							"description": "",
-							"type": "text",
-							"name": "rel"
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						}
 					],
 					"cookie": [],
@@ -2152,7 +2578,6 @@
 			]
 		},
 		{
-			"_postman_id": "20b990ea-a079-446e-86ed-5dd5ac681914",
 			"name": "Find all House JSON haveLocation=true",
 			"event": [
 				{
@@ -2267,7 +2692,6 @@
 			},
 			"response": [
 				{
-					"id": "bd518c5e-ae77-41ce-8305-ac9b4ee7cb6d",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -2379,23 +2803,23 @@
 						{
 							"key": "rel",
 							"value": "next",
+							"name": "rel",
 							"description": "",
-							"type": "text",
-							"name": "rel"
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						}
 					],
 					"cookie": [],
@@ -2404,7 +2828,6 @@
 			]
 		},
 		{
-			"_postman_id": "8e80273a-ad9f-47e5-83a5-15452198c922",
 			"name": "Find all House JSON haveLocation=false",
 			"event": [
 				{
@@ -2520,7 +2943,6 @@
 			},
 			"response": [
 				{
-					"id": "3d59b944-94ae-494c-b4c1-45e6fe93a240",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -2632,23 +3054,23 @@
 						{
 							"key": "rel",
 							"value": "next",
+							"name": "rel",
 							"description": "",
-							"type": "text",
-							"name": "rel"
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						}
 					],
 					"cookie": [],
@@ -2657,7 +3079,6 @@
 			]
 		},
 		{
-			"_postman_id": "8990c1ca-0745-4be3-bc18-2c36214f2fd7",
 			"name": "Find all House JSON ?haveLocation=",
 			"event": [
 				{
@@ -2726,7 +3147,6 @@
 			},
 			"response": [
 				{
-					"id": "71cc1196-a0cd-43b9-a79c-5692b7a1bf94",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -2838,23 +3258,23 @@
 						{
 							"key": "rel",
 							"value": "next",
+							"name": "rel",
 							"description": "",
-							"type": "text",
-							"name": "rel"
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						}
 					],
 					"cookie": [],
@@ -2863,7 +3283,6 @@
 			]
 		},
 		{
-			"_postman_id": "5e944f59-4af9-421a-8437-b567f8510999",
 			"name": "Find all House JSON ?haveLocation",
 			"event": [
 				{
@@ -2936,7 +3355,6 @@
 			},
 			"response": [
 				{
-					"id": "5cdff7a9-fa0f-439f-9474-731898f0a750",
 					"name": "Find Place GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -3048,23 +3466,23 @@
 						{
 							"key": "rel",
 							"value": "next",
+							"name": "rel",
 							"description": "",
-							"type": "text",
-							"name": "rel"
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						}
 					],
 					"cookie": [],
@@ -3073,7 +3491,6 @@
 			]
 		},
 		{
-			"_postman_id": "4636e155-e206-4789-9dcf-13fc9f5a3b1f",
 			"name": "Find my House GeoJSON",
 			"event": [
 				{
@@ -3186,7 +3603,6 @@
 			},
 			"response": [
 				{
-					"id": "2be7b208-6140-4ee8-bb3f-85e2d65cabf0",
 					"name": "Find my house GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -3298,23 +3714,23 @@
 						{
 							"key": "rel",
 							"value": "next",
+							"name": "rel",
 							"description": "",
-							"type": "text",
-							"name": "rel"
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						}
 					],
 					"cookie": [],
@@ -3323,7 +3739,6 @@
 			]
 		},
 		{
-			"_postman_id": "d009a8a5-fd24-450f-ae11-601898eb3c8c",
 			"name": "Edit House by mobile",
 			"event": [
 				{
@@ -3379,7 +3794,6 @@
 			},
 			"response": [
 				{
-					"id": "22bb9fd1-8793-4f69-800c-382b17d4cd95",
 					"name": "New Place",
 					"originalRequest": {
 						"method": "PUT",
@@ -3418,7 +3832,6 @@
 			]
 		},
 		{
-			"_postman_id": "cf4b06a2-741f-4495-a326-c4cb2a18edf6",
 			"name": "Find my House GeoJSON _isSynced=false",
 			"event": [
 				{
@@ -3487,7 +3900,6 @@
 			},
 			"response": [
 				{
-					"id": "3b059fbb-1f77-4921-a5d9-aabd0134dec4",
 					"name": "Find my house GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -3599,23 +4011,23 @@
 						{
 							"key": "rel",
 							"value": "next",
+							"name": "rel",
 							"description": "",
-							"type": "text",
-							"name": "rel"
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						}
 					],
 					"cookie": [],
@@ -3624,7 +4036,6 @@
 			]
 		},
 		{
-			"_postman_id": "7e76fda8-292a-41e5-ab98-f6b8e719517e",
 			"name": "Edit House by org",
 			"event": [
 				{
@@ -3681,7 +4092,6 @@
 			},
 			"response": [
 				{
-					"id": "64232657-574e-46e6-967c-0aab0ec00213",
 					"name": "New Place",
 					"originalRequest": {
 						"method": "PUT",
@@ -3720,7 +4130,6 @@
 			]
 		},
 		{
-			"_postman_id": "f1f7c84c-b2f0-43d1-b590-df4fe88375d1",
 			"name": "Find my House GeoJSON _isSynced=true",
 			"event": [
 				{
@@ -3789,7 +4198,6 @@
 			},
 			"response": [
 				{
-					"id": "86a6ea54-466a-4721-8b73-9e374bffd777",
 					"name": "Find my house GeoJSON",
 					"originalRequest": {
 						"method": "GET",
@@ -3901,23 +4309,23 @@
 						{
 							"key": "rel",
 							"value": "next",
+							"name": "rel",
 							"description": "",
-							"type": "text",
-							"name": "rel"
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						},
 						{
 							"key": "",
 							"value": "",
+							"name": "",
 							"description": "",
-							"type": "text",
-							"name": ""
+							"type": "text"
 						}
 					],
 					"cookie": [],
@@ -3926,7 +4334,6 @@
 			]
 		},
 		{
-			"_postman_id": "c9cd5004-fe77-4ff1-9265-0346ae42a70a",
 			"name": "Delete ข้อมูลของ org status 200",
 			"event": [
 				{
