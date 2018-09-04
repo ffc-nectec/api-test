@@ -228,7 +228,12 @@
 					],
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
 						"body": {},
 						"url": {
 							"raw": "{{url}}/disease",
@@ -265,7 +270,12 @@
 					],
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
 						"body": {},
 						"url": {
 							"raw": "{{url}}/disease?query=ค๊อกคัส",
@@ -309,7 +319,12 @@
 					],
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
 						"body": {},
 						"url": {
 							"raw": "{{url}}/disease?query=fever C",
@@ -353,7 +368,12 @@
 					],
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
 						"body": {},
 						"url": {
 							"raw": "{{url}}/disease?query=A01.3",
@@ -395,7 +415,12 @@
 					],
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
 						"body": {},
 						"url": {
 							"raw": "{{url}}/disease?query=",
