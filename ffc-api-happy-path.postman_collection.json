@@ -1324,6 +1324,163 @@
 			]
 		},
 		{
+			"name": "Findl Org =เนคเทค",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0a89dfa5-c0a9-48b9-bcf8-d23f11e296c6",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/org?query=เนคเทค",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"org"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "เนคเทค"
+						}
+					]
+				},
+				"description": "ค้นหาหน่วยงานเนคเทค"
+			},
+			"response": [
+				{
+					"name": "Find my Org",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?my=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "my",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "",
+							"name": "Access-Control-Allow-Credentials",
+							"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "",
+							"name": "Access-Control-Allow-Headers",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "",
+							"name": "Access-Control-Allow-Methods",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "",
+							"name": "Access-Control-Expose-Headers",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip",
+							"name": "Content-Encoding",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"key": "Content-Length",
+							"value": "153",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Mar 2018 04:28:58 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"aa-kumJZhwOSO2WTj+KJgW7gg\"",
+							"name": "ETag",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding",
+							"name": "Vary",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
+				}
+			]
+		},
+		{
 			"name": "Mobile Login",
 			"event": [
 				{
@@ -4391,6 +4548,135 @@
 					]
 				},
 				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"detail\": \"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\r\n    \"nextAppoint\": \"2018-09-25\",\r\n    \"plan\": \"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\r\n    \"result\": \"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\r\n    \"serviceType\": {\r\n        \"id\": \"1A011\",\r\n        \"name\": \"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \",\r\n        \"translation\": {}\r\n    },\r\n    \"bloodPressure\": {\r\n        \"diastolic\": 69.0,\r\n        \"systolic\": 110.0\r\n    },\r\n    \"bodyTemperature\": 37.0,\r\n    \"diagnosises\": [\r\n        {\r\n            \"disease\": {\r\n                \"icd10\": \"A01.3\",\r\n                \"isChronic\": false,\r\n                \"isEpimedic\": false,\r\n                \"isNCD\": false,\r\n                \"id\": \"cbc60d722a014e428d15d135525d1f86\",\r\n                \"name\": \"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\",\r\n                \"translation\": {}\r\n            },\r\n            \"dxType\": \"PRINCIPLE_DX\",\r\n            \"isContinued\": false\r\n        }\r\n    ],\r\n    \"endTime\": \"2018-09-18T10:27:58.483+07:00\",\r\n    \"height\": 180.0,\r\n    \"patientId\": \"5b9770e029191b0004c91a56\",\r\n    \"photosUrl\": [],\r\n    \"providerId\": \"5b9743345a2e99000421db07\",\r\n    \"pulseRate\": 70.0,\r\n    \"respiratoryRate\": 13.0,\r\n    \"syntom\": \"หน้าซีดร่างกายอ่อนเพลีย\",\r\n    \"time\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"waist\": 82.0,\r\n    \"weight\": 60.0,\r\n    \"id\": \"cd4eed87ad134151b2ec896fd5f7c71d\",\r\n    \"timestamp\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"type\": \"HomeVisit\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/org/{{org_id}}/healthcareservice",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"org",
+						"{{org_id}}",
+						"healthcareservice"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "healthcareservice",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"detail\": \"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\r\n    \"nextAppoint\": \"2018-09-25\",\r\n    \"plan\": \"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\r\n    \"result\": \"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\r\n    \"serviceType\": {\r\n        \"id\": \"1A011\",\r\n        \"name\": \"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \",\r\n        \"translation\": {}\r\n    },\r\n    \"bloodPressure\": {\r\n        \"diastolic\": 69.0,\r\n        \"systolic\": 110.0\r\n    },\r\n    \"bodyTemperature\": 37.0,\r\n    \"diagnosises\": [\r\n        {\r\n            \"disease\": {\r\n                \"icd10\": \"A01.3\",\r\n                \"isChronic\": false,\r\n                \"isEpimedic\": false,\r\n                \"isNCD\": false,\r\n                \"id\": \"cbc60d722a014e428d15d135525d1f86\",\r\n                \"name\": \"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\",\r\n                \"translation\": {}\r\n            },\r\n            \"dxType\": \"PRINCIPLE_DX\",\r\n            \"isContinued\": false\r\n        }\r\n    ],\r\n    \"endTime\": \"2018-09-18T10:27:58.483+07:00\",\r\n    \"height\": 180.0,\r\n    \"patientId\": \"5b9770e029191b0004c91a56\",\r\n    \"photosUrl\": [],\r\n    \"providerId\": \"5b9743345a2e99000421db07\",\r\n    \"pulseRate\": 70.0,\r\n    \"respiratoryRate\": 13.0,\r\n    \"syntom\": \"หน้าซีดร่างกายอ่อนเพลีย\",\r\n    \"time\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"waist\": 82.0,\r\n    \"weight\": 60.0,\r\n    \"id\": \"cd4eed87ad134151b2ec896fd5f7c71d\",\r\n    \"timestamp\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"type\": \"HomeVisit\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/healthcareservice",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"healthcareservice"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1426",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 24 Sep 2018 06:56:16 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.4.z-SNAPSHOT)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						}
+					],
+					"cookie": [],
+					"body": "{\"detail\":\"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\"result\":\"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\"plan\":\"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\"nextAppoint\":\"2018-09-25\",\"serviceType\":{\"translation\":{},\"id\":\"1A011\",\"name\":\"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \"},\"time\":\"2018-09-18T03:22:58.483Z\",\"endTime\":\"2018-09-18T03:27:58.483Z\",\"syntom\":\"หน้าซีดร่างกายอ่อนเพลีย\",\"weight\":60.0,\"height\":180.0,\"waist\":82.0,\"bloodPressure\":{\"systolic\":110.0,\"diastolic\":69.0},\"pulseRate\":70.0,\"respiratoryRate\":13.0,\"bodyTemperature\":37.0,\"diagnosises\":[{\"disease\":{\"icd10\":\"A01.3\",\"isEpimedic\":false,\"isChronic\":false,\"isNCD\":false,\"translation\":{},\"id\":\"cbc60d722a014e428d15d135525d1f86\",\"name\":\"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\"},\"dxType\":\"PRINCIPLE_DX\",\"isContinued\":false}],\"photosUrl\":[],\"providerId\":\"5b9743345a2e99000421db07\",\"patientId\":\"5b9770e029191b0004c91a56\",\"id\":\"5ba88a90b343b6000497d25e\",\"type\":\"HomeVisit\",\"timestamp\":\"2018-09-18T03:22:58.483Z\"}"
+				}
+			]
+		},
+		{
+			"name": "Find visit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "82169a6d-fd5c-495e-8428-c04e2e7748a0",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response have pcucode\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.diagnosises[0].disease.icd10).to.eql(\"A01.3\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{org_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
