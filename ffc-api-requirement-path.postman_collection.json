@@ -87,6 +87,49 @@
 						"description": "ไม่ได้ลงทะเบียนหน่วยงาน เมื่อค้นหาหน่วยงานใน network วงเดียวกันจะพบ status code 404 และ \"ไม่พบรายการลงทะเบียนในกลุ่ม"
 					},
 					"response": []
+				},
+				{
+					"name": "Find org not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ee3f23c0-267b-4e36-9a76-48239fe7031b",
+								"type": "text/javascript",
+								"exec": [
+									" pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ค้นหา\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/org?query=fkljgflgjl",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "fkljgflgjl"
+								}
+							]
+						},
+						"description": "ค้นหา Org ไม่พบต้องแจ้ง status code 404"
+					},
+					"response": []
 				}
 			]
 		},
