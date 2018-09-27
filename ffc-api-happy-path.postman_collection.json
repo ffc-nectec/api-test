@@ -4845,7 +4845,7 @@
 					"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"e079e175c75a44f180e8eaeb\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
 				},
 				"url": {
-					"raw": "{{url}}/org/{{org_id}}/person?query=โพธิ์เรือนดี",
+					"raw": "{{url}}/org/{{org_id}}/person?query=ศรีวัย",
 					"host": [
 						"{{url}}"
 					],
@@ -4857,7 +4857,7 @@
 					"query": [
 						{
 							"key": "query",
-							"value": "โพธิ์เรือนดี"
+							"value": "ศรีวัย"
 						}
 					]
 				},
