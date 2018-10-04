@@ -175,7 +175,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"รพ.สต. เนคเทค2\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T14:19:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": 100145\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n}"
+							"raw": "{\n  \"name\": \"พรทิพา\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T14:19:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": 100145\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org",
@@ -658,6 +658,316 @@
 							"header": [],
 							"cookie": [],
 							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Person",
+			"item": [
+				{
+					"name": "Find Person not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c19d1b08-1f6e-4179-a4a1-7b4722d779e1",
+								"type": "text/javascript",
+								"exec": [
+									" pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Not Found\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{mobile_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/person?query=aaabbb",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"person"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "aaabbb"
+								}
+							]
+						},
+						"description": "ค้นหาคนไม่พบ status code 404"
+					},
+					"response": []
+				},
+				{
+					"name": "Body List But Post By Endpoint  Person",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb6b3a5a-ae7f-4c6a-9ed2-f9cdace20408",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{org_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"identities\": [\n            {\n                \"type\": \"thailand-citizen-id\",\n                \"id\": \"1154801544871\"\n            }\n        ],\n        \"chronics\": [],\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"pid\": \"1234567\",\n                \"cid\": \"11014578451234\"\n            }\n        },\n        \"prename\": \"นาย\",\n        \"firstname\": \"พิรุณ\",\n        \"lastname\": \"พานิชผล\",\n        \"sex\": \"UNKNOWN\",\n        \"birthDate\": \"1993-06-29\",\n        \"id\": \"111a0034c55d4840b7c8470c620cf1ef\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n    },\n    {\n        \"identities\": [\n            {\n                \"type\": \"thailand-citizen-id\",\n                \"id\": \"1154801544872\"\n            }\n        ],\n        \"chronics\": [],\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"pid\": \"1234567\",\n                \"cid\": \"11014578451234\"\n            }\n        },\n        \"prename\": \"นาย\",\n        \"firstname\": \"ธนชัย\",\n        \"lastname\": \"ทองคำ\",\n        \"sex\": \"UNKNOWN\",\n        \"birthDate\": \"1993-06-29\",\n        \"id\": \"4c40a8712a8e4a0f99b1a86434bd0d9c\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n    },\n    {\n        \"identities\": [\n            {\n                \"type\": \"thailand-citizen-id\",\n                \"id\": \"1154801544873\"\n            }\n        ],\n        \"chronics\": [],\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"pid\": \"1234567\",\n                \"cid\": \"11014578451234\"\n            }\n        },\n        \"prename\": \"นาย\",\n        \"firstname\": \"ณัฏฐณิขา\",\n        \"lastname\": \"สุริยะมงคล\",\n        \"sex\": \"UNKNOWN\",\n        \"birthDate\": \"1993-06-29\",\n        \"id\": \"3b241ca6662e4cbcab35ecba6fd6b25e\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n    }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/person",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"person"
+							]
+						},
+						"description": "ใช้ Body List แต่ POST ด้วย Endpoint Person"
+					},
+					"response": [
+						{
+							"name": "New Person",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "435",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Oct 2018 02:11:07 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(9.4.z-SNAPSHOT)",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								}
+							],
+							"cookie": [],
+							"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
+						}
+					]
+				},
+				{
+					"name": "1 Person By Endpoint Persons",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e580ac4-1630-4f7b-9bec-11e911102771",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{org_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544870\"\n    }\n  ],\n  \"prename\": \"นางสาว\",\n  \"firstname\": \"พรทิพา\",\n  \"lastname\": \"โชคสูงเนิน\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234560\",\n      \"cid\": \"11014578451230\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/persons",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"persons"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Person",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": false
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "435",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Oct 2018 02:11:07 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(9.4.z-SNAPSHOT)",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								}
+							],
+							"cookie": [],
+							"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
 						}
 					]
 				}
