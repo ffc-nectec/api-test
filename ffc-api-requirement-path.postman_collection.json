@@ -974,7 +974,7 @@
 			]
 		},
 		{
-			"name": "houseLocation not found ",
+			"name": "house not found ",
 			"item": [
 				{
 					"name": "Find all House JSON haveLocation=true",
@@ -1392,6 +1392,67 @@
 							"body": "[\n    {\n        \"_id\": \"5ae19d63f6db5e0004a2f5c1\",\n        \"_shortId\": \"a2f5c1\",\n        \"hid\": \"22\",\n        \"identity\": {\n            \"type\": \"thailand-household-id\",\n            \"id\": \"54520015001\"\n        },\n        \"haveChronics\": true,\n        \"type\": \"House\",\n        \"no\": \"510/45\",\n        \"road\": \"รังสิต-นครนายก\",\n        \"tambon\": \"คลองหนึ่ง\",\n        \"ampur\": \"คลองหลวง\",\n        \"changwat\": \"ปุทมธานี\",\n        \"coordinates\": [\n            102,\n            13\n        ],\n        \"people\": [\n            {\n                \"pid\": 3000214,\n                \"name\": \"นายพิรุณ พานิชผล\"\n            },\n            {\n                \"pid\": 3000215,\n                \"name\": \"นางสาวพรทิพา โชคสูงเนิน\"\n            },\n            {\n                \"pid\": 3000216,\n                \"name\": \"นายธนชัย ทองคำ\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"5ae19d63f6db5e0004puypuy\",\n        \"hid\": \"32\",\n        \"identity\": {\n            \"type\": \"thailand-household-id\",\n            \"id\": \"54520015001\"\n        },\n        \"haveChronics\": true,\n        \"type\": \"House\",\n        \"no\": \"510/46 \",\n        \"road\": \"รังสิต-นครนายก\",\n        \"tambon\": \"คลองหนึ่ง\",\n        \"ampur\": \"คลองหลวง\",\n        \"changwat\": \"ปุทมธานี\",\n        \"coordinates\": [\n            102,\n            13.1\n        ],\n        \"people\": [\n            {\n                \"id\": 2000117,\n                \"name\": \"นายวัชรากร หนูทอง\"\n            }\n        ]\n    }\n]"
 						}
 					]
+				},
+				{
+					"name": "Find resident in house",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "531c6574-07df-4c63-8946-d833896ab603",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}/resident",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"house",
+								"{{house_id}}",
+								"resident"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b99e8958-6058-4092-88a9-f1372acecbea",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "cef78dd8-76e2-4d25-8eaf-d49dbe05238b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
