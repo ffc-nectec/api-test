@@ -5077,24 +5077,24 @@
 					"listen": "test",
 					"script": {
 						"id": "0e0dfe41-cd62-4bf5-a7aa-3765bb3bcdc2",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"pm.test(\"Response not have id from POST\", function () {",
+							"pm.test(\"Response have firstname\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"พิรุณ\");",
 							"});",
 							"",
-							"pm.test(\"Response not have id from POST\", function () {",
+							"pm.test(\"Response firstname\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"ธนชัย\");",
 							"});",
 							"",
-							"pm.test(\"Response not have id from POST\", function () {",
+							"pm.test(\"Response firstname\", function () {",
 							"    pm.expect(pm.response.text()).to.include(\"ณัฏฐณิขา\");",
 							"});"
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -5213,12 +5213,17 @@
 					"listen": "test",
 					"script": {
 						"id": "b3d6ba25-5b40-4889-a7c4-71d3af323fa4",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"});"
-						]
+							"});",
+							"",
+							"pm.test(\"Response have firstname\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"พรทิพา\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -5356,12 +5361,17 @@
 					"listen": "test",
 					"script": {
 						"id": "5fe45ff5-743e-47b7-8beb-23dd74d04fda",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
-							"});"
-						]
+							"});",
+							"",
+							"pm.test(\"Response have lastname\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"โชคสูงเนิน\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -5504,8 +5514,8 @@
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"pm.test(\"Response not have firstname\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"พรทิพา\");",
+							"pm.test(\"Response have id\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1154801544870\");",
 							"});"
 						],
 						"type": "text/javascript"
@@ -5770,7 +5780,6 @@
 					"listen": "test",
 					"script": {
 						"id": "82169a6d-fd5c-495e-8428-c04e2e7748a0",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -5778,9 +5787,10 @@
 							"",
 							"pm.test(\"Response have pcucode\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.diagnosises[0].disease.icd10).to.eql(\"A01.3\");",
+							"    pm.expect(jsonData[0].diagnosises[0].disease.icd10).to.eql(\"A01.3\");",
 							"});"
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
