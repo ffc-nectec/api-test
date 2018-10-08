@@ -5906,6 +5906,45 @@
 			]
 		},
 		{
+			"name": "servertime",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "50a22fe6-a0c3-4b59-868f-a4f19816f419",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response have datetime\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"dateTime\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/servertime",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"servertime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Delete ข้อมูลของ org status 200",
 			"event": [
 				{
