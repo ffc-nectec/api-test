@@ -2347,7 +2347,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "[\n  {\n    \"id\": \"af1df31674204307b6db328974051c46\",\n    \"link\": {\n      \"isSynced\": true,\n      \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n      \"system\": \"JHICS\",\n      \"keys\": {\n        \"hid\": \"22\"\n      }\n    },\n    \"identity\": {\n      \"type\": \"thailand-household-id\",\n      \"id\": \"54520015001\"\n    },\n    \"haveChronics\": true,\n    \"type\": \"House\",\n    \"no\": \"510/45\",\n    \"road\": \"รังสิต-นครนายก\",\n    \"tambon\": \"คลองหนึ่ง\",\n    \"ampur\": \"คลองหลวง\",\n    \"changwat\": \"ปุทมธานี\",\n    \"location\": {\n      \"type\": \"Point\",\n      \"coordinates\": [\n        100.6027899,\n        14.0782897\n      ]\n    },\n    \"people\": [\n      {\n        \"identities\": [\n          {\n            \"type\": \"thailand-citizen-id\",\n            \"id\": \"1154801544875\"\n          }\n        ],\n        \"prename\": \"นาย\",\n        \"firstname\": \"พิรุณ\",\n        \"lastname\": \"พานิชผล\",\n        \"chronics\": [],\n        \"sex\": \"MALE\",\n        \"birthDate\": \"1993-06-25\",\n        \"link\": {\n          \"isSynced\": true,\n          \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n          \"system\": \"JHICS\",\n          \"keys\": {\n            \"pid\": \"3000214\",\n            \"cid\": \"11014578451234\"\n          }\n        },\n        \"id\": \"e079e175c75a44f180e8eaeb3ccc3cc6\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815\"\n      },\n      {\n        \"identities\": [\n          {\n            \"type\": \"thailand-citizen-id\",\n            \"id\": \"5554801544875\"\n          }\n        ],\n        \"prename\": \"นางสาว\",\n        \"firstname\": \"พรทิพา\",\n        \"lastname\": \"โชคสูงเนิน\",\n        \"chronics\": [\n          {\n            \"diagDate\": \"2018-09-24\",\n            \"disease\": {\n              \"icd10\": \"I10\",\n              \"isEpimedic\": false,\n              \"isChronic\": true,\n              \"isNCD\": true,\n              \"translation\": {\n                \"th\": \"ความดันโลหิตสูงไม่ทราบสาเหตุ (ปฐมภูมิ)\"\n              },\n              \"id\": \"558b22987c914810a1f91946c7683c7b\",\n              \"name\": \"Essential (primary) hypertension\"\n            }\n          }\n        ],\n        \"sex\": \"FEMALE\",\n        \"birthDate\": \"1993-06-25\",\n        \"link\": {\n          \"isSynced\": true,\n          \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n          \"system\": \"JHICS\",\n          \"keys\": {\n            \"pid\": \"3000215\",\n            \"cid\": \"5501457845234\"\n          }\n        },\n        \"id\": \"5559e175c75a44f180e8eaeb3ccc3cc6\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815\"\n      },\n      {\n        \"identities\": [\n          {\n            \"type\": \"thailand-citizen-id\",\n            \"id\": \"6654801544875\"\n          }\n        ],\n        \"prename\": \"นาย\",\n        \"firstname\": \"ธนชัย\",\n        \"lastname\": \"ทองคำ\",\n        \"chronics\": [],\n        \"sex\": \"MALE\",\n        \"birthDate\": \"1993-06-25\",\n        \"link\": {\n          \"isSynced\": true,\n          \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n          \"system\": \"JHICS\",\n          \"keys\": {\n            \"pid\": \"3000216\",\n            \"cid\": \"6601457845234\"\n          }\n        },\n        \"id\": \"6669e175c75a44f180e8eaeb3ccc3cc6\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815\"\n      }\n    ]\n  }\n]"
+					"raw": "[\n  {\n    \"id\": \"af1df31674204307b6db328974051c46\",\n    \"link\": {\n      \"isSynced\": true,\n      \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n      \"system\": \"JHICS\",\n      \"keys\": {\n        \"hid\": \"22\"\n      }\n    },\n    \"identity\": {\n      \"type\": \"thailand-household-id\",\n      \"id\": \"54520015001\"\n    },\n    \"haveChronics\": true,\n    \"type\": \"House\",\n    \"no\": \"8/12\",\n    \"road\": \"รังสิต-นครนายก\",\n    \"tambon\": \"คลองหนึ่ง\",\n    \"ampur\": \"คลองหลวง\",\n    \"changwat\": \"ปุทมธานี\",\n    \"location\": {\n      \"type\": \"Point\",\n      \"coordinates\": [\n        100.6027899,\n        14.0782897\n      ]\n    }\n  }\n]"
 				},
 				"url": {
 					"raw": "{{url}}/org/{{org_id}}/place/houses",
@@ -2461,80 +2461,6 @@
 			]
 		},
 		{
-			"name": "Find resident",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "f50ec664-dc81-4638-8134-ca6eae8410dd",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});",
-							"",
-							"pm.test(\"Response have firstname\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"พิรุณ\");",
-							"});",
-							"",
-							"pm.test(\"Response firstname\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"พรทิพา\");",
-							"});",
-							"",
-							"pm.test(\"Response firstname\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"ธนชัย\");",
-							"});",
-							"",
-							"pm.test(\"Response firstname\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"5554801544875\");",
-							"});",
-							"",
-							"pm.test(\"Response firstname\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"5501457845234\");",
-							"});",
-							"",
-							"pm.test(\"Response firstname\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"6601457845234\");",
-							"});",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{mobile_token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}/resident",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"org",
-						"{{org_id}}",
-						"house",
-						"{{house_id}}",
-						"resident"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "New House by org-haveNotLocation",
 			"event": [
 				{
@@ -2616,7 +2542,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": \"d074eae2bbc84bb0aceac9bcad2362c1\",\n  \"link\": {\n      \"isSynced\": true,\n      \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n      \"system\": \"JHICS\",\n      \"keys\": {\n        \"hid\": \"22\"\n      }\n  },\n  \"identity\": {\n    \"type\": \"thailand-household-id\",\n    \"id\": \"54520015001\"\n  },\n  \"haveChronics\": true,\n  \"type\": \"House\",\n  \"no\": \"510/32\",\n  \"road\": \"รังสิต-นครนายก\",\n  \"tambon\": \"คลองหนึ่ง\",\n  \"ampur\": \"คลองหลวง\",\n  \"changwat\": \"ปุทมธานี\",\n  \"people\": [\n    {\n      \"identities\": [\n        {\n          \"type\": \"thailand-citizen-id\",\n          \"id\": \"5501234567891\"\n        }\n      ],\n      \"prename\": \"นาย\",\n      \"firstname\": \"อายา\",\n      \"lastname\": \"เพิ่มผล\",\n      \"chronics\": [],\n      \"sex\": \"MALE\",\n      \"birthDate\": \"1970-06-25\",\n      \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n          \"pid\": \"3000214\",\n          \"cid\": \"55014578451234\"\n        }\n      },\n      \"id\": \"e079e175c75a44f180e8eaeb3ccc3cc6\",\n      \"type\": \"Person\",\n      \"timestamp\": \"2018-06-25T14:09:07.815\"\n    },\n    {\n      \"identities\": [\n        {\n          \"type\": \"thailand-citizen-id\",\n          \"id\": \"5501234567892\"\n        }\n      ],\n      \"prename\": \"นางสาว\",\n      \"firstname\": \"นานา\",\n      \"lastname\": \"เพิ่มผล\",\n      \"chronics\": [],\n      \"sex\": \"FEMALE\",\n      \"birthDate\": \"1970-06-25\",\n      \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n          \"pid\": \"3000215\",\n          \"cid\": \"66014578451234\"\n        }\n      },\n      \"id\": \"5559e175c75a44f180e8eaeb3ccc3cc6\",\n      \"type\": \"Person\",\n      \"timestamp\": \"2018-06-25T14:09:07.815\"\n    },\n    {\n      \"identities\": [\n        {\n          \"type\": \"thailand-citizen-id\",\n          \"id\": \"5501234567893\"\n        }\n      ],\n      \"prename\": \"นาย\",\n      \"firstname\": \"กากา\",\n      \"lastname\": \"เพิ่มผล\",\n      \"chronics\": [],\n      \"sex\": \"MALE\",\n      \"birthDate\": \"1999-06-25\",\n      \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n          \"pid\": \"3000216\",\n          \"cid\": \"77014578451234\"\n        }\n      },\n      \"id\": \"6669e175c75a44f180e8eaeb3ccc3cc6\",\n      \"type\": \"Person\",\n      \"timestamp\": \"2018-06-25T14:09:07.815\"\n    }\n  ]\n}"
+					"raw": "{\n  \"id\": \"d074eae2bbc84bb0aceac9bcad2362c1\",\n  \"link\": {\n      \"isSynced\": true,\n      \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n      \"system\": \"JHICS\",\n      \"keys\": {\n        \"hid\": \"22\"\n      }\n  },\n  \"identity\": {\n    \"type\": \"thailand-household-id\",\n    \"id\": \"54520015001\"\n  },\n  \"haveChronics\": true,\n  \"type\": \"House\",\n  \"no\": \"510/32\",\n  \"road\": \"รังสิต-นครนายก\",\n  \"tambon\": \"คลองหนึ่ง\",\n  \"ampur\": \"คลองหลวง\",\n  \"changwat\": \"ปุทมธานี\"\n}"
 				},
 				"url": {
 					"raw": "{{url}}/org/{{org_id}}/place/house",
@@ -2671,13 +2597,352 @@
 			]
 		},
 		{
+			"name": "New Person",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d1fb990-c691-487a-bce6-2a6e95b0a214",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response have Person id\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"id\");",
+							"    ",
+							"    //set token to global variable for later use",
+							"    var idRes = pm.response.json();",
+							"    pm.globals.set(\"person_id\", idRes.id);",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{org_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544870\"\n    }\n  ],\n  \"prename\": \"นางสาว\",\n  \"firstname\": \"พรทิพา\",\n  \"lastname\": \"โชคสูงเนิน\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234560\",\n      \"cid\": \"11014578451230\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\",\n  \"houseId\": {{house_id}}\n}\n"
+				},
+				"url": {
+					"raw": "{{url}}/org/{{org_id}}/person",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"org",
+						"{{org_id}}",
+						"person"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Person",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/person",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"person"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "435",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Oct 2018 02:11:07 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.4.z-SNAPSHOT)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						}
+					],
+					"cookie": [],
+					"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
+				}
+			]
+		},
+		{
+			"name": "New Person List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1b349163-df7a-4279-9ec0-33a906c39109",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{org_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"identities\": [\n            {\n                \"type\": \"thailand-citizen-id\",\n                \"id\": \"1154801544871\"\n            }\n        ],\n        \"chronics\": [],\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"pid\": \"1234567\",\n                \"cid\": \"11014578451234\"\n            }\n        },\n        \"prename\": \"นาย\",\n        \"firstname\": \"พิรุณ\",\n        \"lastname\": \"พานิชผล\",\n        \"sex\": \"UNKNOWN\",\n        \"birthDate\": \"1993-06-29\",\n        \"id\": \"111a0034c55d4840b7c8470c620cf1ef\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815+07:00\",\n        \"houseId\": {{house_id}}\n    },\n    {\n        \"identities\": [\n            {\n                \"type\": \"thailand-citizen-id\",\n                \"id\": \"1154801544872\"\n            }\n        ],\n        \"chronics\": [],\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"pid\": \"1234567\",\n                \"cid\": \"11014578451234\"\n            }\n        },\n        \"prename\": \"นาย\",\n        \"firstname\": \"ธนชัย\",\n        \"lastname\": \"ทองคำ\",\n        \"sex\": \"UNKNOWN\",\n        \"birthDate\": \"1993-06-29\",\n        \"id\": \"4c40a8712a8e4a0f99b1a86434bd0d9c\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815+07:00\",\n        \"houseId\": {{house_id}}\n    },\n    {\n        \"identities\": [\n            {\n                \"type\": \"thailand-citizen-id\",\n                \"id\": \"1154801544873\"\n            }\n        ],\n        \"chronics\": [],\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"pid\": \"1234567\",\n                \"cid\": \"11014578451234\"\n            }\n        },\n        \"prename\": \"นางสาว\",\n        \"firstname\": \"ณัฏฐณิขา\",\n        \"lastname\": \"สุริยะมงคล\",\n        \"sex\": \"UNKNOWN\",\n        \"birthDate\": \"1993-06-29\",\n        \"id\": \"3b241ca6662e4cbcab35ecba6fd6b25e\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815+07:00\",\n        \"houseId\": {{house_id}}\n    }\n]"
+				},
+				"url": {
+					"raw": "{{url}}/org/{{org_id}}/persons",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"org",
+						"{{org_id}}",
+						"persons"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Person",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/person",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"person"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "435",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Oct 2018 02:11:07 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.4.z-SNAPSHOT)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						}
+					],
+					"cookie": [],
+					"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
+				}
+			]
+		},
+		{
+			"name": "Find resident",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f50ec664-dc81-4638-8134-ca6eae8410dd",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response have firstname พรทิพา\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"พรทิพา\");",
+							"});",
+							"",
+							"pm.test(\"Response have firstname พิรุณ\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"พิรุณ\");",
+							"});",
+							"",
+							"pm.test(\"Response have firstname ธนชัย\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ธนชัย\");",
+							"});",
+							"",
+							"pm.test(\"Response have firstname ณัฏฐณิขา\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"ณัฏฐณิขา\");",
+							"});",
+							"",
+							"pm.test(\"Response have citizen id พรทิพา\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1154801544870\");",
+							"});",
+							"",
+							"pm.test(\"Response have citizen id พิรุณ\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1154801544871\");",
+							"});",
+							"",
+							"pm.test(\"Response have citizen id ธนชัย \", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1154801544872\");",
+							"});",
+							"",
+							"pm.test(\"Response have citizen id ณัฏฐณิขา\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"1154801544873\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{mobile_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}/resident",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"org",
+						"{{org_id}}",
+						"house",
+						"{{house_id}}",
+						"resident"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Find all House GeoJSON",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"id": "b1f01c46-1771-4bf6-9918-d02815861696",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -2695,8 +2960,8 @@
 							"    pm.expect(pm.response.text()).to.not.include(\"puy\");",
 							"});",
 							"",
-							"pm.test(\"Response have 510/45\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"510/45\");",
+							"pm.test(\"Response have 8/12\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"8/12\");",
 							"});",
 							"",
 							"pm.test(\"House not have location shouldn't present \", function () {",
@@ -2744,7 +3009,8 @@
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.features[0].properties.link.keys);",
 							"});"
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -2933,7 +3199,6 @@
 					"listen": "test",
 					"script": {
 						"id": "d9f2ec9c-3bfc-4277-b86b-ff67a74f6627",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -2943,8 +3208,8 @@
 							"        pm.response.to.have.header(\"Content-Type\") === \"application/json\";",
 							"});",
 							"",
-							"pm.test(\"Response have houseNo 510/45\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"510/45\");",
+							"pm.test(\"Response have houseNo 8/12\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"8/12\");",
 							"});",
 							"",
 							"pm.test(\"Response have houseNo 510/32\", function () {",
@@ -3008,7 +3273,8 @@
 							"    pm.expect(jsonData[1].link.keys);",
 							"});",
 							""
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -4109,7 +4375,6 @@
 					"listen": "test",
 					"script": {
 						"id": "19fc7566-9336-4163-8502-8346322f00d0",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -4127,8 +4392,8 @@
 							"    pm.expect(pm.response.text()).to.not.include(\"puy\");",
 							"});",
 							"",
-							"pm.test(\"Response have houseNo 510/45\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"510/45\");",
+							"pm.test(\"Response have houseNo 8/12\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"8/12\");",
 							"});",
 							"",
 							"pm.test(\"Response not have _shortId\", function () {",
@@ -4168,7 +4433,8 @@
 							"});",
 							"",
 							""
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -4946,264 +5212,6 @@
 			]
 		},
 		{
-			"name": "New Person",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "4d1fb990-c691-487a-bce6-2a6e95b0a214",
-						"type": "text/javascript",
-						"exec": [
-							"pm.test(\"Status code is 201\", function () {",
-							"    pm.response.to.have.status(201);",
-							"});",
-							"",
-							"",
-							"pm.test(\"Response have Person id\", function () {",
-							"    pm.expect(pm.response.text()).to.include(\"id\");",
-							"    ",
-							"    //set token to global variable for later use",
-							"    var idRes = pm.response.json();",
-							"    pm.globals.set(\"personId\", idRes.id);",
-							"    ",
-							"});"
-						]
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{org_token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544870\"\n    }\n  ],\n  \"prename\": \"นางสาว\",\n  \"firstname\": \"พรทิพา\",\n  \"lastname\": \"โชคสูงเนิน\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234560\",\n      \"cid\": \"11014578451230\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
-				},
-				"url": {
-					"raw": "{{url}}/org/{{org_id}}/person",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"org",
-						"{{org_id}}",
-						"person"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "New Person",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"disabled": false
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
-						},
-						"url": {
-							"raw": "{{url}}/org/{{org_id}}/person",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"org",
-								"{{org_id}}",
-								"person"
-							]
-						}
-					},
-					"status": "Created",
-					"code": 201,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Connection",
-							"value": "keep-alive",
-							"name": "Connection",
-							"description": "Options that are desired for the connection"
-						},
-						{
-							"key": "Content-Length",
-							"value": "435",
-							"name": "Content-Length",
-							"description": "The length of the response body in octets (8-bit bytes)"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json",
-							"name": "Content-Type",
-							"description": "The mime type of this content"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 02 Oct 2018 02:11:07 GMT",
-							"name": "Date",
-							"description": "The date and time that the message was sent"
-						},
-						{
-							"key": "Server",
-							"value": "Jetty(9.4.z-SNAPSHOT)",
-							"name": "Server",
-							"description": "A name for the server"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 vegur",
-							"name": "Via",
-							"description": "Informs the client of proxies through which the response was sent."
-						}
-					],
-					"cookie": [],
-					"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
-				}
-			]
-		},
-		{
-			"name": "New Person List",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "1b349163-df7a-4279-9ec0-33a906c39109",
-						"type": "text/javascript",
-						"exec": [
-							"pm.test(\"Status code is 201\", function () {",
-							"    pm.response.to.have.status(201);",
-							"});"
-						]
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{org_token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "[\n    {\n        \"identities\": [\n            {\n                \"type\": \"thailand-citizen-id\",\n                \"id\": \"1154801544871\"\n            }\n        ],\n        \"chronics\": [],\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"pid\": \"1234567\",\n                \"cid\": \"11014578451234\"\n            }\n        },\n        \"prename\": \"นาย\",\n        \"firstname\": \"พิรุณ\",\n        \"lastname\": \"พานิชผล\",\n        \"sex\": \"UNKNOWN\",\n        \"birthDate\": \"1993-06-29\",\n        \"id\": \"111a0034c55d4840b7c8470c620cf1ef\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n    },\n    {\n        \"identities\": [\n            {\n                \"type\": \"thailand-citizen-id\",\n                \"id\": \"1154801544872\"\n            }\n        ],\n        \"chronics\": [],\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"pid\": \"1234567\",\n                \"cid\": \"11014578451234\"\n            }\n        },\n        \"prename\": \"นาย\",\n        \"firstname\": \"ธนชัย\",\n        \"lastname\": \"ทองคำ\",\n        \"sex\": \"UNKNOWN\",\n        \"birthDate\": \"1993-06-29\",\n        \"id\": \"4c40a8712a8e4a0f99b1a86434bd0d9c\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n    },\n    {\n        \"identities\": [\n            {\n                \"type\": \"thailand-citizen-id\",\n                \"id\": \"1154801544873\"\n            }\n        ],\n        \"chronics\": [],\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"pid\": \"1234567\",\n                \"cid\": \"11014578451234\"\n            }\n        },\n        \"prename\": \"นางสาว\",\n        \"firstname\": \"ณัฏฐณิขา\",\n        \"lastname\": \"สุริยะมงคล\",\n        \"sex\": \"UNKNOWN\",\n        \"birthDate\": \"1993-06-29\",\n        \"id\": \"3b241ca6662e4cbcab35ecba6fd6b25e\",\n        \"type\": \"Person\",\n        \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n    }\n]"
-				},
-				"url": {
-					"raw": "{{url}}/org/{{org_id}}/persons",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"org",
-						"{{org_id}}",
-						"persons"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "New Person",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"disabled": false
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
-						},
-						"url": {
-							"raw": "{{url}}/org/{{org_id}}/person",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"org",
-								"{{org_id}}",
-								"person"
-							]
-						}
-					},
-					"status": "Created",
-					"code": 201,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Connection",
-							"value": "keep-alive",
-							"name": "Connection",
-							"description": "Options that are desired for the connection"
-						},
-						{
-							"key": "Content-Length",
-							"value": "435",
-							"name": "Content-Length",
-							"description": "The length of the response body in octets (8-bit bytes)"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json",
-							"name": "Content-Type",
-							"description": "The mime type of this content"
-						},
-						{
-							"key": "Date",
-							"value": "Tue, 02 Oct 2018 02:11:07 GMT",
-							"name": "Date",
-							"description": "The date and time that the message was sent"
-						},
-						{
-							"key": "Server",
-							"value": "Jetty(9.4.z-SNAPSHOT)",
-							"name": "Server",
-							"description": "A name for the server"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 vegur",
-							"name": "Via",
-							"description": "Informs the client of proxies through which the response was sent."
-						}
-					],
-					"cookie": [],
-					"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
-				}
-			]
-		},
-		{
 			"name": "Find all Person",
 			"event": [
 				{
@@ -5678,7 +5686,7 @@
 					"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"e079e175c75a44f180e8eaeb\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
 				},
 				"url": {
-					"raw": "{{url}}/org/{{org_id}}/person/{{personId}}",
+					"raw": "{{url}}/org/{{org_id}}/person/{{person_id}}",
 					"host": [
 						"{{url}}"
 					],
@@ -5686,7 +5694,7 @@
 						"org",
 						"{{org_id}}",
 						"person",
-						"{{personId}}"
+						"{{person_id}}"
 					]
 				},
 				"description": "คนหาคนจากเลขบัตรประชาชน\n"
@@ -5818,7 +5826,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"detail\": \"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\r\n    \"nextAppoint\": \"2018-09-25\",\r\n    \"plan\": \"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\r\n    \"result\": \"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\r\n    \"serviceType\": {\r\n        \"id\": \"1A011\",\r\n        \"name\": \"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \",\r\n        \"translation\": {}\r\n    },\r\n    \"bloodPressure\": {\r\n        \"diastolic\": 69.0,\r\n        \"systolic\": 110.0\r\n    },\r\n    \"bodyTemperature\": 37.0,\r\n    \"diagnosises\": [\r\n        {\r\n            \"disease\": {\r\n                \"icd10\": \"A01.3\",\r\n                \"isChronic\": false,\r\n                \"isEpimedic\": false,\r\n                \"isNCD\": false,\r\n                \"id\": \"cbc60d722a014e428d15d135525d1f86\",\r\n                \"name\": \"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\",\r\n                \"translation\": {}\r\n            },\r\n            \"dxType\": \"PRINCIPLE_DX\",\r\n            \"isContinued\": false\r\n        }\r\n    ],\r\n    \"endTime\": \"2018-09-18T10:27:58.483+07:00\",\r\n    \"height\": 180.0,\r\n    \"patientId\": {{personId}},\r\n    \"photosUrl\": [],\r\n    \"providerId\": \"5b9743345a2e99000421db07\",\r\n    \"pulseRate\": 70.0,\r\n    \"respiratoryRate\": 13.0,\r\n    \"syntom\": \"หน้าซีดร่างกายอ่อนเพลีย\",\r\n    \"time\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"waist\": 82.0,\r\n    \"weight\": 60.0,\r\n    \"id\": \"4c87f749a0a94c298b44358a0e61e681\",\r\n    \"timestamp\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"type\": \"HomeVisit\"\r\n}"
+					"raw": "{\r\n    \"detail\": \"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\r\n    \"nextAppoint\": \"2018-09-25\",\r\n    \"plan\": \"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\r\n    \"result\": \"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\r\n    \"serviceType\": {\r\n        \"id\": \"1A011\",\r\n        \"name\": \"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \",\r\n        \"translation\": {}\r\n    },\r\n    \"bloodPressure\": {\r\n        \"diastolic\": 69.0,\r\n        \"systolic\": 110.0\r\n    },\r\n    \"bodyTemperature\": 37.0,\r\n    \"diagnosises\": [\r\n        {\r\n            \"disease\": {\r\n                \"icd10\": \"A01.3\",\r\n                \"isChronic\": false,\r\n                \"isEpimedic\": false,\r\n                \"isNCD\": false,\r\n                \"id\": \"cbc60d722a014e428d15d135525d1f86\",\r\n                \"name\": \"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\",\r\n                \"translation\": {}\r\n            },\r\n            \"dxType\": \"PRINCIPLE_DX\",\r\n            \"isContinued\": false\r\n        }\r\n    ],\r\n    \"endTime\": \"2018-09-18T10:27:58.483+07:00\",\r\n    \"height\": 180.0,\r\n    \"patientId\": {{person_id}},\r\n    \"photosUrl\": [],\r\n    \"providerId\": \"5b9743345a2e99000421db07\",\r\n    \"pulseRate\": 70.0,\r\n    \"respiratoryRate\": 13.0,\r\n    \"syntom\": \"หน้าซีดร่างกายอ่อนเพลีย\",\r\n    \"time\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"waist\": 82.0,\r\n    \"weight\": 60.0,\r\n    \"id\": \"4c87f749a0a94c298b44358a0e61e681\",\r\n    \"timestamp\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"type\": \"HomeVisit\"\r\n}"
 				},
 				"url": {
 					"raw": "{{url}}/org/{{org_id}}/healthcareservice",
@@ -5950,7 +5958,7 @@
 					"raw": "{\r\n    \"detail\": \"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\r\n    \"nextAppoint\": \"2018-09-25\",\r\n    \"plan\": \"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\r\n    \"result\": \"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\r\n    \"serviceType\": {\r\n        \"id\": \"1A011\",\r\n        \"name\": \"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \",\r\n        \"translation\": {}\r\n    },\r\n    \"bloodPressure\": {\r\n        \"diastolic\": 69.0,\r\n        \"systolic\": 110.0\r\n    },\r\n    \"bodyTemperature\": 37.0,\r\n    \"diagnosises\": [\r\n        {\r\n            \"disease\": {\r\n                \"icd10\": \"A01.3\",\r\n                \"isChronic\": false,\r\n                \"isEpimedic\": false,\r\n                \"isNCD\": false,\r\n                \"id\": \"cbc60d722a014e428d15d135525d1f86\",\r\n                \"name\": \"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\",\r\n                \"translation\": {}\r\n            },\r\n            \"dxType\": \"PRINCIPLE_DX\",\r\n            \"isContinued\": false\r\n        }\r\n    ],\r\n    \"endTime\": \"2018-09-18T10:27:58.483+07:00\",\r\n    \"height\": 180.0,\r\n    \"patientId\": \"5b9770e029191b0004c91a56\",\r\n    \"photosUrl\": [],\r\n    \"providerId\": \"5b9743345a2e99000421db07\",\r\n    \"pulseRate\": 70.0,\r\n    \"respiratoryRate\": 13.0,\r\n    \"syntom\": \"หน้าซีดร่างกายอ่อนเพลีย\",\r\n    \"time\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"waist\": 82.0,\r\n    \"weight\": 60.0,\r\n    \"id\": \"cd4eed87ad134151b2ec896fd5f7c71d\",\r\n    \"timestamp\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"type\": \"HomeVisit\"\r\n}"
 				},
 				"url": {
-					"raw": "{{url}}/org/{{org_id}}/person/{{personId}}/healthcareservice/",
+					"raw": "{{url}}/org/{{org_id}}/person/{{person_id}}/healthcareservice/",
 					"host": [
 						"{{url}}"
 					],
@@ -5958,7 +5966,7 @@
 						"org",
 						"{{org_id}}",
 						"person",
-						"{{personId}}",
+						"{{person_id}}",
 						"healthcareservice",
 						""
 					]
