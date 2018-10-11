@@ -27,7 +27,7 @@
 							"",
 							"pm.test(\"Response have pcucode\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.link.keys.pcucode).to.eql(100145);",
+							"    pm.expect(jsonData.link.keys.pcucode).to.eql(\"100145\");",
 							"});",
 							"",
 							"pm.test(\"Response have new id from POST\", function () {",
@@ -47,28 +47,28 @@
 							"",
 							"pm.test(\"Response have timestamp from POST\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(pm.response.text()).to.include(\"2018-06-28\");",
+							"    pm.expect(pm.response.text()).to.include(\"2018-10-10\");",
 							"    //#notUrgent timestamp POST แล้ว Response คนละ format #7",
 							"    //pm.expect(jsonData.timestamp).to.eql(\"2018-06-28T17:17:43.645+07:00\");",
 							"});",
 							"",
 							"pm.test(\"Response have timestamp of role:USER from POST\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(pm.response.text()).to.include(\"2018-06-28\");",
+							"    pm.expect(pm.response.text()).to.include(\"2018-10-10\");",
 							"    //#notUrgent ",
 							"    //pm.expect(jsonData.timestamp).to.eql(\"2018-06-28T07:14:43.645Z\");",
 							"});",
 							"",
 							"pm.test(\"Response have timestamp of role:ORG from POST\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(pm.response.text()).to.include(\"2018-06-28\");",
+							"    pm.expect(pm.response.text()).to.include(\"2018-10-10\");",
 							"    //#notUrgent",
 							"    //pm.expect(jsonData.timestamp).to.eql(\"2018-06-28T14:19:29.645+07:00\");",
 							"});",
 							"",
 							"pm.test(\"Response have link lastSync \", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(pm.response.text()).to.include(\"2018-06-28\");",
+							"    pm.expect(pm.response.text()).to.include(\"2018-10-10\");",
 							"    //#notUrgent",
 							"    //pm.expect(jsonData.link.lastSync).to.eql(\"2018-06-28T17:21:29.645+07:00\");",
 							"});",
@@ -93,7 +93,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"รพ.สต.เนคเทค\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": 100145\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T17:17:43.645+07:00\"\n}"
+					"raw": "{\n  \"name\": \"รพ.สต.เนคเทค\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-10-10T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-10-10T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-10-10T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"100145\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-10-10T17:17:43.645+07:00\"\n}"
 				},
 				"url": {
 					"raw": "{{url}}/org",
@@ -107,6 +107,62 @@
 				"description": "ลงทะเบียนหน่วยงานสำเร็จ และสร้างตัวแปร Global เพื่อเก็บค่าไปใช้รันเทสลำดับต่อๆไป\n\n- ตัวแปร org_id เก็บ id\n\n\n***timestamp ต้องตรงกับ update date ของ JHCIS"
 			},
 			"response": [
+				{
+					"name": "Register Org",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"รพ.สต.เนคเทค\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-10-10T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-10-10T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-10-10T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"100145\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-10-10T17:17:43.645+07:00\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/org",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 11 Oct 2018 07:40:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "572"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.4.z-SNAPSHOT)"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"รพ.สต.เนคเทค\",\n    \"users\": [\n        {\n            \"name\": \"puy\",\n            \"role\": \"USER\",\n            \"roles\": [\n                \"USER\"\n            ],\n            \"id\": \"5bbefe6e72d96f0004b37bc0\",\n            \"type\": \"User\",\n            \"timestamp\": \"2018-10-10T14:14:43.645+07:00\",\n            \"bundle\": {}\n        },\n        {\n            \"name\": \"pcu100214.airsync\",\n            \"role\": \"ORG\",\n            \"roles\": [\n                \"ORG\"\n            ],\n            \"id\": \"5bbefe6e72d96f0004b37bc1\",\n            \"type\": \"User\",\n            \"timestamp\": \"2018-10-10T14:19:29.645+07:00\",\n            \"bundle\": {}\n        }\n    ],\n    \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-10-10T17:21:29.645+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n            \"pcucode\": \"100145\"\n        }\n    },\n    \"id\": \"5bbefe6f72d96f0004b37bc2\",\n    \"type\": \"Organization\",\n    \"timestamp\": \"2018-10-10T17:17:43.645+07:00\"\n}"
+				},
 				{
 					"name": "Register Org",
 					"originalRequest": {
@@ -147,7 +203,6 @@
 					"listen": "test",
 					"script": {
 						"id": "27330a9b-cc67-4964-81b5-f4aa40a31f98",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {",
 							"    pm.response.to.have.status(201);",
@@ -160,7 +215,8 @@
 							"    var orgRes = pm.response.json();",
 							"    pm.globals.set(\"org_token\", orgRes.token);",
 							"});"
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -356,6 +412,64 @@
 					],
 					"cookie": [],
 					"body": "{\n\t\"token\": \"123abcdef\"\n}"
+				},
+				{
+					"name": "Org Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/authorize",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"authorize"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 11 Oct 2018 07:41:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "361"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.4.z-SNAPSHOT)"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"role\": \"USER\",\n    \"name\": \"\",\n    \"timestamp\": \"2018-10-11T14:41:21.939+07:00\",\n    \"createDate\": \"2018-10-11T14:41:21.939+07:00\",\n    \"expireDate\": \"2043-06-02T14:41:21.939+07:00\",\n    \"user\": {\n        \"name\": \"pcu100214.airsync\",\n        \"role\": \"ORG\",\n        \"roles\": [\n            \"ORG\"\n        ],\n        \"id\": \"5bbefe6e72d96f0004b37bc1\",\n        \"type\": \"User\",\n        \"timestamp\": \"2018-10-10T14:19:29.645+07:00\",\n        \"bundle\": {}\n    },\n    \"token\": \"5bbefea172d96f0004b37bc4\"\n}"
 				}
 			]
 		},
@@ -381,7 +495,7 @@
 							"",
 							"pm.test(\"Response have pcucode\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.link.keys.pcucode).to.eql(100201);",
+							"    pm.expect(jsonData.link.keys.pcucode).to.eql(\"100201\");",
 							"});",
 							"",
 							""
