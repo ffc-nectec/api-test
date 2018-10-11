@@ -12,7 +12,6 @@
 					"listen": "test",
 					"script": {
 						"id": "c1a93da5-c00a-4a35-b62b-a53283328c2f",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {",
 							"    pm.response.to.have.status(201);",
@@ -76,7 +75,8 @@
 							"",
 							"",
 							""
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -366,7 +366,6 @@
 					"listen": "test",
 					"script": {
 						"id": "637d1a2e-7bd5-4d53-a93a-e4060278dbe2",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {",
 							"    pm.response.to.have.status(201);",
@@ -386,7 +385,8 @@
 							"});",
 							"",
 							""
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -724,6 +724,57 @@
 					]
 				},
 				"description": "ลงทะเบียนผู้ใช้งานสำเร็จ"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete ข้อมูลของ org status 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "720cd59d-dee7-4f63-b145-3475bf1a28ef",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{org_token}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/org/{{org_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"org",
+						"{{org_id}}"
+					]
+				}
 			},
 			"response": []
 		}
