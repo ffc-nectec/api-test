@@ -3704,7 +3704,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"รพ.สต.บ้านยาง\",\n  \"users\": [\n    {\n      \"name\": \"admin1\",\n      \"password\": \"admin1\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6ddadmin1\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100210.airsyncorg2\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578eadmin1\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": 100201\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c0admin1\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T17:17:43.645+07:00\"\n}"
+					"raw": "{\n  \"name\": \"รพสต-ลาเต้\",\n  \"displayName\": \"รพ.สต.ลาเต้\",\n  \"users\": [\n    {\n      \"name\": \"admin1\",\n      \"password\": \"admin1\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6ddadmin1\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100210.airsyncorg2\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578eadmin1\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": 100201\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c0admin1\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T17:17:43.645+07:00\"\n}"
 				},
 				"url": {
 					"raw": "{{url}}/org",
@@ -3758,7 +3758,6 @@
 					"listen": "test",
 					"script": {
 						"id": "27330a9b-cc67-4964-81b5-f4aa40a31f98",
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {",
 							"    pm.response.to.have.status(201);",
@@ -3769,9 +3768,10 @@
 							"    ",
 							"    //set token to global variable for later use",
 							"    var orgRes = pm.response.json();",
-							"    pm.globals.set(\"org_token\", orgRes.token);",
+							"    pm.globals.set(\"org_token_2\", orgRes.token);",
 							"});"
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
