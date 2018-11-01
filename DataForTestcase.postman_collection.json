@@ -2621,7 +2621,7 @@
 					"name": "House",
 					"item": [
 						{
-							"name": "New Houses to Genogram",
+							"name": "New Houses to Geno",
 							"event": [
 								{
 									"listen": "test",
@@ -5584,7 +5584,7 @@
 					"name": " Relation",
 					"item": [
 						{
-							"name": "sukit_id relate for Geno",
+							"name": "Sukit (grandfather) relate for Geno",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -5626,7 +5626,7 @@
 							"response": []
 						},
 						{
-							"name": "pranee_id relate for Geno",
+							"name": "Pranee (grandmother) relate for Geno",
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -5738,7 +5738,7 @@
 							"response": []
 						},
 						{
-							"name": "Pranee (grandMother) relate",
+							"name": "Pranee (grandmother) relate",
 							"request": {
 								"auth": {
 									"type": "bearer",
