@@ -8287,6 +8287,20 @@
 					"item": [
 						{
 							"name": "Sukit (grandfather) relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a8d75356-d833-40ae-9ded-b4ece5176882",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -8329,6 +8343,20 @@
 						},
 						{
 							"name": "Pranee (grandmother) relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4a7a4ea1-253b-434a-b63a-48806ae7dc6e",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -8371,6 +8399,20 @@
 						},
 						{
 							"name": "Prasert relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"auth": {
 									"type": "bearer",
@@ -10034,108 +10076,6 @@
 					]
 				},
 				"description": "ลงทะเบียนผู้ใช้งานสำเร็จ"
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Org 1",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "720cd59d-dee7-4f63-b145-3475bf1a28ef",
-						"type": "text/javascript",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						]
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "oauth2",
-					"oauth2": [
-						{
-							"key": "accessToken",
-							"value": "{{org_token}}",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						}
-					]
-				},
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{url}}/org/{{org_id}}",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"org",
-						"{{org_id}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Org 2",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "720cd59d-dee7-4f63-b145-3475bf1a28ef",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "oauth2",
-					"oauth2": [
-						{
-							"key": "accessToken",
-							"value": "{{org_token}}",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						}
-					]
-				},
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{url}}/org/{{org_id_2}}",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"org",
-						"{{org_id_2}}"
-					]
-				}
 			},
 			"response": []
 		}
