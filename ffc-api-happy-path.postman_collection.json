@@ -4325,14 +4325,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house",
+							"raw": "{{url}}/org/{{org_id}}/house",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house"
 							]
 						},
@@ -4589,14 +4588,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house",
+							"raw": "{{url}}/org/{{org_id}}/house",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house"
 							]
 						}
@@ -4745,7 +4743,6 @@
 							"listen": "test",
 							"script": {
 								"id": "9364fb02-bbba-4c2c-af4b-1b155ea09c98",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -4801,7 +4798,8 @@
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData[0].link.keys);",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -4833,14 +4831,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house?haveLocation=true",
+							"raw": "{{url}}/org/{{org_id}}/house?haveLocation=true",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house"
 							],
 							"query": [
@@ -4995,7 +4992,6 @@
 							"listen": "test",
 							"script": {
 								"id": "ac8ebdca-7507-410c-b9a8-7631fa31b6f3",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -5052,7 +5048,8 @@
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData[0].link.keys);",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -5084,14 +5081,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house?haveLocation=false",
+							"raw": "{{url}}/org/{{org_id}}/house?haveLocation=false",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house"
 							],
 							"query": [
@@ -5246,7 +5242,6 @@
 							"listen": "test",
 							"script": {
 								"id": "abdbb27a-5a91-4bd9-8b07-d0745bc50733",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -5256,7 +5251,8 @@
 									"        pm.response.to.have.header(\"Content-Type\") === \"application/json\";",
 									"});",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -5288,14 +5284,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house?haveLocation=",
+							"raw": "{{url}}/org/{{org_id}}/house?haveLocation=",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house"
 							],
 							"query": [
@@ -5450,7 +5445,6 @@
 							"listen": "test",
 							"script": {
 								"id": "32a7b767-20d0-4509-b5c9-8659bea11a76",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -5464,7 +5458,8 @@
 									"",
 									"",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -5496,14 +5491,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house?haveLocation",
+							"raw": "{{url}}/org/{{org_id}}/house?haveLocation",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house"
 							],
 							"query": [
@@ -5749,14 +5743,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house",
 								"{{house_id}}"
 							]
@@ -5951,14 +5944,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house",
 								"{{house_id}}"
 							]
@@ -6108,14 +6100,14 @@
 							"listen": "test",
 							"script": {
 								"id": "37b89d7d-dab4-4f23-ad01-fffe1c6b3830",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -6142,14 +6134,13 @@
 							"raw": "{\n  \"id\": \"{{house_id}}\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"hid\": \"22\"\n    }\n  },\n  \"identity\": {\n    \"type\": \"thailand-household-id\",\n    \"id\": \"54520015001\"\n  },\n  \"haveChronics\": true,\n  \"type\": \"House\",\n  \"no\": \"510/45\",\n  \"tambon\": \"คลองหนึ่ง\",\n  \"ampur\": \"คลองหลวง\",\n  \"changwat\": \"ปุทมธานี\",\n  \"location\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      100.6027656,\n      14.0805834\n    ]\n  },\n  \"people\": [\n    {\n      \"identities\": [\n        {\n          \"type\": \"thailand-citizen-id\",\n          \"id\": \"1154801544875\"\n        }\n      ],\n      \"prename\": \"นาย\",\n      \"firstname\": \"พิรุณ\",\n      \"lastname\": \"พานิชผล\",\n      \"chronics\": [],\n      \"sex\": \"MALE\",\n      \"birthDate\": \"1993-06-25\",\n      \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n          \"pid\": \"3000214\",\n          \"cid\": \"11014578451234\"\n        }\n      },\n      \"id\": \"e079e175c75a44f180e8eaeb3ccc3cc6\",\n      \"type\": \"Person\",\n      \"timestamp\": \"2018-06-25T14:09:07.815\"\n    },\n    {\n      \"identities\": [\n        {\n          \"type\": \"thailand-citizen-id\",\n          \"id\": \"5554801544875\"\n        }\n      ],\n      \"prename\": \"นางสาว\",\n      \"firstname\": \"พรทิพา\",\n      \"lastname\": \"โชคสูงเนิน\",\n      \"chronics\": [],\n      \"sex\": \"FEMALE\",\n      \"birthDate\": \"1993-06-25\",\n      \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n          \"pid\": \"3000215\",\n          \"cid\": \"55014578451234\"\n        }\n      },\n      \"id\": \"5559e175c75a44f180e8eaeb3ccc3cc6\",\n      \"type\": \"Person\",\n      \"timestamp\": \"2018-06-25T14:09:07.815\"\n    },\n    {\n      \"identities\": [\n        {\n          \"type\": \"thailand-citizen-id\",\n          \"id\": \"6654801544875\"\n        }\n      ],\n      \"prename\": \"นาย\",\n      \"firstname\": \"ธนชัย\",\n      \"lastname\": \"ทองคำ\",\n      \"chronics\": [],\n      \"sex\": \"MALE\",\n      \"birthDate\": \"1993-06-25\",\n      \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n          \"pid\": \"3000216\",\n          \"cid\": \"66014578451234\"\n        }\n      },\n      \"id\": \"6669e175c75a44f180e8eaeb3ccc3cc6\",\n      \"type\": \"Person\",\n      \"timestamp\": \"2018-06-25T14:09:07.815\"\n    }\n  ]\n}"
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house",
 								"{{house_id}}"
 							]
@@ -6201,7 +6192,6 @@
 							"listen": "test",
 							"script": {
 								"id": "465991c1-f8e0-41b9-963a-4a9414bde1c9",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -6215,7 +6205,8 @@
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.features[0].properties.link.isSynced).to.eql(false);",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -6247,14 +6238,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house",
 								"{{house_id}}"
 							]
@@ -6405,7 +6395,6 @@
 							"listen": "test",
 							"script": {
 								"id": "084baca0-5858-4254-aa09-e562890d2f27",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -6413,7 +6402,8 @@
 									"",
 									"",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -6440,14 +6430,13 @@
 							"raw": "{\n    \"id\": \"{{house_id}}\",\n    \"link\": {\n\t    \"isSynced\": true,\n\t    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n\t    \"system\": \"JHICS\",\n\t    \"keys\": {\n\t      \"hid\": \"22\"\n\t    }\n    },\n    \"identity\": {\n      \"type\": \"thailand-household-id\",\n      \"id\": \"54520015001\"\n    },\n    \"haveChronics\": true,\n    \"type\": \"House\",\n    \"no\": \"510/45\",\n    \"tambon\": \"คลองหนึ่ง\",\n    \"ampur\": \"คลองหลวง\",\n    \"changwat\": \"ปุทมธานี\",\n    \"location\" : {\n    \t\"type\": \"Point\",\n\t\t\"coordinates\": [\n\t\t  100.6027656,\n\t\t  14.0805834\n\t\t]\n    },\n    \"people\": [\n      {\n        \"pid\": 3000214,\n        \"name\": \"นายพิรุณ พานิชผล\"\n      },\n      {\n        \"pid\": 3000215,\n        \"name\": \"นางสาวพรทิพา โชคสูงเนิน\"\n      },\n      {\n        \"pid\": 3000216,\n        \"name\": \"นายธนชัย ทองคำ\"\n      }\n    ]\n}\n"
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house",
 								"{{house_id}}"
 							]
@@ -6499,7 +6488,6 @@
 							"listen": "test",
 							"script": {
 								"id": "8c908011-8f30-436b-829c-b305af763238",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -6513,7 +6501,8 @@
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.features[0].properties.link.isSynced).to.eql(true);",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -6545,14 +6534,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/place/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"place",
 								"house",
 								"{{house_id}}"
 							]
