@@ -3444,7 +3444,7 @@
 							]
 						},
 						{
-							"name": "New Krist for Geno",
+							"name": "New Cris for Geno",
 							"event": [
 								{
 									"listen": "test",
@@ -3461,7 +3461,7 @@
 											"    ",
 											"    //set token to global variable for later use",
 											"    var idRes = pm.response.json();",
-											"    pm.globals.set(\"krist_id\", idRes.id);",
+											"    pm.globals.set(\"cris_id\", idRes.id);",
 											"});"
 										],
 										"type": "text/javascript"
@@ -6210,7 +6210,7 @@
 							]
 						},
 						{
-							"name": "Krist relate for Geno",
+							"name": "Cris relate for Geno",
 							"event": [
 								{
 									"listen": "test",
@@ -6242,8 +6242,8 @@
 									{
 										"key": "Content-Type",
 										"name": "Content-Type",
-										"value": "application/json",
-										"type": "text"
+										"type": "text",
+										"value": "application/json"
 									}
 								],
 								"body": {
@@ -6251,7 +6251,7 @@
 									"raw": "[\n  {\n    \"relate\": \"Married\",\n    \"id\": \"{{prasert_id}}\",\n    \"name\": \"ประเสริฐ จิระอนันต์\"\n  },\n  {\n    \"relate\": \"Child\",\n    \"id\": \"{{pete_id}}\",\n    \"name\": \"พีท จิระอนันต์\"\n  }\n]\n"
 								},
 								"url": {
-									"raw": "{{url}}/org/{{org_id}}/person/{{krist_id}}/relationship",
+									"raw": "{{url}}/org/{{org_id}}/person/{{cris_id}}/relationship",
 									"host": [
 										"{{url}}"
 									],
@@ -6259,7 +6259,7 @@
 										"org",
 										"{{org_id}}",
 										"person",
-										"{{krist_id}}",
+										"{{cris_id}}",
 										"relationship"
 									]
 								}
@@ -8452,6 +8452,1188 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Nipa relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{nipa_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{nipa_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Chi relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{chi_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{chi_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cris relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{cris_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{cris_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pete relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{pete_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{pete_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Mate relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{mate_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{mate_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Meimei relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{meimei_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{meimei_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patsorn relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{patsorn_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{patsorn_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Monrudee relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{monrudee_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{monrudee_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Kwayteow relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{kwayteow_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{kwayteow_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Kornkan relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{kornkan_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{kornkan_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nampung relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{nampung_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{nampung_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Wichean relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{wichean_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{wichean_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Ei relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{ei_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{ei_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Earn relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{earn_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{earn_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tao relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{tao_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{tao_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Toey relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{toey_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{toey_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Vegas relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{vegas_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{vegas_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Macau relate",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{macau_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{macau_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GET Genogram",
+					"item": [
+						{
+							"name": "Sukit (grandfather)  genogram",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a8d75356-d833-40ae-9ded-b4ece5176882",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{sukit_id}}/genogram",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{sukit_id}}",
+										"genogram"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pranee (grandmother) genogram",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4a7a4ea1-253b-434a-b63a-48806ae7dc6e",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{pranee_id}}/genogram",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{pranee_id}}",
+										"genogram"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Prasert genogram",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4a5a996-d6cc-41d2-9ed3-2fbfd2651fef",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n\t{\n      \"relate\": \"Father\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อากง จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Mother\",\n      \"id\": \"e2ded9ca04174052b1bf65de4f01c368\",\n      \"name\": \"อาม่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Married\",\n      \"id\": \"a85c2ee16c294333a8e9ef3ba3ad97d4\",\n      \"name\": \"วิเชียร จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"9f4601bd69e044219e643eb33ea37732\",\n      \"name\": \"นายอี้ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f8\",\n      \"name\": \"นายเอิร์น จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a89057f9\",\n      \"name\": \"นายเต่า จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Child\",\n      \"id\": \"0e01bc1df9ac486188540051a8905710\",\n      \"name\": \"นายเต้ย จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b30c\",\n      \"name\": \"ประเสริฐ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"1155be4db6694a6cb4c669d9a14b0ce5\",\n      \"name\": \"นายเมธ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b301\",\n      \"name\": \"กรกันต์ จิระอนันต์\"\n    },\n    {\n      \"relate\": \"Sibling\",\n      \"id\": \"a40d7980d5fc4958ad9852e23b78b302\",\n      \"name\": \"มนฤดี จิระอนันต์\"\n    }\n]"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{prasert_id}}/genogram",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{prasert_id}}",
+										"genogram"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"_postman_isSubFolder": true
@@ -9755,7 +10937,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"รพสต-ลาเต้\",\n  \"displayName\": \"รพ.สต.ลาเต้\",\n  \"users\": [\n    {\n      \"name\": \"admin1\",\n      \"password\": \"admin1\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6ddadmin1\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100210.airsyncorg2\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578eadmin1\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": 100201\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c0admin1\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T17:17:43.645+07:00\"\n}"
+					"raw": "{\n  \"name\": \"รพสต-ลาเต้\",\n  \"displayName\": \"รพ.สต.ลาเต้\",\n  \"users\": [\n    {\n      \"name\": \"admin1\",\n      \"password\": \"admin1\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6ddadmin1\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100210.airsyncorg2\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578eadmin1\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"100201\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c0admin1\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T17:17:43.645+07:00\"\n}"
 				},
 				"url": {
 					"raw": "{{url}}/org",
