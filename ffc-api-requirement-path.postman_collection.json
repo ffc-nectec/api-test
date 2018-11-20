@@ -1064,16 +1064,12 @@
 							"listen": "test",
 							"script": {
 								"id": "c19d1b08-1f6e-4179-a4a1-7b4722d779e1",
-								"type": "text/javascript",
 								"exec": [
 									" pm.test(\"Status code is 404\", function () {",
 									"    pm.response.to.have.status(404);",
-									"});",
-									"",
-									"pm.test(\"Body matches string\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"Not Found\");",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
