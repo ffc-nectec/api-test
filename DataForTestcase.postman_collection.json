@@ -15067,7 +15067,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{url}}/org/{{org_id}}/person/{{sukit_id_of_praser_nipa}}/relationship",
+									"raw": "{{url}}/org/{{org_id}}/person/{{sukit_id_of_prasert_nipa}}/relationship",
 									"host": [
 										"{{url}}"
 									],
@@ -15075,7 +15075,7 @@
 										"org",
 										"{{org_id}}",
 										"person",
-										"{{sukit_id_of_praser_nipa}}",
+										"{{sukit_id_of_prasert_nipa}}",
 										"relationship"
 									]
 								}
