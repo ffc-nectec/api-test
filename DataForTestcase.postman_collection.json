@@ -31580,7 +31580,7 @@
 			]
 		},
 		{
-			"name": "New Houses for Person List",
+			"name": "New House",
 			"event": [
 				{
 					"listen": "test",
@@ -31791,6 +31791,139 @@
 						"org",
 						"{{org_id}}",
 						"persons"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Person",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/person",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"person"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Length",
+							"value": "435",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Oct 2018 02:11:07 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.4.z-SNAPSHOT)",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						}
+					],
+					"cookie": [],
+					"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
+				}
+			]
+		},
+		{
+			"name": "New Person Death",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4d1fb990-c691-487a-bce6-2a6e95b0a214",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response have Person id\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"id\");",
+							"    ",
+							"    //set token to global variable for later use",
+							"    var idRes = pm.response.json();",
+							"    pm.globals.set(\"person_id_death\", idRes.id);",
+							"    ",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{org_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544827\"\n    }\n  ],\n  \"prename\": \"นางสาว\",\n  \"firstname\": \"ลูกพีช\",\n  \"lastname\": \"เอฟเอฟซี\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-27\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234527\",\n      \"cid\": \"11014578451227\"\n    }\n  },\n  \"death\": {\n    \"date\": \"2018-11-27\",\n    \"causes\": [\n      {\n        \"icd10\": \"I15.9\",\n        \"isEpimedic\": false,\n        \"isChronic\": false,\n        \"isNCD\": false,\n        \"type\": \"Icd10\",\n        \"translation\": {},\n        \"id\": \"dabd28ca5b4a410885a8879782876169\",\n        \"name\": \"Hypertension\"\n      }\n    ]\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557327\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\",\n  \"houseId\": {{house_id}}\n}\n"
+				},
+				"url": {
+					"raw": "{{url}}/org/{{org_id}}/person",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"org",
+						"{{org_id}}",
+						"person"
 					]
 				}
 			},
