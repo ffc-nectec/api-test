@@ -78,7 +78,7 @@
 					"oauth2": [
 						{
 							"key": "accessToken",
-							"value": "{{org_token}}",
+							"value": "{{org_token_2}}",
 							"type": "string"
 						},
 						{
