@@ -3766,7 +3766,7 @@
 									"    ",
 									"    //set token to global variable for later use",
 									"    var idRes = pm.response.json();",
-									"    pm.globals.set(\"person_id\", idRes.id);",
+									"    pm.globals.set(\"person_id_porntipa\", idRes.id);",
 									"    ",
 									"});"
 								],
@@ -3919,10 +3919,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544870\"\n    }\n  ],\n  \"prename\": \"นางสาว\",\n  \"firstname\": \"พรทิพาทิพา\",\n  \"lastname\": \"เอฟเอฟซี\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234560\",\n      \"cid\": \"11014578451230\"\n    }\n  },\n  \"id\": {{person_id}},\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\",\n  \"houseId\": {{house_id}}\n}\n"
+							"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544870\"\n    }\n  ],\n  \"prename\": \"นางสาว\",\n  \"firstname\": \"พรทิพาทิพา\",\n  \"lastname\": \"เอฟเอฟซี\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234560\",\n      \"cid\": \"11014578451230\"\n    }\n  },\n  \"id\": {{person_id_porntipa}},\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\",\n  \"houseId\": {{house_id}}\n}\n"
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/person/{{person_id}}",
+							"raw": "{{url}}/org/{{org_id}}/person/{{person_id_porntipa}}",
 							"host": [
 								"{{url}}"
 							],
@@ -3930,7 +3930,7 @@
 								"org",
 								"{{org_id}}",
 								"person",
-								"{{person_id}}"
+								"{{person_id_porntipa}}"
 							]
 						}
 					},
@@ -4017,6 +4017,15 @@
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Response have Person id\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"id\");",
+									"    ",
+									"    //set token to global variable for later use",
+									"    var idRes = pm.response.json();",
+									"    pm.globals.set(\"person_id_piruin\", idRes[0].id);",
+									"    ",
 									"});"
 								],
 								"type": "text/javascript"
@@ -4136,7 +4145,7 @@
 			"name": "Visit",
 			"item": [
 				{
-					"name": "New visit",
+					"name": "New visit Porntipa",
 					"event": [
 						{
 							"listen": "test",
@@ -4176,7 +4185,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"nextAppoint\": \"2019-09-21\",\n  \"syntom\": \"ทานอาหารได้น้อย เบื่ออาหาร\",\n  \"weight\": 61.5,\n  \"height\": 170.0,\n  \"bloodPressure\": {\n    \"systolic\": 145.0,\n    \"diastolic\": 95.0\n  },\n  \"pulseRate\": 72.0,\n  \"respiratoryRate\": 24.0,\n  \"bodyTemperature\": 37.5,\n  \"diagnosises\": [\n    {\n      \"disease\": {\n        \"icd10\": \"i10\",\n        \"isEpimedic\": false,\n        \"isChronic\": true,\n        \"isNCD\": true,\n        \"type\": \"Icd10\",\n        \"translation\": {\n          \"th\": \"ความดันโลหิตสูง\"\n        },\n        \"id\": \"7c195f4604104761bd25822d0806702a\",\n        \"name\": \"Hypertension\"\n      },\n      \"dxType\": \"PRINCIPLE_DX\",\n      \"isContinued\": false\n    }\n  ],\n  \"photosUrl\": [\n    \"http://ffc.in.th/img/ffcc.jpg\",\n    \"http://ffc.in.th/img/ffcc1.jpg\"\n  ],\n  \"communityServices\": [\n    {\n      \"detail\": \"ตรวจร่างกายทั่วไป / อธิบานผลเสียของโรค / เปิดโอกาสให้ผู้ป่วยซักถาม\",\n      \"result\": \"ผู้ป่วยเข้าใจเกี่ยวกับโรค สามารถดูแลตัวเองได้และปฎิบัติตามคำแนะนำได้ดี\",\n      \"plan\": \"ติดตามเยี่ยมปีละ 1 ครั้ง\",\n      \"serviceType\": {\n        \"type\": \"ServiceType\",\n        \"translation\": {},\n        \"id\": \"1A000\",\n        \"name\": \"เยี่ยมผู้ป่วยโรคความดันโลหิตสูง\"\n      },\n      \"id\": \"7759f3719b2147cbbecf9ffbc1b7ebba\",\n      \"type\": \"HomeVisit\",\n      \"timestamp\": \"2018-11-20T10:16:04.733+07:00\"\n    }\n  ],\n  \"ncdScreen\": {\n    \"hasHtInFamily\": true,\n    \"smoke\": \"USUALLY\",\n    \"alcohol\": \"RARELY\",\n    \"bloodSugar\": 150.0,\n    \"weight\": 61.5,\n    \"height\": 170.0,\n    \"bloodPressure\": {\n      \"systolic\": 145.0,\n      \"diastolic\": 95.0\n    },\n    \"time\": \"2018-11-20T10:16:04.671+07:00\",\n    \"endTime\": \"2018-11-20T10:21:04.671+07:00\",\n    \"location\": {\n      \"type\": \"Point\",\n      \"coordinates\": [\n        120.029384,\n        14.19239\n      ]\n    },\n    \"providerId\": \"1ea3429ba3dc48068b1ed2d6b51d2a11\",\n    \"patientId\": \"9bd09011bc9a4aec92c3b4a519733bb9\",\n    \"id\": \"339f9a7868ea4023bb4be2c5c74bf7c4\",\n    \"type\": \"NCDScreen\",\n    \"timestamp\": \"2018-11-20T10:16:04.733+07:00\"\n  },\n  \"specialPPs\": [\n    {\n      \"ppType\": {\n        \"type\": \"PPType\",\n        \"translation\": {},\n        \"id\": \"1B1232\",\n        \"name\": \"การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่ามีความเสี่ยงสูง\"\n      },\n      \"time\": \"2018-11-20T10:16:04.671+07:00\",\n      \"endTime\": \"2018-11-20T10:21:04.671+07:00\",\n      \"location\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          120.029384,\n          14.19239\n        ]\n      },\n      \"providerId\": \"1ea3429ba3dc48068b1ed2d6b51d2a11\",\n      \"patientId\": \"9bd09011bc9a4aec92c3b4a519733bb9\",\n      \"id\": \"c7c5c1f8bf964886a756c804bed3c6ae\",\n      \"type\": \"SpecialPP\",\n      \"timestamp\": \"2018-11-20T10:16:04.733+07:00\"\n    }\n  ],\n  \"time\": \"2018-11-20T10:16:04.671+07:00\",\n  \"endTime\": \"2018-11-20T10:21:04.671+07:00\",\n  \"location\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      120.029384,\n      14.19239\n    ]\n  },\n  \"providerId\": \"1ea3429ba3dc48068b1ed2d6b51d2a11\",\n  \"patientId\": {{person_id}},\n  \"id\": \"c7c5c1f8bf964886a756c804bed3c6ae\",\n  \"type\": \"HealthCareService\",\n  \"timestamp\": \"2018-11-20T10:16:04.671+07:00\"\n}\n"
+							"raw": "{\n  \"nextAppoint\": \"2019-09-21\",\n  \"syntom\": \"ทานอาหารได้น้อย เบื่ออาหาร\",\n  \"weight\": 61.5,\n  \"height\": 170.0,\n  \"bloodPressure\": {\n    \"systolic\": 145.0,\n    \"diastolic\": 95.0\n  },\n  \"pulseRate\": 72.0,\n  \"respiratoryRate\": 24.0,\n  \"bodyTemperature\": 37.5,\n  \"diagnosises\": [\n    {\n      \"disease\": {\n        \"icd10\": \"i10\",\n        \"isEpimedic\": false,\n        \"isChronic\": true,\n        \"isNCD\": true,\n        \"type\": \"Icd10\",\n        \"translation\": {\n          \"th\": \"ความดันโลหิตสูง\"\n        },\n        \"id\": \"7c195f4604104761bd25822d0806702a\",\n        \"name\": \"Hypertension\"\n      },\n      \"dxType\": \"PRINCIPLE_DX\",\n      \"isContinued\": false\n    }\n  ],\n  \"photosUrl\": [\n    \"http://ffc.in.th/img/ffcc.jpg\",\n    \"http://ffc.in.th/img/ffcc1.jpg\"\n  ],\n  \"communityServices\": [\n    {\n      \"detail\": \"ตรวจร่างกายทั่วไป / อธิบานผลเสียของโรค / เปิดโอกาสให้ผู้ป่วยซักถาม\",\n      \"result\": \"ผู้ป่วยเข้าใจเกี่ยวกับโรค สามารถดูแลตัวเองได้และปฎิบัติตามคำแนะนำได้ดี\",\n      \"plan\": \"ติดตามเยี่ยมปีละ 1 ครั้ง\",\n      \"serviceType\": {\n        \"type\": \"ServiceType\",\n        \"translation\": {},\n        \"id\": \"1A000\",\n        \"name\": \"เยี่ยมผู้ป่วยโรคความดันโลหิตสูง\"\n      },\n      \"id\": \"7759f3719b2147cbbecf9ffbc1b7ebba\",\n      \"type\": \"HomeVisit\",\n      \"timestamp\": \"2018-11-20T10:16:04.733+07:00\"\n    }\n  ],\n  \"ncdScreen\": {\n    \"hasHtInFamily\": true,\n    \"smoke\": \"USUALLY\",\n    \"alcohol\": \"RARELY\",\n    \"bloodSugar\": 150.0,\n    \"weight\": 61.5,\n    \"height\": 170.0,\n    \"bloodPressure\": {\n      \"systolic\": 145.0,\n      \"diastolic\": 95.0\n    },\n    \"time\": \"2018-11-20T10:16:04.671+07:00\",\n    \"endTime\": \"2018-11-20T10:21:04.671+07:00\",\n    \"location\": {\n      \"type\": \"Point\",\n      \"coordinates\": [\n        120.029384,\n        14.19239\n      ]\n    },\n    \"providerId\": \"1ea3429ba3dc48068b1ed2d6\",\n    \"patientId\": \"9bd09011bc9a4aec92c3b4a519733bb9\",\n    \"id\": \"339f9a7868ea4023bb4be2c5c74bf7c4\",\n    \"type\": \"NCDScreen\",\n    \"timestamp\": \"2018-11-20T10:16:04.733+07:00\"\n  },\n  \"specialPPs\": [\n    {\n      \"ppType\": {\n        \"type\": \"PPType\",\n        \"translation\": {},\n        \"id\": \"1B1232\",\n        \"name\": \"การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่ามีความเสี่ยงสูง\"\n      },\n      \"time\": \"2018-11-20T10:16:04.671+07:00\",\n      \"endTime\": \"2018-11-20T10:21:04.671+07:00\",\n      \"location\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          120.029384,\n          14.19239\n        ]\n      },\n      \"providerId\": \"1ea3429ba3dc48068b1ed2d6\",\n      \"patientId\": \"9bd09011bc9a4aec92c3b4a519733bb9\",\n      \"id\": \"c7c5c1f8bf964886a756c804bed3c6ae\",\n      \"type\": \"SpecialPP\",\n      \"timestamp\": \"2018-11-20T10:16:04.733+07:00\"\n    }\n  ],\n  \"time\": \"2018-11-20T10:16:04.671+07:00\",\n  \"endTime\": \"2018-11-20T10:21:04.671+07:00\",\n  \"location\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      120.029384,\n      14.19239\n    ]\n  },\n  \"providerId\": \"1ea3429ba3dc48068b1ed2d6\",\n  \"patientId\": {{person_id_porntipa}},\n  \"id\": \"c7c5c1f8bf964886a756c804bed3c6ae\",\n  \"type\": \"HealthCareService\",\n  \"timestamp\": \"2018-11-20T10:16:04.671+07:00\"\n}\n"
 						},
 						"url": {
 							"raw": "{{url}}/org/{{org_id}}/healthcareservice",
@@ -4264,7 +4273,7 @@
 					]
 				},
 				{
-					"name": "Find visit",
+					"name": "Find visit Porntipa",
 					"event": [
 						{
 							"listen": "test",
@@ -4307,7 +4316,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/person/{{person_id}}/healthcareservice/",
+							"raw": "{{url}}/org/{{org_id}}/person/{{person_id_porntipa}}/healthcareservice/",
 							"host": [
 								"{{url}}"
 							],
@@ -4315,7 +4324,266 @@
 								"org",
 								"{{org_id}}",
 								"person",
-								"{{person_id}}",
+								"{{person_id_porntipa}}",
+								"healthcareservice",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "healthcareservice",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"detail\": \"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\r\n    \"nextAppoint\": \"2018-09-25\",\r\n    \"plan\": \"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\r\n    \"result\": \"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\r\n    \"serviceType\": {\r\n        \"id\": \"1A011\",\r\n        \"name\": \"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \",\r\n        \"translation\": {}\r\n    },\r\n    \"bloodPressure\": {\r\n        \"diastolic\": 69.0,\r\n        \"systolic\": 110.0\r\n    },\r\n    \"bodyTemperature\": 37.0,\r\n    \"diagnosises\": [\r\n        {\r\n            \"disease\": {\r\n                \"icd10\": \"A01.3\",\r\n                \"isChronic\": false,\r\n                \"isEpimedic\": false,\r\n                \"isNCD\": false,\r\n                \"id\": \"cbc60d722a014e428d15d135525d1f86\",\r\n                \"name\": \"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\",\r\n                \"translation\": {}\r\n            },\r\n            \"dxType\": \"PRINCIPLE_DX\",\r\n            \"isContinued\": false\r\n        }\r\n    ],\r\n    \"endTime\": \"2018-09-18T10:27:58.483+07:00\",\r\n    \"height\": 180.0,\r\n    \"patientId\": \"5b9770e029191b0004c91a56\",\r\n    \"photosUrl\": [],\r\n    \"providerId\": \"5b9743345a2e99000421db07\",\r\n    \"pulseRate\": 70.0,\r\n    \"respiratoryRate\": 13.0,\r\n    \"syntom\": \"หน้าซีดร่างกายอ่อนเพลีย\",\r\n    \"time\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"waist\": 82.0,\r\n    \"weight\": 60.0,\r\n    \"id\": \"cd4eed87ad134151b2ec896fd5f7c71d\",\r\n    \"timestamp\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"type\": \"HomeVisit\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/healthcareservice",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"healthcareservice"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1426",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Sep 2018 06:56:16 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(9.4.z-SNAPSHOT)",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								}
+							],
+							"cookie": [],
+							"body": "{\"detail\":\"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\"result\":\"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\"plan\":\"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\"nextAppoint\":\"2018-09-25\",\"serviceType\":{\"translation\":{},\"id\":\"1A011\",\"name\":\"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \"},\"time\":\"2018-09-18T03:22:58.483Z\",\"endTime\":\"2018-09-18T03:27:58.483Z\",\"syntom\":\"หน้าซีดร่างกายอ่อนเพลีย\",\"weight\":60.0,\"height\":180.0,\"waist\":82.0,\"bloodPressure\":{\"systolic\":110.0,\"diastolic\":69.0},\"pulseRate\":70.0,\"respiratoryRate\":13.0,\"bodyTemperature\":37.0,\"diagnosises\":[{\"disease\":{\"icd10\":\"A01.3\",\"isEpimedic\":false,\"isChronic\":false,\"isNCD\":false,\"translation\":{},\"id\":\"cbc60d722a014e428d15d135525d1f86\",\"name\":\"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\"},\"dxType\":\"PRINCIPLE_DX\",\"isContinued\":false}],\"photosUrl\":[],\"providerId\":\"5b9743345a2e99000421db07\",\"patientId\":\"5b9770e029191b0004c91a56\",\"id\":\"5ba88a90b343b6000497d25e\",\"type\":\"HomeVisit\",\"timestamp\":\"2018-09-18T03:22:58.483Z\"}"
+						}
+					]
+				},
+				{
+					"name": "New visit Piruin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ca2c4de1-3a4a-4888-bfa1-fb22461ec1df",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"Response have disease\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData.diagnosises[0].disease.icd10).to.eql(\"Z00.1\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{org_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"communityServices\": [\n    {\n      \"detail\": \"\",\n      \"plan\": \"\",\n      \"result\": \"\",\n      \"serviceType\": {\n        \"id\": \"1A001\",\n        \"name\": \"เยี่ยมผู้ป่วยโรคเบาหวาน \",\n        \"translation\": {},\n        \"type\": \"ServiceType\"\n      },\n      \"id\": \"6a247b5b3e294bbfbd16fa97ec707bcc\",\n      \"timestamp\": \"2018-11-29T11:36:10.996+07:00\",\n      \"type\": \"HomeVisit\"\n    }\n  ],\n  \"diagnosises\": [\n    {\n      \"disease\": {\n        \"icd10\": \"Z00.1\",\n        \"isChronic\": false,\n        \"isEpimedic\": false,\n        \"isNCD\": false,\n        \"id\": \"32dd627ff71140a19aa7f9bd7ef7e788\",\n        \"name\": \"การตรวจร่างกายทั่วไป\",\n        \"translation\": {\n          \"en\": \"Routine child health examination\"\n        },\n        \"type\": \"Icd10\"\n      },\n      \"dxType\": \"PRINCIPLE_DX\",\n      \"isContinued\": false\n    }\n  ],\n  \"photosUrl\": [],\n  \"specialPPs\": [],\n  \"syntom\": \"\",\n  \"endTime\": \"2018-11-29T11:41:10.991+07:00\",\n  \"patientId\": {{person_id_piruin}},\n  \"providerId\": \"5bf680bd2587bb0004323e75\",\n  \"time\": \"2018-11-29T11:36:10.991+07:00\",\n  \"id\": \"204dec68d0a54c6dae2d352365d9ee3f\",\n  \"timestamp\": \"2018-11-29T11:36:10.991+07:00\",\n  \"type\": \"HealthCareService\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/healthcareservice",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"healthcareservice"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "healthcareservice",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"detail\": \"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\r\n    \"nextAppoint\": \"2018-09-25\",\r\n    \"plan\": \"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\r\n    \"result\": \"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\r\n    \"serviceType\": {\r\n        \"id\": \"1A011\",\r\n        \"name\": \"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \",\r\n        \"translation\": {}\r\n    },\r\n    \"bloodPressure\": {\r\n        \"diastolic\": 69.0,\r\n        \"systolic\": 110.0\r\n    },\r\n    \"bodyTemperature\": 37.0,\r\n    \"diagnosises\": [\r\n        {\r\n            \"disease\": {\r\n                \"icd10\": \"A01.3\",\r\n                \"isChronic\": false,\r\n                \"isEpimedic\": false,\r\n                \"isNCD\": false,\r\n                \"id\": \"cbc60d722a014e428d15d135525d1f86\",\r\n                \"name\": \"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\",\r\n                \"translation\": {}\r\n            },\r\n            \"dxType\": \"PRINCIPLE_DX\",\r\n            \"isContinued\": false\r\n        }\r\n    ],\r\n    \"endTime\": \"2018-09-18T10:27:58.483+07:00\",\r\n    \"height\": 180.0,\r\n    \"patientId\": \"5b9770e029191b0004c91a56\",\r\n    \"photosUrl\": [],\r\n    \"providerId\": \"5b9743345a2e99000421db07\",\r\n    \"pulseRate\": 70.0,\r\n    \"respiratoryRate\": 13.0,\r\n    \"syntom\": \"หน้าซีดร่างกายอ่อนเพลีย\",\r\n    \"time\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"waist\": 82.0,\r\n    \"weight\": 60.0,\r\n    \"id\": \"cd4eed87ad134151b2ec896fd5f7c71d\",\r\n    \"timestamp\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"type\": \"HomeVisit\"\r\n}"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/healthcareservice",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"healthcareservice"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1426",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 24 Sep 2018 06:56:16 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(9.4.z-SNAPSHOT)",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								}
+							],
+							"cookie": [],
+							"body": "{\"detail\":\"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\"result\":\"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\"plan\":\"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\"nextAppoint\":\"2018-09-25\",\"serviceType\":{\"translation\":{},\"id\":\"1A011\",\"name\":\"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \"},\"time\":\"2018-09-18T03:22:58.483Z\",\"endTime\":\"2018-09-18T03:27:58.483Z\",\"syntom\":\"หน้าซีดร่างกายอ่อนเพลีย\",\"weight\":60.0,\"height\":180.0,\"waist\":82.0,\"bloodPressure\":{\"systolic\":110.0,\"diastolic\":69.0},\"pulseRate\":70.0,\"respiratoryRate\":13.0,\"bodyTemperature\":37.0,\"diagnosises\":[{\"disease\":{\"icd10\":\"A01.3\",\"isEpimedic\":false,\"isChronic\":false,\"isNCD\":false,\"translation\":{},\"id\":\"cbc60d722a014e428d15d135525d1f86\",\"name\":\"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\"},\"dxType\":\"PRINCIPLE_DX\",\"isContinued\":false}],\"photosUrl\":[],\"providerId\":\"5b9743345a2e99000421db07\",\"patientId\":\"5b9770e029191b0004c91a56\",\"id\":\"5ba88a90b343b6000497d25e\",\"type\":\"HomeVisit\",\"timestamp\":\"2018-09-18T03:22:58.483Z\"}"
+						}
+					]
+				},
+				{
+					"name": "Find visit Piruin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "82169a6d-fd5c-495e-8428-c04e2e7748a0",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have disease\", function () {",
+									"    var jsonData = pm.response.json();",
+									"    pm.expect(jsonData[0].diagnosises[0].disease.icd10).to.eql(\"Z00.1\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{mobile_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/person/{{person_id_piruin}}/healthcareservice/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"person",
+								"{{person_id_piruin}}",
 								"healthcareservice",
 								""
 							]
@@ -7445,7 +7713,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/person/{{person_id}}",
+							"raw": "{{url}}/org/{{org_id}}/person/{{person_id_porntipa}}",
 							"host": [
 								"{{url}}"
 							],
@@ -7453,7 +7721,7 @@
 								"org",
 								"{{org_id}}",
 								"person",
-								"{{person_id}}"
+								"{{person_id_porntipa}}"
 							]
 						},
 						"description": "คนหาคนจากเลขบัตรประชาชน\n"
