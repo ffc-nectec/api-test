@@ -6,57 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "Delete Org 1",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "720cd59d-dee7-4f63-b145-3475bf1a28ef",
-						"type": "text/javascript",
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {",
-							"    pm.response.to.have.status(200);",
-							"});"
-						]
-					}
-				}
-			],
-			"request": {
-				"auth": {
-					"type": "oauth2",
-					"oauth2": [
-						{
-							"key": "accessToken",
-							"value": "{{org_token}}",
-							"type": "string"
-						},
-						{
-							"key": "addTokenTo",
-							"value": "header",
-							"type": "string"
-						}
-					]
-				},
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{url}}/org/{{org_id}}",
-					"host": [
-						"{{url}}"
-					],
-					"path": [
-						"org",
-						"{{org_id}}"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Delete Org 2",
 			"event": [
 				{
@@ -102,6 +51,57 @@
 					"path": [
 						"org",
 						"{{org_id_2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Org 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "720cd59d-dee7-4f63-b145-3475bf1a28ef",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "{{org_token}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/org/{{org_id}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"org",
+						"{{org_id}}"
 					]
 				}
 			},
