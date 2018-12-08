@@ -4158,7 +4158,7 @@
 									"",
 									"pm.test(\"Response have disease\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.diagnosises[0].disease.icd10).to.eql(\"i10\");",
+									"    pm.expect(jsonData.diagnosises[0].disease.icd10).to.eql(\"Z39.2\");",
 									"});"
 								],
 								"type": "text/javascript"
@@ -4185,135 +4185,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"id\": \"73008541152448718e204a104a8d1a34\",\n  \"providerId\": \"5c07f94a6eabfa0004258b77\",\n  \"patientId\": \"5c07fb5c6eabfa000425bc8a\",\n  \"syntom\": \" ติดตามเยี่ยมมารดาหลังคลอดครั้งที่3\",\n  \"weight\": 64.5,\n  \"height\": 158,\n  \"pulseRate\": 96,\n  \"bodyTemperature\": 36.5,\n  \"diagnosises\": [\n    {\n      \"disease\": {\n        \"icd10\": \"Z39.2\",\n        \"isEpimedic\": false,\n        \"isChronic\": false,\n        \"isNCD\": false,\n        \"type\": \"Icd10\",\n        \"translation\": {\n          \"th\": \"การดูแลและการตรวจหลังคลอด\"\n        },\n        \"id\": \"Z39.2\",\n        \"name\": \"Routine postpartum follow-up\"\n      },\n      \"dxType\": \"PRINCIPLE_DX\",\n      \"isContinued\": false\n    },\n    {\n      \"disease\": {\n        \"icd10\": \"Z71.8\",\n        \"isEpimedic\": false,\n        \"isChronic\": false,\n        \"isNCD\": false,\n        \"type\": \"Icd10\",\n        \"translation\": {\n          \"th\": \"การให้คำปรึกษาอื่นที่ระบุรายละเอียด\"\n        },\n        \"id\": \"Z71.8\",\n        \"name\": \"Other specified counselling\"\n      },\n      \"dxType\": \"OTHER\",\n      \"isContinued\": false\n    }\n  ],\n  \"photosUrl\": [],\n  \"communityServices\": [\n    {\n      \"detail\": \"แนะนำกระตุ้นพัฒนาการเด็กให้เหมาะสมกับวัย\",\n      \"result\": \"มารดามีความรู้และจะพาบุตรไปฉีดวัคซีน DTP+HB 1 อายุ 2 เดือน และตรวจพัฒนาการ\",\n      \"serviceType\": {\n        \"type\": \"ServiceType\",\n        \"translation\": {\n          \"th\": \"เยี่ยมหญิงหลังคลอด ครั้งที่ 2 (4-6 สัปดาห์) ที่ไม่มีภาวะผิดปกติ\"\n        },\n        \"link\": {\n          \"isSynced\": true,\n          \"lastSync\": \"2018-11-22T16:27:43.127+07:00\",\n          \"system\": \"JHICS\",\n          \"keys\": {\n            \"code\": \"1A213\",\n            \"map\": \"1A213\"\n          }\n        },\n        \"id\": \"1A213\",\n        \"name\": \"เยี่ยมหญิงหลังคลอด ครั้งที่ 2 (4-6 สัปดาห์) ที่ไม่มีภาวะผิดปกติ\"\n      },\n      \"id\": \"7e7cb35e3c33445f9c791bfc2c3946a0\",\n      \"type\": \"HomeVisit\",\n      \"timestamp\": \"2018-12-06T00:00:21.739+07:00\"\n    }\n  ],\n  \"specialPPs\": [\n    {\n      \"ppType\": {\n        \"type\": \"PPType\",\n        \"translation\": {},\n        \"id\": \"1B52\",\n        \"name\": \"ผู้มารับบริการมีพฤติกรรมไม่เคยสูบบุหรี่\"\n      },\n      \"time\": \"2018-11-12T12:49:11.000+07:00\",\n      \"endTime\": \"2018-11-12T12:55:33.000+07:00\",\n      \"providerId\": \"5c07f94a6eabfa0004258b77\",\n      \"patientId\": \"5c07fb5c6eabfa000425bc8a\",\n      \"id\": \"b3b610916d0b4198a488f7b24db16438\",\n      \"type\": \"SpecialPP\",\n      \"timestamp\": \"2018-12-06T00:00:21.739+07:00\"\n    },\n    {\n      \"ppType\": {\n        \"type\": \"PPType\",\n        \"translation\": {},\n        \"id\": \"1B600\",\n        \"name\": \"ผู้มารับบริการไม่เคยดื่มเครื่องดื่มแอลกอฮอล์ ตลอดชีวิตที่ผ่านมา\"\n      },\n      \"time\": \"2018-11-12T12:49:11.000+07:00\",\n      \"endTime\": \"2018-11-12T12:55:33.000+07:00\",\n      \"providerId\": \"5c07f94a6eabfa0004258b77\",\n      \"patientId\": {{person_id_porntipa}},\n      \"id\": \"b3b610916d0b4198a488f7b24db16438\",\n      \"type\": \"SpecialPP\",\n      \"timestamp\": \"2018-12-06T00:00:21.739+07:00\"\n    }\n  ],\n  \"time\": \"2018-11-12T12:49:11.000+07:00\",\n  \"endTime\": \"2018-11-12T12:55:33.000+07:00\",\n  \"type\": \"HealthCareService\",\n  \"timestamp\": \"2018-11-19T12:55:34.000+07:00\",\n  \"suggestion\": \" แนะนำการดูแลมารดาหลังคลอด การเลียงดูบุตร ด้วยนมแม่ ให้คำแนะนำเรื่องวัคซีน และแรื่องสมุนไพรไพรการทับหม้อเกลือ\",\n  \"waist\": 78,\n  \"note\": \"เยี่ยมมารดาครั้งที่3\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-12-05T23:37:12.885+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"01092\",\n      \"visitno\": \"289706\",\n      \"pid\": \"9462\",\n      \"rightcode\": \"89\",\n      \"rightno\": \"R89130038321975\",\n      \"hosmain\": \"10761\",\n      \"hossub\": \"01092\"\n    }\n  },\n  \"nextAppoint\": \"2019-01-09\",\n  \"bloodPressure\": {\n    \"systolic\": 110,\n    \"diastolic\": 62\n  },\n  \"bloodPressure2nd\": {\n    \"systolic\": 116,\n    \"diastolic\": 66\n  }\n}"
-						},
-						"url": {
-							"raw": "{{url}}/org/{{org_id}}/healthcareservice",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"org",
-								"{{org_id}}",
-								"healthcareservice"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "healthcareservice",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"detail\": \"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\r\n    \"nextAppoint\": \"2018-09-25\",\r\n    \"plan\": \"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\r\n    \"result\": \"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\r\n    \"serviceType\": {\r\n        \"id\": \"1A011\",\r\n        \"name\": \"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \",\r\n        \"translation\": {}\r\n    },\r\n    \"bloodPressure\": {\r\n        \"diastolic\": 69.0,\r\n        \"systolic\": 110.0\r\n    },\r\n    \"bodyTemperature\": 37.0,\r\n    \"diagnosises\": [\r\n        {\r\n            \"disease\": {\r\n                \"icd10\": \"A01.3\",\r\n                \"isChronic\": false,\r\n                \"isEpimedic\": false,\r\n                \"isNCD\": false,\r\n                \"id\": \"cbc60d722a014e428d15d135525d1f86\",\r\n                \"name\": \"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\",\r\n                \"translation\": {}\r\n            },\r\n            \"dxType\": \"PRINCIPLE_DX\",\r\n            \"isContinued\": false\r\n        }\r\n    ],\r\n    \"endTime\": \"2018-09-18T10:27:58.483+07:00\",\r\n    \"height\": 180.0,\r\n    \"patientId\": \"5b9770e029191b0004c91a56\",\r\n    \"photosUrl\": [],\r\n    \"providerId\": \"5b9743345a2e99000421db07\",\r\n    \"pulseRate\": 70.0,\r\n    \"respiratoryRate\": 13.0,\r\n    \"syntom\": \"หน้าซีดร่างกายอ่อนเพลีย\",\r\n    \"time\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"waist\": 82.0,\r\n    \"weight\": 60.0,\r\n    \"id\": \"cd4eed87ad134151b2ec896fd5f7c71d\",\r\n    \"timestamp\": \"2018-09-18T10:22:58.483+07:00\",\r\n    \"type\": \"HomeVisit\"\r\n}"
-								},
-								"url": {
-									"raw": "{{url}}/org/{{org_id}}/healthcareservice",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"org",
-										"{{org_id}}",
-										"healthcareservice"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Connection",
-									"value": "keep-alive",
-									"name": "Connection",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"key": "Content-Length",
-									"value": "1426",
-									"name": "Content-Length",
-									"description": "The length of the response body in octets (8-bit bytes)"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"name": "Content-Type",
-									"description": "The mime type of this content"
-								},
-								{
-									"key": "Date",
-									"value": "Mon, 24 Sep 2018 06:56:16 GMT",
-									"name": "Date",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"key": "Server",
-									"value": "Jetty(9.4.z-SNAPSHOT)",
-									"name": "Server",
-									"description": "A name for the server"
-								},
-								{
-									"key": "Via",
-									"value": "1.1 vegur",
-									"name": "Via",
-									"description": "Informs the client of proxies through which the response was sent."
-								}
-							],
-							"cookie": [],
-							"body": "{\"detail\":\"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\"result\":\"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\"plan\":\"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\"nextAppoint\":\"2018-09-25\",\"serviceType\":{\"translation\":{},\"id\":\"1A011\",\"name\":\"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \"},\"time\":\"2018-09-18T03:22:58.483Z\",\"endTime\":\"2018-09-18T03:27:58.483Z\",\"syntom\":\"หน้าซีดร่างกายอ่อนเพลีย\",\"weight\":60.0,\"height\":180.0,\"waist\":82.0,\"bloodPressure\":{\"systolic\":110.0,\"diastolic\":69.0},\"pulseRate\":70.0,\"respiratoryRate\":13.0,\"bodyTemperature\":37.0,\"diagnosises\":[{\"disease\":{\"icd10\":\"A01.3\",\"isEpimedic\":false,\"isChronic\":false,\"isNCD\":false,\"translation\":{},\"id\":\"cbc60d722a014e428d15d135525d1f86\",\"name\":\"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\"},\"dxType\":\"PRINCIPLE_DX\",\"isContinued\":false}],\"photosUrl\":[],\"providerId\":\"5b9743345a2e99000421db07\",\"patientId\":\"5b9770e029191b0004c91a56\",\"id\":\"5ba88a90b343b6000497d25e\",\"type\":\"HomeVisit\",\"timestamp\":\"2018-09-18T03:22:58.483Z\"}"
-						}
-					]
-				},
-				{
-					"name": "New visit Porntipa By Org Token No Link",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "ca2c4de1-3a4a-4888-bfa1-fb22461ec1df",
-								"exec": [
-									"pm.test(\"Status code is 201\", function () {",
-									"    pm.response.to.have.status(201);",
-									"});",
-									"",
-									"pm.test(\"Response have disease\", function () {",
-									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData.diagnosises[0].disease.icd10).to.eql(\"i10\");",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{org_token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"nextAppoint\": \"2019-09-21\",\n  \"syntom\": \"ทานอาหารได้น้อย เบื่ออาหาร\",\n  \"weight\": 61.5,\n  \"height\": 170.0,\n  \"bloodPressure\": {\n    \"systolic\": 145.0,\n    \"diastolic\": 95.0\n  },\n  \"pulseRate\": 72.0,\n  \"respiratoryRate\": 24.0,\n  \"bodyTemperature\": 37.5,\n  \"diagnosises\": [\n    {\n      \"disease\": {\n        \"icd10\": \"i10\",\n        \"isEpimedic\": false,\n        \"isChronic\": true,\n        \"isNCD\": true,\n        \"type\": \"Icd10\",\n        \"translation\": {\n          \"th\": \"ความดันโลหิตสูง\"\n        },\n        \"id\": \"7c195f4604104761bd25822d0806702a\",\n        \"name\": \"Hypertension\"\n      },\n      \"dxType\": \"PRINCIPLE_DX\",\n      \"isContinued\": false\n    }\n  ],\n  \"photosUrl\": [\n    \"http://ffc.in.th/img/ffcc.jpg\",\n    \"http://ffc.in.th/img/ffcc1.jpg\"\n  ],\n  \"communityServices\": [\n    {\n      \"detail\": \"ตรวจร่างกายทั่วไป / อธิบานผลเสียของโรค / เปิดโอกาสให้ผู้ป่วยซักถาม\",\n      \"result\": \"ผู้ป่วยเข้าใจเกี่ยวกับโรค สามารถดูแลตัวเองได้และปฎิบัติตามคำแนะนำได้ดี\",\n      \"plan\": \"ติดตามเยี่ยมปีละ 1 ครั้ง\",\n      \"serviceType\": {\n        \"type\": \"ServiceType\",\n        \"translation\": {},\n        \"id\": \"1A000\",\n        \"name\": \"เยี่ยมผู้ป่วยโรคความดันโลหิตสูง\"\n      },\n      \"id\": \"7759f3719b2147cbbecf9ffbc1b7ebba\",\n      \"type\": \"HomeVisit\",\n      \"timestamp\": \"2018-11-20T10:16:04.733+07:00\"\n    }\n  ],\n  \"ncdScreen\": {\n    \"hasHtInFamily\": true,\n    \"smoke\": \"USUALLY\",\n    \"alcohol\": \"RARELY\",\n    \"bloodSugar\": 150.0,\n    \"weight\": 61.5,\n    \"height\": 170.0,\n    \"bloodPressure\": {\n      \"systolic\": 145.0,\n      \"diastolic\": 95.0\n    },\n    \"time\": \"2018-11-20T10:16:04.671+07:00\",\n    \"endTime\": \"2018-11-20T10:21:04.671+07:00\",\n    \"location\": {\n      \"type\": \"Point\",\n      \"coordinates\": [\n        120.029384,\n        14.19239\n      ]\n    },\n    \"providerId\": \"1ea3429ba3dc48068b1ed2d6\",\n    \"patientId\": \"9bd09011bc9a4aec92c3b4a519733bb9\",\n    \"id\": \"339f9a7868ea4023bb4be2c5c74bf7c4\",\n    \"type\": \"NCDScreen\",\n    \"timestamp\": \"2018-11-20T10:16:04.733+07:00\"\n  },\n  \"specialPPs\": [\n    {\n      \"ppType\": {\n        \"type\": \"PPType\",\n        \"translation\": {},\n        \"id\": \"1B1232\",\n        \"name\": \"การตรวจคัดกรองความเสี่ยงโรคหัวใจและหลอดเลือดสมองในผู้สูงอายุ พบว่ามีความเสี่ยงสูง\"\n      },\n      \"time\": \"2018-11-20T10:16:04.671+07:00\",\n      \"endTime\": \"2018-11-20T10:21:04.671+07:00\",\n      \"location\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n          120.029384,\n          14.19239\n        ]\n      },\n      \"providerId\": \"1ea3429ba3dc48068b1ed2d6\",\n      \"patientId\": \"9bd09011bc9a4aec92c3b4a519733bb9\",\n      \"id\": \"c7c5c1f8bf964886a756c804bed3c6ae\",\n      \"type\": \"SpecialPP\",\n      \"timestamp\": \"2018-11-20T10:16:04.733+07:00\"\n    }\n  ],\n  \"time\": \"2018-11-20T10:16:04.671+07:00\",\n  \"endTime\": \"2018-11-20T10:21:04.671+07:00\",\n  \"location\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      120.029384,\n      14.19239\n    ]\n  },\n  \"providerId\": \"1ea3429ba3dc48068b1ed2d6\",\n  \"patientId\": {{person_id_porntipa}},\n  \"id\": \"c7c5c1f8bf964886a756c804bed3c6ae\",\n  \"type\": \"HealthCareService\",\n  \"timestamp\": \"2018-11-20T10:16:04.671+07:00\"\n}\n"
+							"raw": "{\n  \"id\": \"73008541152448718e204a104a8d1a34\",\n  \"providerId\": \"5c07f94a6eabfa0004258b77\",\n  \"patientId\": {{person_id_porntipa}},\n  \"syntom\": \" ติดตามเยี่ยมมารดาหลังคลอดครั้งที่3\",\n  \"weight\": 64.5,\n  \"height\": 158,\n  \"pulseRate\": 96,\n  \"bodyTemperature\": 36.5,\n  \"diagnosises\": [\n    {\n      \"disease\": {\n        \"icd10\": \"Z39.2\",\n        \"isEpimedic\": false,\n        \"isChronic\": false,\n        \"isNCD\": false,\n        \"type\": \"Icd10\",\n        \"translation\": {\n          \"th\": \"การดูแลและการตรวจหลังคลอด\"\n        },\n        \"id\": \"Z39.2\",\n        \"name\": \"Routine postpartum follow-up\"\n      },\n      \"dxType\": \"PRINCIPLE_DX\",\n      \"isContinued\": false\n    },\n    {\n      \"disease\": {\n        \"icd10\": \"Z71.8\",\n        \"isEpimedic\": false,\n        \"isChronic\": false,\n        \"isNCD\": false,\n        \"type\": \"Icd10\",\n        \"translation\": {\n          \"th\": \"การให้คำปรึกษาอื่นที่ระบุรายละเอียด\"\n        },\n        \"id\": \"Z71.8\",\n        \"name\": \"Other specified counselling\"\n      },\n      \"dxType\": \"OTHER\",\n      \"isContinued\": false\n    }\n  ],\n  \"photosUrl\": [],\n  \"communityServices\": [\n    {\n      \"detail\": \"แนะนำกระตุ้นพัฒนาการเด็กให้เหมาะสมกับวัย\",\n      \"result\": \"มารดามีความรู้และจะพาบุตรไปฉีดวัคซีน DTP+HB 1 อายุ 2 เดือน และตรวจพัฒนาการ\",\n      \"serviceType\": {\n        \"type\": \"ServiceType\",\n        \"translation\": {\n          \"th\": \"เยี่ยมหญิงหลังคลอด ครั้งที่ 2 (4-6 สัปดาห์) ที่ไม่มีภาวะผิดปกติ\"\n        },\n        \"link\": {\n          \"isSynced\": true,\n          \"lastSync\": \"2018-11-22T16:27:43.127+07:00\",\n          \"system\": \"JHICS\",\n          \"keys\": {\n            \"code\": \"1A213\",\n            \"map\": \"1A213\"\n          }\n        },\n        \"id\": \"1A213\",\n        \"name\": \"เยี่ยมหญิงหลังคลอด ครั้งที่ 2 (4-6 สัปดาห์) ที่ไม่มีภาวะผิดปกติ\"\n      },\n      \"id\": \"7e7cb35e3c33445f9c791bfc2c3946a0\",\n      \"type\": \"HomeVisit\",\n      \"timestamp\": \"2018-12-06T00:00:21.739+07:00\"\n    }\n  ],\n  \"specialPPs\": [\n    {\n      \"ppType\": {\n        \"type\": \"PPType\",\n        \"translation\": {},\n        \"id\": \"1B52\",\n        \"name\": \"ผู้มารับบริการมีพฤติกรรมไม่เคยสูบบุหรี่\"\n      },\n      \"time\": \"2018-11-12T12:49:11.000+07:00\",\n      \"endTime\": \"2018-11-12T12:55:33.000+07:00\",\n      \"providerId\": \"5c07f94a6eabfa0004258b77\",\n      \"patientId\": {{person_id_porntipa}},\n      \"id\": \"b3b610916d0b4198a488f7b24db16438\",\n      \"type\": \"SpecialPP\",\n      \"timestamp\": \"2018-12-06T00:00:21.739+07:00\"\n    },\n    {\n      \"ppType\": {\n        \"type\": \"PPType\",\n        \"translation\": {},\n        \"id\": \"1B600\",\n        \"name\": \"ผู้มารับบริการไม่เคยดื่มเครื่องดื่มแอลกอฮอล์ ตลอดชีวิตที่ผ่านมา\"\n      },\n      \"time\": \"2018-11-12T12:49:11.000+07:00\",\n      \"endTime\": \"2018-11-12T12:55:33.000+07:00\",\n      \"providerId\": \"5c07f94a6eabfa0004258b77\",\n      \"patientId\":  {{person_id_porntipa}},\n      \"id\": \"b3b610916d0b4198a488f7b24db16438\",\n      \"type\": \"SpecialPP\",\n      \"timestamp\": \"2018-12-06T00:00:21.739+07:00\"\n    }\n  ],\n  \"time\": \"2018-11-12T12:49:11.000+07:00\",\n  \"endTime\": \"2018-11-12T12:55:33.000+07:00\",\n  \"type\": \"HealthCareService\",\n  \"timestamp\": \"2018-11-19T12:55:34.000+07:00\",\n  \"suggestion\": \" แนะนำการดูแลมารดาหลังคลอด การเลียงดูบุตร ด้วยนมแม่ ให้คำแนะนำเรื่องวัคซีน และแรื่องสมุนไพรไพรการทับหม้อเกลือ\",\n  \"waist\": 78,\n  \"note\": \"เยี่ยมมารดาครั้งที่3\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-12-05T23:37:12.885+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"01092\",\n      \"visitno\": \"289706\",\n      \"pid\": \"9462\",\n      \"rightcode\": \"89\",\n      \"rightno\": \"R89130038321975\",\n      \"hosmain\": \"10761\",\n      \"hossub\": \"01092\"\n    }\n  },\n  \"nextAppoint\": \"2019-01-09\",\n  \"bloodPressure\": {\n    \"systolic\": 110,\n    \"diastolic\": 62\n  },\n  \"bloodPressure2nd\": {\n    \"systolic\": 116,\n    \"diastolic\": 66\n  }\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org/{{org_id}}/healthcareservice",
@@ -4414,7 +4286,7 @@
 									"",
 									"pm.test(\"Response have disease\", function () {",
 									"    var jsonData = pm.response.json();",
-									"    pm.expect(jsonData[0].diagnosises[0].disease.icd10).to.eql(\"i10\");",
+									"    pm.expect(jsonData[0].diagnosises[0].disease.icd10).to.eql(\"Z39.2\");",
 									"});"
 								],
 								"type": "text/javascript"
