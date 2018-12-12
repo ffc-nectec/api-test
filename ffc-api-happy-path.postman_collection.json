@@ -4145,7 +4145,7 @@
 			"name": "Visit",
 			"item": [
 				{
-					"name": "New visit Porntipa By Org Token New",
+					"name": "New visit Porntipa By Org Token",
 					"event": [
 						{
 							"listen": "test",
@@ -4159,6 +4159,15 @@
 									"pm.test(\"Response have disease\", function () {",
 									"    var jsonData = pm.response.json();",
 									"    pm.expect(jsonData.diagnosises[0].disease.icd10).to.eql(\"Z39.2\");",
+									"});",
+									"",
+									"pm.test(\"Response have Person id\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"id\");",
+									"    ",
+									"    //set id to global variable for later use",
+									"    var idRes = pm.response.json();",
+									"    pm.globals.set(\"visit_id_porntipa\", idRes.id);",
+									"    ",
 									"});"
 								],
 								"type": "text/javascript"
