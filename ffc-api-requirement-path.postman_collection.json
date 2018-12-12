@@ -2869,12 +2869,12 @@
 							"listen": "test",
 							"script": {
 								"id": "2cd2ba75-f7cf-4b87-8504-35a02f898213",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 401\", function () {",
 									"    pm.response.to.have.status(401);",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -2906,13 +2906,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/99999/authorize",
+							"raw": "{{url}}/org/5c09a7af9ba4cb00049f4d8e/authorize",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
-								"99999",
+								"5c09a7af9ba4cb00049f4d8e",
 								"authorize"
 							]
 						},
