@@ -1231,7 +1231,7 @@
 							"basic": [
 								{
 									"key": "password",
-									"value": "2122",
+									"value": "hipuy",
 									"type": "string"
 								},
 								{
@@ -1491,23 +1491,15 @@
 					]
 				},
 				{
-					"name": "Add Org Login",
+					"name": "Find All User in Org",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "27330a9b-cc67-4964-81b5-f4aa40a31f98",
 								"exec": [
-									"pm.test(\"Status code is 201\", function () {",
-									"    pm.response.to.have.status(201);",
-									"});",
-									"",
-									"pm.test(\"Response have token\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"token\");",
-									"    ",
-									"    //set token to global variable for later use",
-									"    var orgRes = pm.response.json();",
-									"    pm.globals.set(\"org_token\", orgRes.token);",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
 									"});"
 								],
 								"type": "text/javascript"
