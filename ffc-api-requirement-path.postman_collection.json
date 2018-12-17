@@ -48,6 +48,43 @@
 						"description": "url ในการค้นหาโรคไม่ถูกต้องตอบ 404"
 					},
 					"response": []
+				},
+				{
+					"name": "find homehealth not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "810c6cab-30ee-4524-b4e7-561363dbe4b7",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/homehealthkiki",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealthkiki"
+							]
+						},
+						"description": "url ในการค้นหาประเภทการเยี่ยมไม่ถูกต้อง ต้องตอบ 404"
+					},
+					"response": []
 				}
 			]
 		},
