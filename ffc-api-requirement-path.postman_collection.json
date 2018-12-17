@@ -6,6 +6,52 @@
 	},
 	"item": [
 		{
+			"name": "Lookup Not found",
+			"item": [
+				{
+					"name": "Find disease not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bf2ead31-71a5-416c-b30c-3711230aa967",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/diseaseklkl",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"diseaseklkl"
+							]
+						},
+						"description": "url ในการค้นหาโรคไม่ถูกต้องตอบ 404"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Organization Not Found",
 			"item": [
 				{
