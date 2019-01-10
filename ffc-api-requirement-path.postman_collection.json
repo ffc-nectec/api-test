@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Lookup Not found",
+			"name": "Lookup",
 			"item": [
 				{
 					"name": "Find disease not found",
@@ -50,15 +50,15 @@
 					"response": []
 				},
 				{
-					"name": "find homehealth not found",
+					"name": "homehealth not found",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"id": "810c6cab-30ee-4524-b4e7-561363dbe4b7",
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
 									"});",
 									""
 								],
@@ -85,6 +85,403 @@
 						"description": "url ในการค้นหาประเภทการเยี่ยมไม่ถูกต้อง ต้องตอบ 404"
 					},
 					"response": []
+				},
+				{
+					"name": "homehealthSearch q=aaaa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e2867e8-8710-4955-b77a-9ea90619c58f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/homehealth?query=aaaa",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "aaaa"
+								}
+							]
+						},
+						"description": "ค้นหาประเภทการเยี่ยมโดยใช้ id"
+					},
+					"response": []
+				},
+				{
+					"name": "homehealthSearchTH q=เสื่อม",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2e8eaf15-1416-49d8-84d1-7d91d3d30799",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have เยี่ยมผู้ป่วยโรคสมองเสื่อม\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"เยี่ยมผู้ป่วยโรคสมองเสื่อม\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/homehealth?query=เสื่อม",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "เสื่อม"
+								}
+							]
+						},
+						"description": "ค้นหาประภทการเยี่ยมที่มีคำว่าเสื่อมได้สำเร็จ"
+					},
+					"response": []
+				},
+				{
+					"name": "homehealthSearchById q=1106",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "20034976-d757-4545-a018-5a2f38942c0d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have translation\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"1106\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/homehealth?query=1106",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "1106"
+								}
+							]
+						},
+						"description": "ค้นหาประเภทการเยี่ยมโดยใช้ id"
+					},
+					"response": []
+				},
+				{
+					"name": "homehealthSearch q=",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "02e5a648-56b1-4b1c-801f-0fdb4e102db5",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/homehealth?query=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": ""
+								}
+							]
+						},
+						"description": "ค้นหาประเภทการเยี่ยมแต่ไม่ใส่ค่าต้องตอบ 200"
+					},
+					"response": []
+				},
+				{
+					"name": "diseaseSearch q=ค๊อกคัส",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f8ae75ad-6c4b-4315-9e92-c01cd39189f9",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have translation\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ค๊อกคัส\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/disease?query=ค๊อกคัส",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"disease"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "ค๊อกคัส"
+								}
+							]
+						},
+						"description": "ค้นหาโรคด้วยชื่อภาษาไทยสำเร็จ"
+					},
+					"response": []
+				},
+				{
+					"name": "diseaseSearchNotfound",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e2867e8-8710-4955-b77a-9ea90619c58f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/homehealth?query=aaaa",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"homehealth"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "aaaa"
+								}
+							]
+						},
+						"description": "ค้นหาโรคไม่พบต้องตอบ 404"
+					},
+					"response": []
+				},
+				{
+					"name": "diseaseSearch q=",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b922ebe7-42ff-4a38-a2ae-3a7d9c0dff83",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/disease?query=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"disease"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": ""
+								}
+							]
+						},
+						"description": "ค้นหาประเภทการเยี่ยมแต่ไม่ใส่ค่าต้องตอบ 200"
+					},
+					"response": []
+				},
+				{
+					"name": "diseaseSearchById",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "302738bc-4ed5-4a6e-a35d-5828b987cd91",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have A01.3\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"A01.3\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/disease?query=A01.3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"disease"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "A01.3"
+								}
+							]
+						},
+						"description": "ค้นหาโรคด้วย Id สำเร็จ"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4fe89252-4a4c-408b-b694-700a63616364",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "17d8720f-1504-4aaa-81b0-48f290e21636",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
 			]
 		},
@@ -5790,6 +6187,58 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "diseaseSearch q=fever C",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "20a93047-e1aa-4612-8dba-5e07e0560d9b",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response have Paratyphoid fever C\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Paratyphoid fever C\");",
+							"});",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "th"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/disease?query=fever C",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"disease"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "fever C"
+						}
+					]
+				},
+				"description": "ค้นหาโรคด้วยชื่อภาษาอังกฤษสำเร็จ"
+			},
+			"response": []
 		}
 	]
 }

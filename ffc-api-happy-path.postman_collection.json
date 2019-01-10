@@ -46,186 +46,6 @@
 					"response": []
 				},
 				{
-					"name": "homehealthSearchTH q=เสื่อม",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "2e8eaf15-1416-49d8-84d1-7d91d3d30799",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"pm.test(\"Response have เยี่ยมผู้ป่วยโรคสมองเสื่อม\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"เยี่ยมผู้ป่วยโรคสมองเสื่อม\");",
-									"});",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url}}/homehealth?query=เสื่อม",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"homehealth"
-							],
-							"query": [
-								{
-									"key": "query",
-									"value": "เสื่อม"
-								}
-							]
-						},
-						"description": "ค้นหาประภทการเยี่ยมที่มีคำว่าเสื่อมได้สำเร็จ"
-					},
-					"response": []
-				},
-				{
-					"name": "homehealthSearchById q=1106",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "20034976-d757-4545-a018-5a2f38942c0d",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									"pm.test(\"Response have translation\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"1106\");",
-									"});",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url}}/homehealth?query=1106",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"homehealth"
-							],
-							"query": [
-								{
-									"key": "query",
-									"value": "1106"
-								}
-							]
-						},
-						"description": "ค้นหาประเภทการเยี่ยมโดยใช้ id"
-					},
-					"response": []
-				},
-				{
-					"name": "homehealthSearch q=",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "02e5a648-56b1-4b1c-801f-0fdb4e102db5",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									"",
-									""
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url}}/homehealth?query=",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"homehealth"
-							],
-							"query": [
-								{
-									"key": "query",
-									"value": ""
-								}
-							]
-						},
-						"description": "ค้นหาประเภทการเยี่ยมแต่ไม่ใส่ค่าต้องตอบ 200"
-					},
-					"response": []
-				},
-				{
-					"name": "homehealthSearchNotfound",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "3e2867e8-8710-4955-b77a-9ea90619c58f",
-								"type": "text/javascript",
-								"exec": [
-									"pm.test(\"Status code is 404\", function () {",
-									"    pm.response.to.have.status(404);",
-									"});"
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url}}/homehealth?query=aaaa",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"homehealth"
-							],
-							"query": [
-								{
-									"key": "query",
-									"value": "aaaa"
-								}
-							]
-						},
-						"description": "ค้นหาประเภทการเยี่ยมโดยใช้ id"
-					},
-					"response": []
-				},
-				{
 					"name": "disease",
 					"event": [
 						{
@@ -8157,6 +7977,147 @@
 				},
 				{
 					"name": "Find Person By id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "84a5139c-a10e-4fe8-aa6f-a9d58960552e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have id\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"1154801544870\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{mobile_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/person/{{person_id_porntipa}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"person",
+								"{{person_id_porntipa}}"
+							]
+						},
+						"description": "คนหาคนจากเลขบัตรประชาชน\n"
+					},
+					"response": [
+						{
+							"name": "Find Person query= 3130100602804",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"e079e175c75a44f180e8eaeb\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person?query=4130300002574",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "4130300002574"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "max-age=5",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1427",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Sep 2018 06:56:25 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(9.4.z-SNAPSHOT)",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								}
+							],
+							"cookie": [],
+							"body": "[{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"4130300002574\"}],\"prename\":\"นาง\",\"firstname\":\"ลาวัลย์\",\"lastname\":\"รอดทุกข์\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1962-11-04\",\"chronics\":[{\"diagDate\":\"2018-09-24\",\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-24T13:44:33.549+07:00\",\"system\":\"JHICS\",\"keys\":{\"pcucodeperson\":\"01088\",\"pid\":\"4263\",\"hcode\":\"609\"}},\"disease\":{\"icd10\":\"E14.9\",\"isEpimedic\":false,\"isChronic\":true,\"isNCD\":false,\"translation\":{\"th\":\"เบาหวานที่ไม่ระบุรายละเอียด ไม่มีภาวะแทรกซ้อน\"},\"id\":\"fb708002fb0647a0a26591d4c8ecb6eb\",\"name\":\"Unspecified diabetes mellitus at without complications\"}},{\"diagDate\":\"2018-09-24\",\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-24T13:44:33.549+07:00\",\"system\":\"JHICS\",\"keys\":{\"pcucodeperson\":\"01088\",\"pid\":\"4263\",\"hcode\":\"609\"}},\"disease\":{\"icd10\":\"I10\",\"isEpimedic\":false,\"isChronic\":true,\"isNCD\":true,\"translation\":{\"th\":\"ความดันโลหิตสูงไม่ทราบสาเหตุ (ปฐมภูมิ)\"},\"id\":\"1b5466653d124f27a57014c6255a20a2\",\"name\":\"Essential (primary) hypertension\"}}],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-24T13:44:32.904+07:00\",\"system\":\"JHICS\",\"keys\":{\"pcucodeperson\":\"01088\",\"pid\":\"4263\",\"hcode\":\"609\"}},\"id\":\"5ba888242ffa860004ec0920\",\"type\":\"Person\",\"timestamp\":\"2018-09-24T13:44:32.904+07:00\"}]"
+						}
+					]
+				},
+				{
+					"name": "Find Person By id มะลิ",
 					"event": [
 						{
 							"listen": "test",
