@@ -9,48 +9,7 @@
 			"name": "Lookup",
 			"item": [
 				{
-					"name": "Find disease not found",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "bf2ead31-71a5-416c-b30c-3711230aa967",
-								"exec": [
-									"pm.test(\"Status code is 404\", function () {",
-									"    pm.response.to.have.status(404);",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Accept-Language",
-								"value": "th"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url}}/diseaseklkl",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"diseaseklkl"
-							]
-						},
-						"description": "url ในการค้นหาโรคไม่ถูกต้องตอบ 404"
-					},
-					"response": []
-				},
-				{
-					"name": "homehealth not found",
+					"name": "Get homehealth not found",
 					"event": [
 						{
 							"listen": "test",
@@ -87,7 +46,7 @@
 					"response": []
 				},
 				{
-					"name": "homehealthSearch q=aaaa",
+					"name": "Get homehealth by name not found",
 					"event": [
 						{
 							"listen": "test",
@@ -124,12 +83,12 @@
 								}
 							]
 						},
-						"description": "ค้นหาประเภทการเยี่ยมโดยใช้ id"
+						"description": "ค้นหาประเภทการเยี่ยมโดยใช้ value ที่ไม่มี"
 					},
 					"response": []
 				},
 				{
-					"name": "homehealthSearchTH q=เสื่อม",
+					"name": "Get homehealth by name",
 					"event": [
 						{
 							"listen": "test",
@@ -176,7 +135,7 @@
 					"response": []
 				},
 				{
-					"name": "homehealthSearchById q=1106",
+					"name": "Get homehealth by id",
 					"event": [
 						{
 							"listen": "test",
@@ -263,6 +222,47 @@
 							]
 						},
 						"description": "ค้นหาประเภทการเยี่ยมแต่ไม่ใส่ค่าต้องตอบ 200"
+					},
+					"response": []
+				},
+				{
+					"name": "Find disease not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bf2ead31-71a5-416c-b30c-3711230aa967",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/diseaseklkl",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"diseaseklkl"
+							]
+						},
+						"description": "url ในการค้นหาโรคไม่ถูกต้องตอบ 404"
 					},
 					"response": []
 				},
@@ -971,7 +971,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"พรทิพา\",\n  \"displayName\": \"พรทิพา\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T14:19:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"100145\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n}"
+							"raw": "{\n  \"name\": \"รพสต-พรทิพา1\",\n  \"displayName\": \"รพ.สต. พรทิพา 1\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T14:19:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"100145\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org",
@@ -1529,6 +1529,1267 @@
 							"header": [],
 							"cookie": [],
 							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Find Org Copy",
+			"item": [
+				{
+					"name": "Find  Org =รพสต-พรทิพา1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a89dfa5-c0a9-48b9-bcf8-d23f11e296c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?query=รพสต-พรทิพา1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "รพสต-พรทิพา1"
+								}
+							]
+						},
+						"description": "ค้นหาหน่วยงานเนคเทค"
+					},
+					"response": [
+						{
+							"name": "Find my Org",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org?my=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									],
+									"query": [
+										{
+											"key": "my",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "153",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 20 Mar 2018 04:28:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-kumJZhwOSO2WTj+KJgW7gg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find  Org =รพ.สต.พรทิพา1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a89dfa5-c0a9-48b9-bcf8-d23f11e296c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?query=รพ.สต.พรทิพา1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "รพ.สต.พรทิพา1"
+								}
+							]
+						},
+						"description": "ค้นหาหน่วยงานเนคเทค"
+					},
+					"response": [
+						{
+							"name": "Find my Org",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org?my=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									],
+									"query": [
+										{
+											"key": "my",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "153",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 20 Mar 2018 04:28:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-kumJZhwOSO2WTj+KJgW7gg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find  Org =รพ.สต. พรทิพา 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a89dfa5-c0a9-48b9-bcf8-d23f11e296c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?query=รพ.สต. พรทิพา 1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "รพ.สต. พรทิพา 1"
+								}
+							]
+						},
+						"description": "ค้นหาหน่วยงานเนคเทค"
+					},
+					"response": [
+						{
+							"name": "Find my Org",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org?my=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									],
+									"query": [
+										{
+											"key": "my",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "153",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 20 Mar 2018 04:28:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-kumJZhwOSO2WTj+KJgW7gg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find  Org =พรทิพา 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a89dfa5-c0a9-48b9-bcf8-d23f11e296c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?query=พรทิพา 1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "พรทิพา 1"
+								}
+							]
+						},
+						"description": "ค้นหาหน่วยงานเนคเทค"
+					},
+					"response": [
+						{
+							"name": "Find my Org",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org?my=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									],
+									"query": [
+										{
+											"key": "my",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "153",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 20 Mar 2018 04:28:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-kumJZhwOSO2WTj+KJgW7gg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find  Org =พรทิพา1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a89dfa5-c0a9-48b9-bcf8-d23f11e296c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?query=พรทิพา1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "พรทิพา1"
+								}
+							]
+						},
+						"description": "ค้นหาหน่วยงานเนคเทค"
+					},
+					"response": [
+						{
+							"name": "Find my Org",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org?my=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									],
+									"query": [
+										{
+											"key": "my",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "153",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 20 Mar 2018 04:28:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-kumJZhwOSO2WTj+KJgW7gg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find  Org =พร ทิ พา",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a89dfa5-c0a9-48b9-bcf8-d23f11e296c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?query=พร ทิ พา",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "พร ทิ พา"
+								}
+							]
+						},
+						"description": "ค้นหาหน่วยงานเนคเทค"
+					},
+					"response": [
+						{
+							"name": "Find my Org",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org?my=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									],
+									"query": [
+										{
+											"key": "my",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "153",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 20 Mar 2018 04:28:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-kumJZhwOSO2WTj+KJgW7gg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find  Org =ทิพา",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a89dfa5-c0a9-48b9-bcf8-d23f11e296c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?query=ทิพา",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "ทิพา "
+								}
+							]
+						},
+						"description": "ค้นหาหน่วยงานเนคเทค"
+					},
+					"response": [
+						{
+							"name": "Find my Org",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org?my=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									],
+									"query": [
+										{
+											"key": "my",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "153",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 20 Mar 2018 04:28:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-kumJZhwOSO2WTj+KJgW7gg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Find Org by pcucode=10008",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0a89dfa5-c0a9-48b9-bcf8-d23f11e296c6",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?query=100145",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "100145"
+								}
+							]
+						},
+						"description": "ค้นหาหน่วยงานเนคเทค"
+					},
+					"response": [
+						{
+							"name": "Find my Org",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org?my=true",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									],
+									"query": [
+										{
+											"key": "my",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "",
+									"name": "Access-Control-Allow-Credentials",
+									"description": "Indicates whether or not the response to the request can be exposed when the credentials flag is true. When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials."
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "",
+									"name": "Access-Control-Allow-Headers",
+									"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "",
+									"name": "Access-Control-Allow-Methods",
+									"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*",
+									"name": "Access-Control-Allow-Origin",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"key": "Access-Control-Expose-Headers",
+									"value": "",
+									"name": "Access-Control-Expose-Headers",
+									"description": "Lets a server whitelist headers that browsers are allowed to access."
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip",
+									"name": "Content-Encoding",
+									"description": "The type of encoding used on the data."
+								},
+								{
+									"key": "Content-Length",
+									"value": "153",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 20 Mar 2018 04:28:58 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-kumJZhwOSO2WTj+KJgW7gg\"",
+									"name": "ETag",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"key": "Server",
+									"value": "nginx",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding",
+									"name": "Vary",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
 						}
 					]
 				}
