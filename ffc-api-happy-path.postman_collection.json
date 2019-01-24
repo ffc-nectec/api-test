@@ -218,6 +218,58 @@
 						"description": "ขอข้อมูลรายการโรค  1 รายการ"
 					},
 					"response": []
+				},
+				{
+					"name": "Get 1 disease by name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "20a93047-e1aa-4612-8dba-5e07e0560d9b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have Paratyphoid fever C\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Paratyphoid fever C\");",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "th"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/disease?query=fever C",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"disease"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "fever C"
+								}
+							]
+						},
+						"description": "ขอรายการชื่อโรค 1 รายการ ด้วยชื่อภาษาอังกฤษ"
+					},
+					"response": []
 				}
 			]
 		},
