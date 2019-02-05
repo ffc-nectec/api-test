@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "9bbd8423-b322-4409-b036-d23765a1775e",
+		"name": "Legal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Legal",
+			"item": [
+				{
+					"name": "Refresh Legal Document",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/legal/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"legal",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get latest terms of uses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "38d69f9f-7253-4b51-abcb-ca0a6bc3cccc",
+								"exec": [
+									"pm.test(\"Response time is less than 3s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+									"});",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ข้อตกลงการใช้บริการ\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/legal/terms/latest",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"legal",
+								"terms",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get latest privacy policy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "281dbb3e-cb1e-4159-8913-eabb9c3791fa",
+								"exec": [
+									"pm.test(\"Response time is less than 3s\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(3000);",
+									"});",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"นโยบายความเป็นส่วนตัว\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/legal/privacy/latest",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"legal",
+								"privacy",
+								"latest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check terms of use agreement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1db0ae23-3589-4119-bc63-5363e29e8899",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{mobile_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/legal/terms/latest/agreement/{{org_id}}/{{user_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"legal",
+								"terms",
+								"latest",
+								"agreement",
+								"{{org_id}}",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check privacy policy agreement",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "368ab755-535b-4e27-99f5-9a22f9412b77",
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{mobile_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/legal/privacy/latest/agreement/{{org_id}}/{{user_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"legal",
+								"privacy",
+								"latest",
+								"agreement",
+								"{{org_id}}",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept privacy policy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1835d320-51ba-408c-b1ee-c5cccb7ece0e",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{mobile_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/legal/terms/n0currentVer/agreement/{{org_id}}/{{user_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"legal",
+								"terms",
+								"n0currentVer",
+								"agreement",
+								"{{org_id}}",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept term of use",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{mobile_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/legal/terms/lask39df/agreement/{{org_id}}/{{user_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"legal",
+								"terms",
+								"lask39df",
+								"agreement",
+								"{{org_id}}",
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
