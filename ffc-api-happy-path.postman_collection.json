@@ -824,6 +824,7 @@
 									"    //set token to global variable for later use",
 									"    var loginRes = pm.response.json();",
 									"    pm.globals.set(\"mobile_token\", loginRes.token);",
+									"    pm.globals.set(\"user_id\", loginRes.user.id);",
 									"    ",
 									"});",
 									"",
