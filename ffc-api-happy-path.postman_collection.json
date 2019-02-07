@@ -6328,6 +6328,145 @@
 							"body": "{\"detail\":\"ให้จิบน้ำผสมเกลือแร่ ทานยาแก้ท้องเสียตามฉลากอยากดื่มน้ำและพักผ่อนมากๆ\",\"result\":\"สุขภาพน่าจะดีขึ้น หลังกินยาแก้ท้องเสียและพักผ่อน\",\"plan\":\"ตรวจสอบว่าผู้รับบริการหายดีแล้ว\",\"nextAppoint\":\"2018-09-25\",\"serviceType\":{\"translation\":{},\"id\":\"1A011\",\"name\":\"เยี่ยมผู้ป่วยโรคอุจจาระร่วง \"},\"time\":\"2018-09-18T03:22:58.483Z\",\"endTime\":\"2018-09-18T03:27:58.483Z\",\"syntom\":\"หน้าซีดร่างกายอ่อนเพลีย\",\"weight\":60.0,\"height\":180.0,\"waist\":82.0,\"bloodPressure\":{\"systolic\":110.0,\"diastolic\":69.0},\"pulseRate\":70.0,\"respiratoryRate\":13.0,\"bodyTemperature\":37.0,\"diagnosises\":[{\"disease\":{\"icd10\":\"A01.3\",\"isEpimedic\":false,\"isChronic\":false,\"isNCD\":false,\"translation\":{},\"id\":\"cbc60d722a014e428d15d135525d1f86\",\"name\":\"ไข้รากสาดเทียม (พาราไทฟอยด์) ซี\"},\"dxType\":\"PRINCIPLE_DX\",\"isContinued\":false}],\"photosUrl\":[],\"providerId\":\"5b9743345a2e99000421db07\",\"patientId\":\"5b9770e029191b0004c91a56\",\"id\":\"5ba88a90b343b6000497d25e\",\"type\":\"HomeVisit\",\"timestamp\":\"2018-09-18T03:22:58.483Z\"}"
 						}
 					]
+				},
+				{
+					"name": "Get Person By icd10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "84a5139c-a10e-4fe8-aa6f-a9d58960552e",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{mobile_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/person/icd10/Z00.1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"person",
+								"icd10",
+								"Z00.1"
+							]
+						},
+						"description": "ขอข้อมูลบุคคลตามรหัสโรคที่ต้องการ"
+					},
+					"response": [
+						{
+							"name": "Find Person query= 3130100602804",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"e079e175c75a44f180e8eaeb\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person?query=4130300002574",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "4130300002574"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "max-age=5",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1427",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Sep 2018 06:56:25 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(9.4.z-SNAPSHOT)",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								}
+							],
+							"cookie": [],
+							"body": "[{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"4130300002574\"}],\"prename\":\"นาง\",\"firstname\":\"ลาวัลย์\",\"lastname\":\"รอดทุกข์\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1962-11-04\",\"chronics\":[{\"diagDate\":\"2018-09-24\",\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-24T13:44:33.549+07:00\",\"system\":\"JHICS\",\"keys\":{\"pcucodeperson\":\"01088\",\"pid\":\"4263\",\"hcode\":\"609\"}},\"disease\":{\"icd10\":\"E14.9\",\"isEpimedic\":false,\"isChronic\":true,\"isNCD\":false,\"translation\":{\"th\":\"เบาหวานที่ไม่ระบุรายละเอียด ไม่มีภาวะแทรกซ้อน\"},\"id\":\"fb708002fb0647a0a26591d4c8ecb6eb\",\"name\":\"Unspecified diabetes mellitus at without complications\"}},{\"diagDate\":\"2018-09-24\",\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-24T13:44:33.549+07:00\",\"system\":\"JHICS\",\"keys\":{\"pcucodeperson\":\"01088\",\"pid\":\"4263\",\"hcode\":\"609\"}},\"disease\":{\"icd10\":\"I10\",\"isEpimedic\":false,\"isChronic\":true,\"isNCD\":true,\"translation\":{\"th\":\"ความดันโลหิตสูงไม่ทราบสาเหตุ (ปฐมภูมิ)\"},\"id\":\"1b5466653d124f27a57014c6255a20a2\",\"name\":\"Essential (primary) hypertension\"}}],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-24T13:44:32.904+07:00\",\"system\":\"JHICS\",\"keys\":{\"pcucodeperson\":\"01088\",\"pid\":\"4263\",\"hcode\":\"609\"}},\"id\":\"5ba888242ffa860004ec0920\",\"type\":\"Person\",\"timestamp\":\"2018-09-24T13:44:32.904+07:00\"}]"
+						}
+					]
 				}
 			]
 		},
