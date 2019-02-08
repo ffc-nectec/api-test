@@ -533,6 +533,92 @@
 						"description": "ค้นหา Org ไม่พบต้องแจ้ง status code 404"
 					},
 					"response": []
+				},
+				{
+					"name": "Find all org Before Regis Org",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bd5bc291-e7c3-48c7-9a30-6147f09bfc04",
+								"type": "text/javascript",
+								"exec": [
+									" pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ไม่มีข้อมูลลงทะเบียน\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							]
+						},
+						"description": "ไม่ได้ลงทะเบียนหน่วยงานเมื่อค้นหาต้องแจ้งสถานะโค้ด 404 และข้อความ \"ไม่มีข้อมูลลงทะเบียน\""
+					},
+					"response": []
+				},
+				{
+					"name": "Find my org Before Regis",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a3526d86-e728-4470-8949-5c921833b50a",
+								"type": "text/javascript",
+								"exec": [
+									" pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"ไม่พบรายการลงทะเบียนในกลุ่มของ\");",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/org?my=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							],
+							"query": [
+								{
+									"key": "my",
+									"value": "true"
+								}
+							]
+						},
+						"description": "ไม่ได้ลงทะเบียนหน่วยงาน เมื่อค้นหาหน่วยงานใน network วงเดียวกันจะพบ status code 404 และ \"ไม่พบรายการลงทะเบียนในกลุ่ม"
+					},
+					"response": []
 				}
 			]
 		},
