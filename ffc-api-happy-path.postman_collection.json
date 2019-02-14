@@ -1885,14 +1885,14 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/house",
+							"raw": "{{url}}/org/{{org_id}}/house.json",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"house"
+								"house.json"
 							]
 						},
 						"description": "ขอข้อมูลรายการบ้านแบบ JSON"
@@ -2141,14 +2141,14 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/house",
+							"raw": "{{url}}/org/{{org_id}}/house.geojson",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"org",
 								"{{org_id}}",
-								"house"
+								"house.geojson"
 							]
 						},
 						"description": "ขอรายการข้อมูลบ้านแบบ GeoJSON"
@@ -2891,7 +2891,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}.geojson",
 							"host": [
 								"{{url}}"
 							],
@@ -2899,7 +2899,7 @@
 								"org",
 								"{{org_id}}",
 								"house",
-								"{{house_id}}"
+								"{{house_id}}.geojson"
 							]
 						},
 						"description": "ขอข้อมูลบ้านแบบ GeoJSON 1 รายการ"
@@ -3093,7 +3093,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}.json",
 							"host": [
 								"{{url}}"
 							],
@@ -3101,7 +3101,7 @@
 								"org",
 								"{{org_id}}",
 								"house",
-								"{{house_id}}"
+								"{{house_id}}.json"
 							]
 						},
 						"description": "ขอข้อมูลบ้านแบบ JSON 1 รายการ"
@@ -3389,7 +3389,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}.geojson",
 							"host": [
 								"{{url}}"
 							],
@@ -3397,7 +3397,7 @@
 								"org",
 								"{{org_id}}",
 								"house",
-								"{{house_id}}"
+								"{{house_id}}.geojson"
 							]
 						},
 						"description": "ขอข้อมูลรายการบ้านที่แก้ไขผ่านอุปกรณ์เคลื่อนที่ 1 รายการ"
@@ -3685,7 +3685,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}.geojson",
 							"host": [
 								"{{url}}"
 							],
@@ -3693,7 +3693,7 @@
 								"org",
 								"{{org_id}}",
 								"house",
-								"{{house_id}}"
+								"{{house_id}}.geojson"
 							]
 						},
 						"description": "ขอข้อมูลรายการบ้านที่แก้ไขผ่านโปรแกรมของหน่วยงาน 1 รายการ"
