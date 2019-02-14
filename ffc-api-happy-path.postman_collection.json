@@ -3284,7 +3284,7 @@
 							"raw": "{\n  \"id\": \"{{house_id}}\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"hid\": \"22\"\n    }\n  },\n  \"identity\": {\n    \"type\": \"thailand-household-id\",\n    \"id\": \"54520015001\"\n  },\n  \"haveChronics\": true,\n  \"type\": \"House\",\n  \"no\": \"510/45\",\n  \"tambon\": \"คลองหนึ่ง\",\n  \"ampur\": \"คลองหลวง\",\n  \"changwat\": \"ปุทมธานี\",\n  \"location\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      100.6027656,\n      14.0805834\n    ]\n  },\n  \"people\": [\n    {\n      \"identities\": [\n        {\n          \"type\": \"thailand-citizen-id\",\n          \"id\": \"1154801544875\"\n        }\n      ],\n      \"prename\": \"นาย\",\n      \"firstname\": \"พิรุณ\",\n      \"lastname\": \"พานิชผล\",\n      \"chronics\": [],\n      \"sex\": \"MALE\",\n      \"birthDate\": \"1993-06-25\",\n      \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n          \"pid\": \"3000214\",\n          \"cid\": \"11014578451234\"\n        }\n      },\n      \"id\": \"e079e175c75a44f180e8eaeb3ccc3cc6\",\n      \"type\": \"Person\",\n      \"timestamp\": \"2018-06-25T14:09:07.815\"\n    },\n    {\n      \"identities\": [\n        {\n          \"type\": \"thailand-citizen-id\",\n          \"id\": \"5554801544875\"\n        }\n      ],\n      \"prename\": \"นางสาว\",\n      \"firstname\": \"พรทิพา\",\n      \"lastname\": \"โชคสูงเนิน\",\n      \"chronics\": [],\n      \"sex\": \"FEMALE\",\n      \"birthDate\": \"1993-06-25\",\n      \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n          \"pid\": \"3000215\",\n          \"cid\": \"55014578451234\"\n        }\n      },\n      \"id\": \"5559e175c75a44f180e8eaeb3ccc3cc6\",\n      \"type\": \"Person\",\n      \"timestamp\": \"2018-06-25T14:09:07.815\"\n    },\n    {\n      \"identities\": [\n        {\n          \"type\": \"thailand-citizen-id\",\n          \"id\": \"6654801544875\"\n        }\n      ],\n      \"prename\": \"นาย\",\n      \"firstname\": \"ธนชัย\",\n      \"lastname\": \"ทองคำ\",\n      \"chronics\": [],\n      \"sex\": \"MALE\",\n      \"birthDate\": \"1993-06-25\",\n      \"link\": {\n        \"isSynced\": true,\n        \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n        \"system\": \"JHICS\",\n        \"keys\": {\n          \"pid\": \"3000216\",\n          \"cid\": \"66014578451234\"\n        }\n      },\n      \"id\": \"6669e175c75a44f180e8eaeb3ccc3cc6\",\n      \"type\": \"Person\",\n      \"timestamp\": \"2018-06-25T14:09:07.815\"\n    }\n  ]\n}"
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}?=",
 							"host": [
 								"{{url}}"
 							],
@@ -3293,6 +3293,12 @@
 								"{{org_id}}",
 								"house",
 								"{{house_id}}"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
 							]
 						},
 						"description": "แก้ไขข้อมูลบ้านด้วยอุปกรณ์เคลื่อนที่ได้"
@@ -3382,6 +3388,11 @@
 							{
 								"key": "Accept",
 								"value": "application/vnd.geo+json"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -3389,7 +3400,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}.geojson",
+							"raw": "{{url}}/org/{{org_id}}/house/{{house_id}}.geojson?delay=1000",
 							"host": [
 								"{{url}}"
 							],
@@ -3398,6 +3409,12 @@
 								"{{org_id}}",
 								"house",
 								"{{house_id}}.geojson"
+							],
+							"query": [
+								{
+									"key": "delay",
+									"value": "1000"
+								}
 							]
 						},
 						"description": "ขอข้อมูลรายการบ้านที่แก้ไขผ่านอุปกรณ์เคลื่อนที่ 1 รายการ"
