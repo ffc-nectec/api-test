@@ -226,7 +226,6 @@
 							"listen": "test",
 							"script": {
 								"id": "20a93047-e1aa-4612-8dba-5e07e0560d9b",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -236,7 +235,8 @@
 									"    pm.expect(pm.response.text()).to.include(\"Paratyphoid fever C\");",
 									"});",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -253,7 +253,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/disease?query=fever C",
+							"raw": "{{url}}/disease?query=fever C&delay=500",
 							"host": [
 								"{{url}}"
 							],
@@ -264,6 +264,10 @@
 								{
 									"key": "query",
 									"value": "fever C"
+								},
+								{
+									"key": "delay",
+									"value": "500"
 								}
 							]
 						},
