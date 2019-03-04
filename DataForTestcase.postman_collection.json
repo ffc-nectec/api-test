@@ -4470,6 +4470,63 @@
 									"response": []
 								},
 								{
+									"name": "Sukit (grandfather)  genogram of PrasertNipaFamily collect",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "a8d75356-d833-40ae-9ded-b4ece5176882",
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{org_token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"type": "text",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": ""
+										},
+										"url": {
+											"raw": "{{url}}/org/{{org_id}}/person/{{sukit_id_of_prasert_nipa}}/genogram/collect",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"org",
+												"{{org_id}}",
+												"person",
+												"{{sukit_id_of_prasert_nipa}}",
+												"genogram",
+												"collect"
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "Pranee (grandmother) genogram of PresertNipaFamily",
 									"event": [
 										{
