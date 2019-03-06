@@ -7926,7 +7926,7 @@
 			"name": "server",
 			"item": [
 				{
-					"name": "Get server time",
+					"name": "Get system time",
 					"event": [
 						{
 							"listen": "test",
@@ -7967,7 +7967,7 @@
 					"response": []
 				},
 				{
-					"name": "Get freememory",
+					"name": "Get system memory",
 					"event": [
 						{
 							"listen": "test",
@@ -8001,15 +8001,16 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/freememory",
+							"raw": "{{url}}/system/memory",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"freememory"
+								"system",
+								"memory"
 							]
 						},
-						"description": "ขอข้อมูล Free memory ของ server ปลุก server"
+						"description": "ขอข้อมูล Free memory ของ server"
 					},
 					"response": [
 						{
