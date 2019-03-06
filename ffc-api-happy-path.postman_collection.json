@@ -866,6 +866,56 @@
 						"description": "สร้างคำแนะนำสภาพ/อาการ ของผู้ป่วย การให้บริการ การประเมินผล"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Suggestion health care service",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b94c3173-f360-4aea-8feb-103cf2ab1200",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาอย่างต่อเนื่อง และไปพบแพทย์ตามนัด\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ระวังการเกิดอุบัติเหตุ การรับประทานยาและการควบคุมอาหาร\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"มารดามีความรู้และจะพาบุตรไปฉีดวัคซีน DTP+HB 1 อายุ 2 เดือน และตรวจพัฒนาการ\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำญาติดูแลสายสวนปัสสาวะไม่ให้บิดงอ\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำการทำกายภาพบำบัดแก่ญาติผู้ป่วย\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมอาทิตย์ละ 1 ครั้ง\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมปีละ 1 ครั้ง\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุกเดือน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุกวัน วัดความดื้อ ทุกครั้งที่ไปเยี่ยม\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุก 3 เดือน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"สามารถดูแลตนเองได้เป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตัวเองเลี้ยงลูกด้วยนมแม่ได้อย่างถูกต้อง ตอบคำถาม ดูดเร็ว ดูดบ่อย ดูดถูกวิธี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ลดอาหารจำพวกแป้ง ขนมหวาน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการออกกำลังกายอย่างสม่ำเสมอเกี่ยวกับโรคที่ตนเองเป็นอยู่\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"มารดาสามารถดูแลบุตรได้เเป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานอาหารให้เหมาะสมกับโรคที่เป็นอยู่\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถทำตามคำแนะนำได้เป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ป้องกันการเกิดแผลกดทับ และอาการแทรกซ้อน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ป้องกันการเกิดภาวะเเทรกซ้อน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"นัดเยี่ยมหลังคลอดและตรวจหลังคลอด 6สัปดาห์\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"นัดตรวจภายในหลังคลอดบุตร\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ต้องการญาติดูแลผู้ป่วยใกล้ชิด\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ญาติสามารถดูแลผู้สูงอายุได้ดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ใส่สายสวนปัสสาวะ และใส่สายอาหารแก่ผู้ป่วย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แพทย์แผนไทยนวดผ่อนคลายความเครียด\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาและไปรับการรักษาอย่างต่อเนื่อง\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาเกี่ยวกับโรค และไปรับการรักษาอย่างต่อเนื่อง\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการดูแลให้นมบุตร\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการทานอาหารและการออกกำลังกายให้เหมาะสมกับวัย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำกระตุ้นพัฒนาการเด็กให้เหมาะสมกับวัย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"อาการอื่นๆทั่วไปปกติ\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ประเมินภาวะซึมเศร้า โดยนักจิตวิทยา = ไม่มีภาวะซึมเศร้า\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการทานอาหารและการออกกำลังกายเพื่อเพิ่มสมรรถภาพ ...\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ทำกายภาพบำบัดแก่ผู้ป่วยโดยนักกายภาพบำบัด\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"จ่ายยาแก้เหงา เส้าสร้อย Soka ardoon\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แผลฝีเย็บแห้งดี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"เยี่ยมผู้สูงอายุประจำปี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"เปลี่ยนสายอาหารและสายปัสสาวะให้แก่ผู้ป่วย\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"อาการทั่วไปปกติดี ผู้ป่วยสามารถดูแลตนเองได้\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"อาการทั่วไปปกติ\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"สุขภาพแข็งแรงสมบูรณ์มาก\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"รู้สึกตัว\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถช่วยเหลือตนเองได้ดี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"วัดความดัน และแนะนำในการดูแลสุขภาพให้เหมาะกับโรคประจำตัว\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตัวเองได้น้อย\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตนเองไม่ได้\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ติดตามเรื่องระดับความดันโลหิตของผู้ป่วย       159/79      mmHg\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถเลี้ยงบุตรด้วยนมแม่ได้อย่างถูกต้องสามารถตอบคำถามได้อย่างถูกต้องเรื่องการรับประทานอาหารที่มีประโยชน์\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"บุตรดูดนมได้ลูกต้อง ดูดเร็ว ดูดบ่อย ดูดถูกวิธี แข็งแรงสมบูรณ์\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ติดตามผู้ป่วยเบาหวานที่มีระดับน้ำตาลในเลือดสูงเกิน 200 mg% (DTX=  mg%)\",\n        \"field\": \"HealthCareService.syntom\"\n    }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/template/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"template",
+								""
+							]
+						},
+						"description": "ขอข้อมูลคำแนะนำสภาพ/อาการ ของผู้ป่วย การให้บริการ การประเมินผล"
+					},
+					"response": []
 				}
 			]
 		},
@@ -7876,56 +7926,6 @@
 			"name": "server",
 			"item": [
 				{
-					"name": "Get Suggestion health care service",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "b94c3173-f360-4aea-8feb-103cf2ab1200",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "[\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาอย่างต่อเนื่อง และไปพบแพทย์ตามนัด\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ระวังการเกิดอุบัติเหตุ การรับประทานยาและการควบคุมอาหาร\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"มารดามีความรู้และจะพาบุตรไปฉีดวัคซีน DTP+HB 1 อายุ 2 เดือน และตรวจพัฒนาการ\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำญาติดูแลสายสวนปัสสาวะไม่ให้บิดงอ\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำการทำกายภาพบำบัดแก่ญาติผู้ป่วย\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมอาทิตย์ละ 1 ครั้ง\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมปีละ 1 ครั้ง\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุกเดือน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุกวัน วัดความดื้อ ทุกครั้งที่ไปเยี่ยม\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุก 3 เดือน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"สามารถดูแลตนเองได้เป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตัวเองเลี้ยงลูกด้วยนมแม่ได้อย่างถูกต้อง ตอบคำถาม ดูดเร็ว ดูดบ่อย ดูดถูกวิธี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ลดอาหารจำพวกแป้ง ขนมหวาน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการออกกำลังกายอย่างสม่ำเสมอเกี่ยวกับโรคที่ตนเองเป็นอยู่\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"มารดาสามารถดูแลบุตรได้เเป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานอาหารให้เหมาะสมกับโรคที่เป็นอยู่\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถทำตามคำแนะนำได้เป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ป้องกันการเกิดแผลกดทับ และอาการแทรกซ้อน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ป้องกันการเกิดภาวะเเทรกซ้อน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"นัดเยี่ยมหลังคลอดและตรวจหลังคลอด 6สัปดาห์\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"นัดตรวจภายในหลังคลอดบุตร\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ต้องการญาติดูแลผู้ป่วยใกล้ชิด\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ญาติสามารถดูแลผู้สูงอายุได้ดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ใส่สายสวนปัสสาวะ และใส่สายอาหารแก่ผู้ป่วย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แพทย์แผนไทยนวดผ่อนคลายความเครียด\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาและไปรับการรักษาอย่างต่อเนื่อง\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาเกี่ยวกับโรค และไปรับการรักษาอย่างต่อเนื่อง\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการดูแลให้นมบุตร\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการทานอาหารและการออกกำลังกายให้เหมาะสมกับวัย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำกระตุ้นพัฒนาการเด็กให้เหมาะสมกับวัย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"อาการอื่นๆทั่วไปปกติ\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ประเมินภาวะซึมเศร้า โดยนักจิตวิทยา = ไม่มีภาวะซึมเศร้า\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการทานอาหารและการออกกำลังกายเพื่อเพิ่มสมรรถภาพ ...\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ทำกายภาพบำบัดแก่ผู้ป่วยโดยนักกายภาพบำบัด\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"จ่ายยาแก้เหงา เส้าสร้อย Soka ardoon\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แผลฝีเย็บแห้งดี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"เยี่ยมผู้สูงอายุประจำปี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"เปลี่ยนสายอาหารและสายปัสสาวะให้แก่ผู้ป่วย\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"อาการทั่วไปปกติดี ผู้ป่วยสามารถดูแลตนเองได้\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"อาการทั่วไปปกติ\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"สุขภาพแข็งแรงสมบูรณ์มาก\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"รู้สึกตัว\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถช่วยเหลือตนเองได้ดี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"วัดความดัน และแนะนำในการดูแลสุขภาพให้เหมาะกับโรคประจำตัว\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตัวเองได้น้อย\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตนเองไม่ได้\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ติดตามเรื่องระดับความดันโลหิตของผู้ป่วย       159/79      mmHg\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถเลี้ยงบุตรด้วยนมแม่ได้อย่างถูกต้องสามารถตอบคำถามได้อย่างถูกต้องเรื่องการรับประทานอาหารที่มีประโยชน์\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"บุตรดูดนมได้ลูกต้อง ดูดเร็ว ดูดบ่อย ดูดถูกวิธี แข็งแรงสมบูรณ์\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ติดตามผู้ป่วยเบาหวานที่มีระดับน้ำตาลในเลือดสูงเกิน 200 mg% (DTX=  mg%)\",\n        \"field\": \"HealthCareService.syntom\"\n    }\n]"
-						},
-						"url": {
-							"raw": "{{url}}/org/{{org_id}}/template/",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"org",
-								"{{org_id}}",
-								"template",
-								""
-							]
-						},
-						"description": "ขอข้อมูลคำแนะนำสภาพ/อาการ ของผู้ป่วย การให้บริการ การประเมินผล"
-					},
-					"response": []
-				},
-				{
 					"name": "Get server time",
 					"event": [
 						{
@@ -7938,7 +7938,7 @@
 									"});",
 									"",
 									"pm.test(\"Response have datetime\", function () {",
-									"    pm.expect(pm.response.text()).to.include(\"dateTime\");",
+									"    pm.expect(pm.response.text()).to.include(\"datetime\");",
 									"});"
 								],
 								"type": "text/javascript"
@@ -7953,12 +7953,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/servertime",
+							"raw": "{{url}}/system/time",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"servertime"
+								"system",
+								"time"
 							]
 						},
 						"description": "ขอข้อมูลเวลา server"
