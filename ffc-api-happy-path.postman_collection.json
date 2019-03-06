@@ -7926,6 +7926,50 @@
 			"name": "server",
 			"item": [
 				{
+					"name": "Get api info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "50a22fe6-a0c3-4b59-868f-a4f19816f419",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have developers\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"developers\");",
+									"});",
+									"",
+									"pm.test(\"Response have copyright\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"copyright\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": "ขอข้อมูลของระบบ"
+					},
+					"response": []
+				},
+				{
 					"name": "Get system time",
 					"event": [
 						{
