@@ -225,19 +225,7 @@
 					],
 					"request": {
 						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "a1e6-4f63e8295160",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "pcu100214.airsync",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -248,7 +236,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n  \"username\": \"pcu100214.airsync\",\n  \"password\": \"a1e6-4f63e8295160\"\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org/{{org_id}}/authorize",
@@ -483,7 +471,6 @@
 							"listen": "test",
 							"script": {
 								"id": "dcdf9ce2-52de-4a8e-8341-0499a949911d",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -518,25 +505,14 @@
 									"",
 									"",
 									""
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
 					"request": {
 						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "hipuy",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "puy",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -547,7 +523,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n  \"username\": \"puy\",\n  \"password\": \"hipuy\"\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org/{{org_id}}/authorize",
@@ -22436,7 +22412,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n  \"username\": \"pcu100210.airsyncorg2\",\n  \"password\": \"a1e6-4f63e8295160\"\n}"
 				},
 				"url": {
 					"raw": "{{url}}/org/{{org_id_2}}/authorize",
@@ -22654,19 +22630,7 @@
 			],
 			"request": {
 				"auth": {
-					"type": "basic",
-					"basic": [
-						{
-							"key": "password",
-							"value": "admin1",
-							"type": "string"
-						},
-						{
-							"key": "username",
-							"value": "admin1",
-							"type": "string"
-						}
-					]
+					"type": "noauth"
 				},
 				"method": "POST",
 				"header": [
@@ -22677,7 +22641,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n  \"username\": \"admin1\",\n  \"password\": \"admin1\"\n}"
 				},
 				"url": {
 					"raw": "{{url}}/org/{{org_id_2}}/authorize",

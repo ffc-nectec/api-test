@@ -422,7 +422,6 @@
 							"listen": "test",
 							"script": {
 								"id": "27330a9b-cc67-4964-81b5-f4aa40a31f98",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {",
 									"    pm.response.to.have.status(201);",
@@ -435,25 +434,14 @@
 									"    var orgRes = pm.response.json();",
 									"    pm.globals.set(\"org_token\", orgRes.token);",
 									"});"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
 					"request": {
 						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "a1e6-4f63e8295160",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "pcu100214.airsync",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -464,7 +452,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n  \"username\": \"pcu100214.airsync\",\n  \"password\": \"a1e6-4f63e8295160\"\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org/{{org_id}}/authorize",
@@ -971,19 +959,7 @@
 					],
 					"request": {
 						"auth": {
-							"type": "basic",
-							"basic": [
-								{
-									"key": "password",
-									"value": "hipuy",
-									"type": "string"
-								},
-								{
-									"key": "username",
-									"value": "puy",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -994,7 +970,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "{\n  \"username\": \"puy\",\n  \"password\": \"hipuy\"\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org/{{org_id}}/authorize",
