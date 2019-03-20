@@ -932,81 +932,6 @@
 					]
 				},
 				{
-					"name": "Register Org  unique",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "77cd9572-435d-4796-8d8d-37fed0dc3086",
-								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
-									"    pm.response.to.have.status(400);",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"รพสต-พรทิพา1\",\n  \"displayName\": \"รพ.สต. พรทิพา 1\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T14:19:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"100145\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n}"
-						},
-						"url": {
-							"raw": "{{url}}/org",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"org"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Register Org",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"pcuCode\":\"145\",\n  \"name\": \"เนคเทค\",\n  \"uuid\": \"151b9\"\n}"
-								},
-								"url": {
-									"raw": "{{url}}/org",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"org"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [],
-							"cookie": [],
-							"body": "{\n    \"code\": \"145\",\n    \"name\": \"เนคเทค\",\n    \"uuid\": \"15169\",\n    \"token\": \"2314abc\",\n    \"id\": \"1\"\n}"
-						}
-					]
-				},
-				{
 					"name": "Org Login",
 					"event": [
 						{
@@ -1419,6 +1344,163 @@
 							"header": [],
 							"cookie": [],
 							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Organization",
+			"item": [
+				{
+					"name": "Register Organization Duplicate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "77cd9572-435d-4796-8d8d-37fed0dc3086",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"รพสต-พรทิพา1\",\n  \"displayName\": \"รพ.สต. พรทิพา 1\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T14:19:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"100145\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/org",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							]
+						},
+						"description": "ชื่อ org เดียวกัน ต้องลงทะเบียนซ้ำไม่ได้"
+					},
+					"response": [
+						{
+							"name": "Register Org",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"pcuCode\":\"145\",\n  \"name\": \"เนคเทค\",\n  \"uuid\": \"151b9\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/org",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"code\": \"145\",\n    \"name\": \"เนคเทค\",\n    \"uuid\": \"15169\",\n    \"token\": \"2314abc\",\n    \"id\": \"1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register Organization Duplicate have speace bar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "77cd9572-435d-4796-8d8d-37fed0dc3086",
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"รพสต-พรทิ พา1\",\n  \"displayName\": \"รพ.สต. พรทิ พา 1\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"role\": \"USER\",\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"role\": \"ORG\",\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T14:19:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"100145\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/org",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org"
+							]
+						},
+						"description": "ชื่อ org เดียวกัน แต่เขียนเว้นวรรคไม่เท่ากันไม่ควร POST ซ้ำได้"
+					},
+					"response": [
+						{
+							"name": "Register Org",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"pcuCode\":\"145\",\n  \"name\": \"เนคเทค\",\n  \"uuid\": \"151b9\"\n}"
+								},
+								"url": {
+									"raw": "{{url}}/org",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": "{\n    \"code\": \"145\",\n    \"name\": \"เนคเทค\",\n    \"uuid\": \"15169\",\n    \"token\": \"2314abc\",\n    \"id\": \"1\"\n}"
 						}
 					]
 				}
