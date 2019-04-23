@@ -10,7 +10,7 @@ install:
 test_script:
   - node --version
   - npm --version
-  - node_modules/.bin/newman run ffc-api-requirement-path.postman_collection.json -e ffc-api-test.postman_environment.json
+  - node_modules/.bin/newman run ffc-api-requirement-path.postman_collection.json -e environment/ffc-api-staging.postman_environment.json
 
 # Turn of MSBuild
 build: off
