@@ -7085,57 +7085,6 @@
 					"response": []
 				},
 				{
-					"name": "Delete ข้อมูลของ org status 404",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "0ef5718c-0c31-4c92-94d1-9fd0364ce440",
-								"exec": [
-									"pm.test(\"Status code is 404\", function () {",
-									"    pm.response.to.have.status(404);",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "oauth2",
-							"oauth2": [
-								{
-									"key": "accessToken",
-									"value": "{{org_token}}",
-									"type": "string"
-								},
-								{
-									"key": "addTokenTo",
-									"value": "header",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{url}}/org/5c65273f3dcb100004c50215",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"org",
-								"5c65273f3dcb100004c50215"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Delete ข้อมูลของ org status 200",
 					"event": [
 						{
