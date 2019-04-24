@@ -1211,6 +1211,38 @@
 			"item": [
 				{
 					"name": "Refresh Legal Document",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b19599d6-13b1-4f7c-b45a-a3213668c3ce",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response have privacyVersion\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"privacyVersion\");",
+									"    ",
+									"    //set token to global variable for later use",
+									"    var response = pm.response.json();",
+									"    pm.globals.set(\"privacy_version\", response.privacyVersion);",
+									"});",
+									"",
+									"pm.test(\"Response have termsVersion\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"termsVersion\");",
+									"    ",
+									"    //set token to global variable for later use",
+									"    var response = pm.response.json();",
+									"    pm.globals.set(\"terms_version\", response.termsVersion);",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -1357,17 +1389,18 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/legal/terms/latest/agreement/{{org_id}}/{{user_id}}",
+							"raw": "{{url}}/org/{{org_id}}/user/{{user_id}}/agreement/terms/latest",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"legal",
-								"terms",
-								"latest",
-								"agreement",
+								"org",
 								"{{org_id}}",
-								"{{user_id}}"
+								"user",
+								"{{user_id}}",
+								"agreement",
+								"terms",
+								"latest"
 							]
 						}
 					},
@@ -1407,17 +1440,18 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/legal/privacy/latest/agreement/{{org_id}}/{{user_id}}",
+							"raw": "{{url}}/org/{{org_id}}/user/{{user_id}}/agreement/privacy/latest",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"legal",
-								"privacy",
-								"latest",
-								"agreement",
+								"org",
 								"{{org_id}}",
-								"{{user_id}}"
+								"user",
+								"{{user_id}}",
+								"agreement",
+								"privacy",
+								"latest"
 							]
 						}
 					},
@@ -1431,8 +1465,8 @@
 							"script": {
 								"id": "1835d320-51ba-408c-b1ee-c5cccb7ece0e",
 								"exec": [
-									"pm.test(\"Status code is 400\", function () {",
-									"    pm.response.to.have.status(400);",
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -1457,17 +1491,18 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/legal/terms/n0currentVer/agreement/{{org_id}}/{{user_id}}",
+							"raw": "{{url}}/org/{{org_id}}/user/{{user_id}}/agreement/privacy/{{privacy_version}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"legal",
-								"terms",
-								"n0currentVer",
-								"agreement",
+								"org",
 								"{{org_id}}",
-								"{{user_id}}"
+								"user",
+								"{{user_id}}",
+								"agreement",
+								"privacy",
+								"{{privacy_version}}"
 							]
 						}
 					},
@@ -1475,6 +1510,20 @@
 				},
 				{
 					"name": "Accept term of use",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4b47a3a0-767c-4f20-a4b1-17b618cb243a",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1493,17 +1542,18 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{url}}/legal/terms/lask39df/agreement/{{org_id}}/{{user_id}}",
+							"raw": "{{url}}/org/{{org_id}}/user/{{user_id}}/agreement/terms/{{terms_version}}",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
-								"legal",
-								"terms",
-								"lask39df",
-								"agreement",
+								"org",
 								"{{org_id}}",
-								"{{user_id}}"
+								"user",
+								"{{user_id}}",
+								"agreement",
+								"terms",
+								"{{terms_version}}"
 							]
 						}
 					},
