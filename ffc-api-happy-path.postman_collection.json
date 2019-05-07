@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "fe1ab6ba-91bc-481b-8eb6-0d148db96cb5",
+		"_postman_id": "579c932f-3111-4943-8d99-750bf4f643d1",
 		"name": "ffc-api-happy-path",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -362,7 +362,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"รพสต-พรทิพา\",\n  \"displayName\": \"รพ.สต. พรทิพา\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"roles\": [\"PROVIDER\"],\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"roles\": [\"ADMIN\",\"SYNC_AGENT\"],\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"10008\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T17:17:43.645+07:00\"\n}"
+							"raw": "{\n  \"name\": \"รพสต-พิรุณ\",\n  \"displayName\": \"รพ.สต. พิรุณ\",\n  \"users\": [\n    {\n      \"name\": \"puy\",\n      \"password\": \"hipuy\",\n      \"roles\": [\"PROVIDER\"],\n      \"id\": \"bdb8c14b3feb47dba0311cf6dd8233a6\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:14:43.645+07:00\"\n    },\n    {\n      \"name\": \"pcu100214.airsync\",\n      \"password\": \"a1e6-4f63e8295160\",\n      \"roles\": [\"ADMIN\",\"SYNC_AGENT\"],\n      \"id\": \"5dc194a5b85b4733889247578e4bd5f0\",\n      \"type\": \"User\",\n      \"timestamp\": \"2018-06-28T14:19:29.645+07:00\"\n    }\n  ],\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-28T17:21:29.645+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pcucode\": \"10008\"\n    }\n  },\n  \"id\": \"1459f3933d5e4ef8b0a68463c012f26b\",\n  \"type\": \"Organization\",\n  \"timestamp\": \"2018-06-28T17:17:43.645+07:00\"\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org",
@@ -848,56 +848,6 @@
 						"description": "สร้างคำแนะนำสภาพ/อาการ ของผู้ป่วย การให้บริการ การประเมินผล"
 					},
 					"response": []
-				},
-				{
-					"name": "Get Suggestion health care service",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "b94c3173-f360-4aea-8feb-103cf2ab1200",
-								"exec": [
-									"pm.test(\"Status code is 200\", function () {",
-									"    pm.response.to.have.status(200);",
-									"});",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "[\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาอย่างต่อเนื่อง และไปพบแพทย์ตามนัด\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ระวังการเกิดอุบัติเหตุ การรับประทานยาและการควบคุมอาหาร\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"มารดามีความรู้และจะพาบุตรไปฉีดวัคซีน DTP+HB 1 อายุ 2 เดือน และตรวจพัฒนาการ\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำญาติดูแลสายสวนปัสสาวะไม่ให้บิดงอ\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำการทำกายภาพบำบัดแก่ญาติผู้ป่วย\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมอาทิตย์ละ 1 ครั้ง\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมปีละ 1 ครั้ง\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุกเดือน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุกวัน วัดความดื้อ ทุกครั้งที่ไปเยี่ยม\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุก 3 เดือน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"สามารถดูแลตนเองได้เป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตัวเองเลี้ยงลูกด้วยนมแม่ได้อย่างถูกต้อง ตอบคำถาม ดูดเร็ว ดูดบ่อย ดูดถูกวิธี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ลดอาหารจำพวกแป้ง ขนมหวาน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการออกกำลังกายอย่างสม่ำเสมอเกี่ยวกับโรคที่ตนเองเป็นอยู่\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"มารดาสามารถดูแลบุตรได้เเป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานอาหารให้เหมาะสมกับโรคที่เป็นอยู่\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถทำตามคำแนะนำได้เป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ป้องกันการเกิดแผลกดทับ และอาการแทรกซ้อน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ป้องกันการเกิดภาวะเเทรกซ้อน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"นัดเยี่ยมหลังคลอดและตรวจหลังคลอด 6สัปดาห์\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"นัดตรวจภายในหลังคลอดบุตร\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ต้องการญาติดูแลผู้ป่วยใกล้ชิด\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ญาติสามารถดูแลผู้สูงอายุได้ดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ใส่สายสวนปัสสาวะ และใส่สายอาหารแก่ผู้ป่วย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แพทย์แผนไทยนวดผ่อนคลายความเครียด\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาและไปรับการรักษาอย่างต่อเนื่อง\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาเกี่ยวกับโรค และไปรับการรักษาอย่างต่อเนื่อง\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการดูแลให้นมบุตร\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการทานอาหารและการออกกำลังกายให้เหมาะสมกับวัย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำกระตุ้นพัฒนาการเด็กให้เหมาะสมกับวัย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"อาการอื่นๆทั่วไปปกติ\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ประเมินภาวะซึมเศร้า โดยนักจิตวิทยา = ไม่มีภาวะซึมเศร้า\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการทานอาหารและการออกกำลังกายเพื่อเพิ่มสมรรถภาพ ...\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ทำกายภาพบำบัดแก่ผู้ป่วยโดยนักกายภาพบำบัด\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"จ่ายยาแก้เหงา เส้าสร้อย Soka ardoon\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แผลฝีเย็บแห้งดี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"เยี่ยมผู้สูงอายุประจำปี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"เปลี่ยนสายอาหารและสายปัสสาวะให้แก่ผู้ป่วย\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"อาการทั่วไปปกติดี ผู้ป่วยสามารถดูแลตนเองได้\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"อาการทั่วไปปกติ\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"สุขภาพแข็งแรงสมบูรณ์มาก\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"รู้สึกตัว\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถช่วยเหลือตนเองได้ดี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"วัดความดัน และแนะนำในการดูแลสุขภาพให้เหมาะกับโรคประจำตัว\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตัวเองได้น้อย\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตนเองไม่ได้\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ติดตามเรื่องระดับความดันโลหิตของผู้ป่วย       159/79      mmHg\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถเลี้ยงบุตรด้วยนมแม่ได้อย่างถูกต้องสามารถตอบคำถามได้อย่างถูกต้องเรื่องการรับประทานอาหารที่มีประโยชน์\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"บุตรดูดนมได้ลูกต้อง ดูดเร็ว ดูดบ่อย ดูดถูกวิธี แข็งแรงสมบูรณ์\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ติดตามผู้ป่วยเบาหวานที่มีระดับน้ำตาลในเลือดสูงเกิน 200 mg% (DTX=  mg%)\",\n        \"field\": \"HealthCareService.syntom\"\n    }\n]"
-						},
-						"url": {
-							"raw": "{{url}}/org/{{org_id}}/template/",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"org",
-								"{{org_id}}",
-								"template",
-								""
-							]
-						},
-						"description": "ขอข้อมูลคำแนะนำสภาพ/อาการ ของผู้ป่วย การให้บริการ การประเมินผล"
-					},
-					"response": []
 				}
 			]
 		},
@@ -951,14 +901,13 @@
 					},
 					"response": [
 						{
-							"name": "Login not success",
+							"name": "Puy Hipuy Login",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
 									{
-										"key": "Authorization",
-										"value": "Basic YWRtaW4wOjEyMzQ=",
-										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman."
+										"key": "Content-Type",
+										"value": "application/json"
 									}
 								],
 								"body": {
@@ -977,12 +926,49 @@
 									]
 								}
 							},
-							"status": "Unauthorized",
-							"code": 401,
-							"_postman_previewlanguage": "Text",
-							"header": [],
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "478",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Sep 2018 09:34:45 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(9.4.z-SNAPSHOT)",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								}
+							],
 							"cookie": [],
-							"body": ""
+							"body": "{\"role\":\"USER\",\"name\":\"\",\"timestamp\":\"2018-09-27T16:34:45.927+07:00\",\"createDate\":\"2018-09-27T16:34:45.927+07:00\",\"expireDate\":\"2018-09-28T16:34:45.927+07:00\",\"user\":{\"name\":\"puy\",\"role\":\"USER\",\"roles\":[\"USER\"],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-27T15:40:24.984+07:00\",\"system\":\"JHICS\",\"keys\":{\"username\":\"puy\",\"pcucode\":\"01088\"}},\"id\":\"5bac977cdb9df90004cf25d3\",\"type\":\"User\",\"timestamp\":\"2018-09-27T15:40:24.984+07:00\",\"bundle\":{}},\"token\":\"5baca435db9df90004cfcdef\"}"
 						},
 						{
 							"name": "Login success",
@@ -1103,13 +1089,14 @@
 							"body": "{\n\t\"token\": \"123abcdef\"\n}"
 						},
 						{
-							"name": "Puy Hipuy Login",
+							"name": "Login not success",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
 									{
-										"key": "Content-Type",
-										"value": "application/json"
+										"key": "Authorization",
+										"value": "Basic YWRtaW4wOjEyMzQ=",
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman."
 									}
 								],
 								"body": {
@@ -1128,49 +1115,12 @@
 									]
 								}
 							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Connection",
-									"value": "keep-alive",
-									"name": "Connection",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"key": "Content-Length",
-									"value": "478",
-									"name": "Content-Length",
-									"description": "The length of the response body in octets (8-bit bytes)"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"name": "Content-Type",
-									"description": "The mime type of this content"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 27 Sep 2018 09:34:45 GMT",
-									"name": "Date",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"key": "Server",
-									"value": "Jetty(9.4.z-SNAPSHOT)",
-									"name": "Server",
-									"description": "A name for the server"
-								},
-								{
-									"key": "Via",
-									"value": "1.1 vegur",
-									"name": "Via",
-									"description": "Informs the client of proxies through which the response was sent."
-								}
-							],
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "Text",
+							"header": [],
 							"cookie": [],
-							"body": "{\"role\":\"USER\",\"name\":\"\",\"timestamp\":\"2018-09-27T16:34:45.927+07:00\",\"createDate\":\"2018-09-27T16:34:45.927+07:00\",\"expireDate\":\"2018-09-28T16:34:45.927+07:00\",\"user\":{\"name\":\"puy\",\"role\":\"USER\",\"roles\":[\"USER\"],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-27T15:40:24.984+07:00\",\"system\":\"JHICS\",\"keys\":{\"username\":\"puy\",\"pcucode\":\"01088\"}},\"id\":\"5bac977cdb9df90004cf25d3\",\"type\":\"User\",\"timestamp\":\"2018-09-27T15:40:24.984+07:00\",\"bundle\":{}},\"token\":\"5baca435db9df90004cfcdef\"}"
+							"body": ""
 						}
 					]
 				},
@@ -1182,11 +1132,17 @@
 							"script": {
 								"id": "4e552b2c-0a24-442c-aa2a-fbc9931bf663",
 								"exec": [
-									"pm.test(\"Status code is 201\", function () {",
+									"pm.test(\"Status code is 200\", function () {",
 									"    pm.response.to.have.status(200);",
 									"});",
 									"",
-									""
+									"pm.test(\"Response have otp\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"otp\");",
+									"    ",
+									"    //set token to global variable for later use",
+									"    var json = pm.response.json();",
+									"    pm.environment.set(\"otp\", json.otp);",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -1377,7 +1333,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"username\": \"puy\",\n  \"password\": \"hipuy\",\n  \"otp\": \"660695\"\n}"
+							"raw": "{\n  \"username\": \"puy\",\n  \"password\": \"hipuy\",\n  \"otp\": \"{{otp}}\"\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org/{{org_id}}/user/activate",
@@ -1695,110 +1651,6 @@
 					},
 					"response": [
 						{
-							"name": "Puy Hipuy Login",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{url}}/org/{{org_id}}/authorize",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"org",
-										"{{org_id}}",
-										"authorize"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Connection",
-									"value": "keep-alive",
-									"name": "Connection",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"key": "Content-Length",
-									"value": "478",
-									"name": "Content-Length",
-									"description": "The length of the response body in octets (8-bit bytes)"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"name": "Content-Type",
-									"description": "The mime type of this content"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 27 Sep 2018 09:34:45 GMT",
-									"name": "Date",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"key": "Server",
-									"value": "Jetty(9.4.z-SNAPSHOT)",
-									"name": "Server",
-									"description": "A name for the server"
-								},
-								{
-									"key": "Via",
-									"value": "1.1 vegur",
-									"name": "Via",
-									"description": "Informs the client of proxies through which the response was sent."
-								}
-							],
-							"cookie": [],
-							"body": "{\"role\":\"USER\",\"name\":\"\",\"timestamp\":\"2018-09-27T16:34:45.927+07:00\",\"createDate\":\"2018-09-27T16:34:45.927+07:00\",\"expireDate\":\"2018-09-28T16:34:45.927+07:00\",\"user\":{\"name\":\"puy\",\"role\":\"USER\",\"roles\":[\"USER\"],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-27T15:40:24.984+07:00\",\"system\":\"JHICS\",\"keys\":{\"username\":\"puy\",\"pcucode\":\"01088\"}},\"id\":\"5bac977cdb9df90004cf25d3\",\"type\":\"User\",\"timestamp\":\"2018-09-27T15:40:24.984+07:00\",\"bundle\":{}},\"token\":\"5baca435db9df90004cfcdef\"}"
-						},
-						{
-							"name": "Login not success",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Basic YWRtaW4wOjEyMzQ=",
-										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman."
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{url}}/org/{{org_id}}/authorize",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"org",
-										"{{org_id}}",
-										"authorize"
-									]
-								}
-							},
-							"status": "Unauthorized",
-							"code": 401,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						},
-						{
 							"name": "Login success",
 							"originalRequest": {
 								"method": "POST",
@@ -1915,6 +1767,110 @@
 							],
 							"cookie": [],
 							"body": "{\n\t\"token\": \"123abcdef\"\n}"
+						},
+						{
+							"name": "Puy Hipuy Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/authorize",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"authorize"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "478",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Sep 2018 09:34:45 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(9.4.z-SNAPSHOT)",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								}
+							],
+							"cookie": [],
+							"body": "{\"role\":\"USER\",\"name\":\"\",\"timestamp\":\"2018-09-27T16:34:45.927+07:00\",\"createDate\":\"2018-09-27T16:34:45.927+07:00\",\"expireDate\":\"2018-09-28T16:34:45.927+07:00\",\"user\":{\"name\":\"puy\",\"role\":\"USER\",\"roles\":[\"USER\"],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-09-27T15:40:24.984+07:00\",\"system\":\"JHICS\",\"keys\":{\"username\":\"puy\",\"pcucode\":\"01088\"}},\"id\":\"5bac977cdb9df90004cf25d3\",\"type\":\"User\",\"timestamp\":\"2018-09-27T15:40:24.984+07:00\",\"bundle\":{}},\"token\":\"5baca435db9df90004cfcdef\"}"
+						},
+						{
+							"name": "Login not success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic YWRtaW4wOjEyMzQ=",
+										"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman."
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/authorize",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"authorize"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": ""
 						}
 					]
 				}
@@ -2391,6 +2347,41 @@
 					},
 					"response": [
 						{
+							"name": "New Place",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"type\": \"Feature\",\n  \"properties\": {\n    \"id\": -5844940478183523000,\n    \"hid\": \"22\",\n    \"identity\": {\n      \"type\": \"thailand-household-id\",\n      \"id\": \"54520015001\"\n    },\n    \"haveChronics\": true,\n    \"type\": \"House\",\n    \"no\": \"510/45\",\n    \"road\": \"รังสิต-นครนายก\",\n    \"tambon\": \"คลองหนึ่ง\",\n    \"ampur\": \"คลองหลวง\",\n    \"changwat\": \"ปุทมธานี\",\n    \"coordinates\": [\n      102,\n      13\n    ],\n    \"people\": [\n      {\n        \"pid\": 3000214,\n        \"name\": \"นายพิรุณ พานิชผล\"\n      },\n      {\n        \"pid\": 3000215,\n        \"name\": \"นางสาวพรทิพา โชคสูงเนิน\"\n      },\n      {\n        \"pid\": 3000216,\n        \"name\": \"นายธนชัย ทองคุ้ม\"\n      }\n    ]\n  }\n}"
+								},
+								"url": {
+									"raw": "{{url}}/org/1/place/house",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"1",
+										"place",
+										"house"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [],
+							"cookie": [],
+							"body": ""
+						},
+						{
 							"name": "New Houses by org (Array)-haveLocation",
 							"originalRequest": {
 								"method": "POST",
@@ -2448,41 +2439,6 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"identity\": {\n            \"type\": \"thailand-household-id\",\n            \"id\": \"54520015001\"\n        },\n        \"people\": [\n            {\n                \"identities\": [\n                    {\n                        \"type\": \"thailand-citizen-id\",\n                        \"id\": \"1154801544875\"\n                    }\n                ],\n                \"chronics\": [],\n                \"link\": {\n                    \"isSynced\": true,\n                    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n                    \"system\": \"JHICS\",\n                    \"keys\": {\n                        \"pid\": \"3000214\",\n                        \"cid\": \"11014578451234\"\n                    }\n                },\n                \"prename\": \"นาย\",\n                \"firstname\": \"พิรุณ\",\n                \"lastname\": \"พานิชผล\",\n                \"sex\": \"MALE\",\n                \"birthDate\": \"1993-06-25\",\n                \"houseId\": \"3ec04871d6e349aaae2904ec732f6ef0\",\n                \"id\": \"e079e175c75a44f180e8eaeb3ccc3cc6\",\n                \"type\": \"Person\",\n                \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n            },\n            {\n                \"identities\": [\n                    {\n                        \"type\": \"thailand-citizen-id\",\n                        \"id\": \"5554801544875\"\n                    }\n                ],\n                \"chronics\": [\n                    {\n                        \"diagDate\": \"2018-09-24\",\n                        \"disease\": {\n                            \"icd10\": \"I10\",\n                            \"isEpimedic\": false,\n                            \"isChronic\": true,\n                            \"isNCD\": true,\n                            \"translation\": {\n                                \"th\": \"ความดันโลหิตสูงไม่ทราบสาเหตุ (ปฐมภูมิ)\"\n                            },\n                            \"id\": \"558b22987c914810a1f91946c7683c7b\",\n                            \"name\": \"Essential (primary) hypertension\"\n                        }\n                    }\n                ],\n                \"link\": {\n                    \"isSynced\": true,\n                    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n                    \"system\": \"JHICS\",\n                    \"keys\": {\n                        \"pid\": \"3000215\",\n                        \"cid\": \"5501457845234\"\n                    }\n                },\n                \"prename\": \"นางสาว\",\n                \"firstname\": \"พรทิพา\",\n                \"lastname\": \"โชคสูงเนิน\",\n                \"sex\": \"FEMALE\",\n                \"birthDate\": \"1993-06-25\",\n                \"houseId\": \"a57caf1645fb4c24aa12136081ed913d\",\n                \"id\": \"5559e175c75a44f180e8eaeb3ccc3cc6\",\n                \"type\": \"Person\",\n                \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n            },\n            {\n                \"identities\": [\n                    {\n                        \"type\": \"thailand-citizen-id\",\n                        \"id\": \"6654801544875\"\n                    }\n                ],\n                \"chronics\": [],\n                \"link\": {\n                    \"isSynced\": true,\n                    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n                    \"system\": \"JHICS\",\n                    \"keys\": {\n                        \"pid\": \"3000216\",\n                        \"cid\": \"6601457845234\"\n                    }\n                },\n                \"prename\": \"นาย\",\n                \"firstname\": \"ธนชัย\",\n                \"lastname\": \"ทองคำ\",\n                \"sex\": \"MALE\",\n                \"birthDate\": \"1993-06-25\",\n                \"houseId\": \"c60603e0200a4a04a7c72dd05daf13bb\",\n                \"id\": \"6669e175c75a44f180e8eaeb3ccc3cc6\",\n                \"type\": \"Person\",\n                \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n            }\n        ],\n        \"haveChronic\": false,\n        \"link\": {\n            \"isSynced\": true,\n            \"lastSync\": \"2018-10-09T11:36:51.103+07:00\",\n            \"system\": \"JHICS\",\n            \"keys\": {\n                \"hid\": \"22\"\n            }\n        },\n        \"no\": \"510/45\",\n        \"road\": \"รังสิต-นครนายก\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                100.6027899,\n                14.0782897\n            ]\n        },\n        \"id\": \"5bbc3063c982cf0004f633b4\",\n        \"type\": \"House\",\n        \"timestamp\": \"2018-10-09T11:36:51.102+07:00\"\n    }\n]"
-						},
-						{
-							"name": "New Place",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"name": "Content-Type",
-										"value": "application/json"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"type\": \"Feature\",\n  \"properties\": {\n    \"id\": -5844940478183523000,\n    \"hid\": \"22\",\n    \"identity\": {\n      \"type\": \"thailand-household-id\",\n      \"id\": \"54520015001\"\n    },\n    \"haveChronics\": true,\n    \"type\": \"House\",\n    \"no\": \"510/45\",\n    \"road\": \"รังสิต-นครนายก\",\n    \"tambon\": \"คลองหนึ่ง\",\n    \"ampur\": \"คลองหลวง\",\n    \"changwat\": \"ปุทมธานี\",\n    \"coordinates\": [\n      102,\n      13\n    ],\n    \"people\": [\n      {\n        \"pid\": 3000214,\n        \"name\": \"นายพิรุณ พานิชผล\"\n      },\n      {\n        \"pid\": 3000215,\n        \"name\": \"นางสาวพรทิพา โชคสูงเนิน\"\n      },\n      {\n        \"pid\": 3000216,\n        \"name\": \"นายธนชัย ทองคุ้ม\"\n      }\n    ]\n  }\n}"
-								},
-								"url": {
-									"raw": "{{url}}/org/1/place/house",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"org",
-										"1",
-										"place",
-										"house"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [],
-							"cookie": [],
-							"body": ""
 						}
 					]
 				},
@@ -7907,75 +7863,6 @@
 					},
 					"response": [
 						{
-							"name": "บ้านคลองเปรม",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "{{url}}/org",
-									"host": [
-										"{{url}}"
-									],
-									"path": [
-										"org"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Cache-Control",
-									"value": "max-age=5",
-									"name": "Cache-Control",
-									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive",
-									"name": "Connection",
-									"description": "Options that are desired for the connection"
-								},
-								{
-									"key": "Content-Length",
-									"value": "269",
-									"name": "Content-Length",
-									"description": "The length of the response body in octets (8-bit bytes)"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json",
-									"name": "Content-Type",
-									"description": "The mime type of this content"
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 27 Sep 2018 09:31:20 GMT",
-									"name": "Date",
-									"description": "The date and time that the message was sent"
-								},
-								{
-									"key": "Server",
-									"value": "Jetty(9.4.z-SNAPSHOT)",
-									"name": "Server",
-									"description": "A name for the server"
-								},
-								{
-									"key": "Via",
-									"value": "1.1 vegur",
-									"name": "Via",
-									"description": "Informs the client of proxies through which the response was sent."
-								}
-							],
-							"cookie": [],
-							"body": "[{\"name\":\"หลักหก 1 บ้านคลองเปรม หมู่ที่ 07,สอ.\",\"users\":[],\"tel\":\"0-2536-4463\",\"address\":\"ปทุมธานี\",\"id\":\"5bac9778db9df90004cf25cc\",\"type\":\"Organization\",\"timestamp\":\"2018-09-27T15:40:18.850+07:00\"}]"
-						},
-						{
 							"name": "Find my Org",
 							"originalRequest": {
 								"method": "GET",
@@ -8085,6 +7972,75 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"code\": \"145\",\n        \"name\": \"เนคเทค\",\n        \"uuid\": \"15169\",\n        \"id\": \"1\"\n    }\n]"
+						},
+						{
+							"name": "บ้านคลองเปรม",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{url}}/org",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Cache-Control",
+									"value": "max-age=5",
+									"name": "Cache-Control",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive",
+									"name": "Connection",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269",
+									"name": "Content-Length",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "The mime type of this content"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 27 Sep 2018 09:31:20 GMT",
+									"name": "Date",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"key": "Server",
+									"value": "Jetty(9.4.z-SNAPSHOT)",
+									"name": "Server",
+									"description": "A name for the server"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur",
+									"name": "Via",
+									"description": "Informs the client of proxies through which the response was sent."
+								}
+							],
+							"cookie": [],
+							"body": "[{\"name\":\"หลักหก 1 บ้านคลองเปรม หมู่ที่ 07,สอ.\",\"users\":[],\"tel\":\"0-2536-4463\",\"address\":\"ปทุมธานี\",\"id\":\"5bac9778db9df90004cf25cc\",\"type\":\"Organization\",\"timestamp\":\"2018-09-27T15:40:18.850+07:00\"}]"
 						}
 					]
 				},
@@ -8650,6 +8606,56 @@
 							"body": "{\n    \"code\": \"145\",\n    \"name\": \"เนคเทค\",\n    \"uuid\": \"15169\",\n    \"token\": \"2314abc\",\n    \"id\": \"1\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Get Suggestion health care service",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b94c3173-f360-4aea-8feb-103cf2ab1200",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาอย่างต่อเนื่อง และไปพบแพทย์ตามนัด\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ระวังการเกิดอุบัติเหตุ การรับประทานยาและการควบคุมอาหาร\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"มารดามีความรู้และจะพาบุตรไปฉีดวัคซีน DTP+HB 1 อายุ 2 เดือน และตรวจพัฒนาการ\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำญาติดูแลสายสวนปัสสาวะไม่ให้บิดงอ\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำการทำกายภาพบำบัดแก่ญาติผู้ป่วย\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมอาทิตย์ละ 1 ครั้ง\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมปีละ 1 ครั้ง\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุกเดือน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุกวัน วัดความดื้อ ทุกครั้งที่ไปเยี่ยม\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"เยี่ยมทุก 3 เดือน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"สามารถดูแลตนเองได้เป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตัวเองเลี้ยงลูกด้วยนมแม่ได้อย่างถูกต้อง ตอบคำถาม ดูดเร็ว ดูดบ่อย ดูดถูกวิธี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ลดอาหารจำพวกแป้ง ขนมหวาน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการออกกำลังกายอย่างสม่ำเสมอเกี่ยวกับโรคที่ตนเองเป็นอยู่\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"มารดาสามารถดูแลบุตรได้เเป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานอาหารให้เหมาะสมกับโรคที่เป็นอยู่\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถทำตามคำแนะนำได้เป็นอย่างดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ป้องกันการเกิดแผลกดทับ และอาการแทรกซ้อน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ป้องกันการเกิดภาวะเเทรกซ้อน\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"นัดเยี่ยมหลังคลอดและตรวจหลังคลอด 6สัปดาห์\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"นัดตรวจภายในหลังคลอดบุตร\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ต้องการญาติดูแลผู้ป่วยใกล้ชิด\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ญาติสามารถดูแลผู้สูงอายุได้ดี\",\n        \"field\": \"HomeVisit.result\"\n    },\n    {\n        \"value\": \"ใส่สายสวนปัสสาวะ และใส่สายอาหารแก่ผู้ป่วย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แพทย์แผนไทยนวดผ่อนคลายความเครียด\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาและไปรับการรักษาอย่างต่อเนื่อง\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการรับประทานยาเกี่ยวกับโรค และไปรับการรักษาอย่างต่อเนื่อง\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการดูแลให้นมบุตร\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการทานอาหารและการออกกำลังกายให้เหมาะสมกับวัย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำกระตุ้นพัฒนาการเด็กให้เหมาะสมกับวัย\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"อาการอื่นๆทั่วไปปกติ\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ประเมินภาวะซึมเศร้า โดยนักจิตวิทยา = ไม่มีภาวะซึมเศร้า\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แนะนำเรื่องการทานอาหารและการออกกำลังกายเพื่อเพิ่มสมรรถภาพ ...\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ทำกายภาพบำบัดแก่ผู้ป่วยโดยนักกายภาพบำบัด\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"จ่ายยาแก้เหงา เส้าสร้อย Soka ardoon\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"แผลฝีเย็บแห้งดี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"เยี่ยมผู้สูงอายุประจำปี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"เปลี่ยนสายอาหารและสายปัสสาวะให้แก่ผู้ป่วย\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"อาการทั่วไปปกติดี ผู้ป่วยสามารถดูแลตนเองได้\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"อาการทั่วไปปกติ\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"สุขภาพแข็งแรงสมบูรณ์มาก\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"รู้สึกตัว\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถช่วยเหลือตนเองได้ดี\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"วัดความดัน และแนะนำในการดูแลสุขภาพให้เหมาะกับโรคประจำตัว\",\n        \"field\": \"HomeVisit.detail\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตัวเองได้น้อย\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยช่วยเหลือตนเองไม่ได้\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ติดตามเรื่องระดับความดันโลหิตของผู้ป่วย       159/79      mmHg\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ผู้ป่วยสามารถเลี้ยงบุตรด้วยนมแม่ได้อย่างถูกต้องสามารถตอบคำถามได้อย่างถูกต้องเรื่องการรับประทานอาหารที่มีประโยชน์\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"บุตรดูดนมได้ลูกต้อง ดูดเร็ว ดูดบ่อย ดูดถูกวิธี แข็งแรงสมบูรณ์\",\n        \"field\": \"HealthCareService.syntom\"\n    },\n    {\n        \"value\": \"ติดตามผู้ป่วยเบาหวานที่มีระดับน้ำตาลในเลือดสูงเกิน 200 mg% (DTX=  mg%)\",\n        \"field\": \"HealthCareService.syntom\"\n    }\n]"
+						},
+						"url": {
+							"raw": "{{url}}/org/{{org_id}}/template/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"org",
+								"{{org_id}}",
+								"template",
+								""
+							]
+						},
+						"description": "ขอข้อมูลคำแนะนำสภาพ/อาการ ของผู้ป่วย การให้บริการ การประเมินผล"
+					},
+					"response": []
 				}
 			]
 		},
