@@ -4843,6 +4843,141 @@
 									"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
 								}
 							]
+						},
+						{
+							"name": "New Bew",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c6deda62-fa9e-4afe-93f5-86c9084cbdec",
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});",
+											"",
+											"",
+											"pm.test(\"Response have Person id\", function () {",
+											"    pm.expect(pm.response.text()).to.include(\"id\");",
+											"",
+											"    //set token to global variable for later use",
+											"    var idRes = pm.response.json();",
+											"    pm.globals.set(\"bew_id\", idRes.id);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"identities\": [],\n  \"chronics\": [],\n  \"relationships\": [],\n  \"prename\": \"\",\n  \"firstname\": \"บิว\",\n  \"lastname\": \"ผาสุข\",\n  \"sex\": \"MALE\",\n  \"birthDate\": \"1994-06-27\",\n  \"houseId\": \"{{house_id_jiraanan}}\",\n  \"id\": \"555b62eacf4a4306b296b73dcec07999\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-11-01T21:33:10.020+07:00\",\n  \"avatarUrl\": \"https://i.pinimg.com/originals/9f/2f/d4/9f2fd43d102cfc8a59a42f88ef90c94d.jpg\"\n}",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Person",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+										},
+										"url": {
+											"raw": "{{url}}/org/{{org_id}}/person",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"org",
+												"{{org_id}}",
+												"person"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Connection",
+											"value": "keep-alive",
+											"name": "Connection",
+											"description": "Options that are desired for the connection"
+										},
+										{
+											"key": "Content-Length",
+											"value": "435",
+											"name": "Content-Length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 02 Oct 2018 02:11:07 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Server",
+											"value": "Jetty(9.4.z-SNAPSHOT)",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 vegur",
+											"name": "Via",
+											"description": "Informs the client of proxies through which the response was sent."
+										}
+									],
+									"cookie": [],
+									"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
+								}
+							]
 						}
 					],
 					"event": [
@@ -6303,7 +6438,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "[\n  {\n    \"relate\": \"Father\",\n    \"id\": \"{{prasert_id}}\",\n    \"name\": \"ประเสริฐ จิระอนันต์\"\n  },\n  {\n    \"relate\": \"Mother\",\n    \"id\": \"{{nipa_id}}\",\n    \"name\": \"นิภา จิระอนันต์\"\n  },\n  {\n    \"relate\": \"Child\",\n    \"id\": \"{{tom_id}}\",\n    \"name\": \"ทอม จิระอนันต์\"\n  }\n]\n"
+									"raw": "[\n  {\n    \"relate\": \"Father\",\n    \"id\": \"{{prasert_id}}\",\n    \"name\": \"ประเสริฐ จิระอนันต์\"\n  },\n  {\n    \"relate\": \"Mother\",\n    \"id\": \"{{nipa_id}}\",\n    \"name\": \"นิภา จิระอนันต์\"\n  },\n  {\n    \"relate\": \"Child\",\n    \"id\": \"{{tom_id}}\",\n    \"name\": \"ทอม จิระอนันต์\"\n  },\n  {\n    \"relate\": \"Married\",\n    \"id\": \"{{bew_id}}\",\n    \"name\": \"บิว ผาสุข\"\n  }\n]\n",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{url}}/org/{{org_id}}/person/{{chi_id}}/relationship",
@@ -8093,7 +8231,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "[\n {\n    \"relate\": \"Father\",\n    \"id\": \"{{chi_id}}\",\n    \"name\": \"ฉี อินแทวอน\"\n  }\n]"
+									"raw": "[\n {\n    \"relate\": \"Father\",\n    \"id\": \"{{chi_id}}\",\n    \"name\": \"ฉี จิระอนันต์\"\n  }\n]",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{url}}/org/{{org_id}}/person/{{tom_id}}/relationship",
@@ -8105,6 +8246,137 @@
 										"{{org_id}}",
 										"person",
 										"{{tom_id}}",
+										"relationship"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Person",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"identities\": [\n    {\n      \"type\": \"thailand-citizen-id\",\n      \"id\": \"1154801544875\"\n    }\n  ],\n  \"prename\": \"นาย\",\n  \"firstname\": \"พิรุณ\",\n  \"lastname\": \"พานิชผล\",\n  \"chronics\": [],\n  \"sex\": \"UNKNOWN\",\n  \"birthDate\": \"1993-06-29\",\n  \"link\": {\n    \"isSynced\": true,\n    \"lastSync\": \"2018-06-25T14:09:07.815+07:00\",\n    \"system\": \"JHICS\",\n    \"keys\": {\n      \"pid\": \"1234567\",\n      \"cid\": \"11014578451234\"\n    }\n  },\n  \"id\": \"76f5dc0db6b247ce9d5241dda6557300\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-06-25T14:09:07.815+07:00\"\n}\n"
+										},
+										"url": {
+											"raw": "{{url}}/org/{{org_id}}/person",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"org",
+												"{{org_id}}",
+												"person"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Connection",
+											"value": "keep-alive",
+											"name": "Connection",
+											"description": "Options that are desired for the connection"
+										},
+										{
+											"key": "Content-Length",
+											"value": "435",
+											"name": "Content-Length",
+											"description": "The length of the response body in octets (8-bit bytes)"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json",
+											"name": "Content-Type",
+											"description": "The mime type of this content"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 02 Oct 2018 02:11:07 GMT",
+											"name": "Date",
+											"description": "The date and time that the message was sent"
+										},
+										{
+											"key": "Server",
+											"value": "Jetty(9.4.z-SNAPSHOT)",
+											"name": "Server",
+											"description": "A name for the server"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 vegur",
+											"name": "Via",
+											"description": "Informs the client of proxies through which the response was sent."
+										}
+									],
+									"cookie": [],
+									"body": "{\"identities\":[{\"type\":\"thailand-citizen-id\",\"id\":\"1154801544875\"}],\"chronics\":[],\"link\":{\"isSynced\":true,\"lastSync\":\"2018-06-25T14:09:07.815+07:00\",\"system\":\"JHICS\",\"keys\":{\"pid\":\"1234567\",\"cid\":\"11014578451234\"}},\"prename\":\"นาย\",\"firstname\":\"พิรุณ\",\"lastname\":\"พานิชผล\",\"sex\":\"UNKNOWN\",\"birthDate\":\"1993-06-29\",\"id\":\"5bb2d3bbfe42670004020a31\",\"type\":\"Person\",\"timestamp\":\"2018-06-25T14:09:07.815+07:00\"}"
+								}
+							]
+						},
+						{
+							"name": "Bew",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ed7f5651-b88f-4de4-ad43-11adb52f1c9c",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {",
+											"    pm.response.to.have.status(200);",
+											"});",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{org_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n {\n    \"relate\": \"Married\",\n    \"id\": \"{{chi_id}}\",\n    \"name\": \"ฉี จิระอนันต์\"\n  }\n]",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/org/{{org_id}}/person/{{bew_id}}/relationship",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"org",
+										"{{org_id}}",
+										"person",
+										"{{bew_id}}",
 										"relationship"
 									]
 								}
