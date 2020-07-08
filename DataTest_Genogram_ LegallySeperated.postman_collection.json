@@ -216,7 +216,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"identities\": [],\n  \"chronics\": [],\n  \"relationships\": [],\n  \"prename\": \"\",\n  \"firstname\": \"นานา\",\n  \"lastname\": \"ประจิต\",\n  \"sex\": \"FEMALE\",\n  \"birthDate\": \"1992-06-27\",\n  \"houseId\": \"{{house_id_nana}}\",\n  \"id\": \"155ddc6017f94b0fbc7c24d5e1d61e72\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-11-01T21:58:48.220+07:00\",\n  \"avatarUrl\": \"https://i.pinimg.com/736x/64/9c/de/649cde6543b0a943415eff6342cc34fe.jpg\"\n}"
+							"raw": "{\n  \"identities\": [],\n  \"chronics\": [],\n  \"relationships\": [],\n  \"prename\": \"\",\n  \"firstname\": \"นานา\",\n  \"lastname\": \"ประจิต\",\n  \"sex\": \"FEMALE\",\n  \"birthDate\": \"1992-06-27\",\n  \"houseId\": \"{{house_id_no_2}}\",\n  \"id\": \"155ddc6017f94b0fbc7c24d5e1d61e72\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-11-01T21:58:48.220+07:00\",\n  \"avatarUrl\": \"https://i.pinimg.com/736x/64/9c/de/649cde6543b0a943415eff6342cc34fe.jpg\"\n}"
 						},
 						"url": {
 							"raw": "{{url}}/org/{{org_id}}/person",
