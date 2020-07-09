@@ -582,7 +582,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n {\n    \"relate\": \"Seperated\",\n    \"id\": \"{{่jack_id}}\",\n    \"name\": \"แจ็ค ชิดชัย\"\n  }\n]",
+							"raw": "[\n {\n    \"relate\": \"Seperated\",\n    \"id\": \"{{jack_id}}\",\n    \"name\": \"แจ็ค ชิดชัย\"\n  }\n]",
 							"options": {
 								"raw": {}
 							}
