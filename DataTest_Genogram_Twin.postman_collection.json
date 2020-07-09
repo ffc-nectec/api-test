@@ -216,7 +216,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{ \n  \"identities\": [],\n  \"chronics\": [],\n  \"relationships\": [],\n  \"prename\": \"\",\n  \"firstname\": \"กรีน\",\n  \"lastname\": \"อนันต์\",\n  \"sex\": \"MALE\",\n  \"birthDate\": \"1929-01-01\",\n  \"houseId\": \"{{house_id_no_8}}\",\n  \"id\": \"552a59176e6149689987155751bc1dcf\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-11-01T15:28:15.188+07:00\",\n  \"avatarUrl\": \"https://pbs.twimg.com/media/DqtukBCV4AAeypy.jpg\"\n}\n",
+							"raw": "{ \n  \"identities\": [],\n  \"chronics\": [],\n  \"relationships\": [],\n  \"prename\": \"\",\n  \"firstname\": \"กรีน\",\n  \"lastname\": \"อนันต์\",\n  \"sex\": \"MALE\",\n  \"birthDate\": \"1929-01-01\",\n  \"houseId\": \"{{house_id_no_8}}\",\n  \"id\": \"552a59176e6149689987155751bc1dcf\",\n  \"type\": \"Person\",\n  \"timestamp\": \"2018-11-01T15:28:15.188+07:00\",\n  \"avatarUrl\": \"https://d3lp4xedbqa8a5.cloudfront.net/imagegen/cr/340/255/s3/digital-cougar-assets/atnau/2017/03/20/139322/Sergio-Carboni-small.jpg\"\n}\n",
 							"options": {
 								"raw": {}
 							}
