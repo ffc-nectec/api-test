@@ -25,7 +25,7 @@
 									"    ",
 									"    //set token to global variable for later use",
 									"    var orgRes = pm.response.json();",
-									"    pm.globals.set(\"org_id\", orgRes.id);",
+									"    pm.environment.set(\"org_id\", orgRes.id);",
 									"});",
 									"",
 									"pm.test(\"Response have pcucode\", function () {",
@@ -216,7 +216,7 @@
 									"    ",
 									"    //set token to global variable for later use",
 									"    var orgRes = pm.response.json();",
-									"    pm.globals.set(\"org_token\", orgRes.token);",
+									"    pm.environment.set(\"org_token\", orgRes.token);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -481,7 +481,7 @@
 									"    ",
 									"    //set token to global variable for later use",
 									"    var loginRes = pm.response.json();",
-									"    pm.globals.set(\"mobile_token\", loginRes.token);",
+									"    pm.environment.set(\"mobile_token\", loginRes.token);",
 									"    ",
 									"});",
 									"",
@@ -791,7 +791,7 @@
 													"    ",
 													"    //set house_id to global variable for later use",
 													"    var jsonData = pm.response.json();",
-													"    pm.globals.set(\"house_id_of_prasert_nipa\", jsonData[0].id);",
+													"    pm.environment.set(\"house_id_of_prasert_nipa\", jsonData[0].id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -954,7 +954,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"sukit_id_of_prasert_nipa\", idRes.id);",
+													"    pm.environment.set(\"sukit_id_of_prasert_nipa\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -1086,7 +1086,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"pranee_id_of_prasert_nipa\", idRes.id);",
+													"    pm.environment.set(\"pranee_id_of_prasert_nipa\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -1218,7 +1218,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"prasert_id_of_prasert_nipa\", idRes.id);",
+													"    pm.environment.set(\"prasert_id_of_prasert_nipa\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -1350,7 +1350,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"nipa_id_of_prasert_nipa\", idRes.id);",
+													"    pm.environment.set(\"nipa_id_of_prasert_nipa\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -1482,7 +1482,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"chi_id_of_prasert_nipa\", idRes.id);",
+													"    pm.environment.set(\"chi_id_of_prasert_nipa\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -2952,7 +2952,7 @@
 													"    ",
 													"    //set house_id to global variable for later use",
 													"    var jsonData = pm.response.json();",
-													"    pm.globals.set(\"house_id_of_mete\", jsonData[0].id);",
+													"    pm.environment.set(\"house_id_of_mete\", jsonData[0].id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3115,7 +3115,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"sukit_id_of_mete\", idRes.id);",
+													"    pm.environment.set(\"sukit_id_of_mete\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3247,7 +3247,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"pranee_id_of_mete\", idRes.id);",
+													"    pm.environment.set(\"pranee_id_of_mete\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3379,7 +3379,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"mate_id_of_mete\", idRes.id);",
+													"    pm.environment.set(\"mate_id_of_mete\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -3511,7 +3511,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"meimei_id_of_mete\", idRes.id);",
+													"    pm.environment.set(\"meimei_id_of_mete\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -4692,7 +4692,7 @@
 													"    ",
 													"    //set house_id to global variable for later use",
 													"    var jsonData = pm.response.json();",
-													"    pm.globals.set(\"house_id_of_patsorn\", jsonData[0].id);",
+													"    pm.environment.set(\"house_id_of_patsorn\", jsonData[0].id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -4855,7 +4855,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"sukit_id_of_patsorn\", idRes.id);",
+													"    pm.environment.set(\"sukit_id_of_patsorn\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -4987,7 +4987,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"pranee_id_of_patsorn\", idRes.id);",
+													"    pm.environment.set(\"pranee_id_of_patsorn\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -5119,7 +5119,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"patsorn_id_of_patsorn\", idRes.id);",
+													"    pm.environment.set(\"patsorn_id_of_patsorn\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -5251,7 +5251,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"wichean_id_of_patsorn\", idRes.id);",
+													"    pm.environment.set(\"wichean_id_of_patsorn\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -5383,7 +5383,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"ei_id_of_patsorn\", idRes.id);",
+													"    pm.environment.set(\"ei_id_of_patsorn\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -5515,7 +5515,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"earn_id_of_patsorn\", idRes.id);",
+													"    pm.environment.set(\"earn_id_of_patsorn\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -5647,7 +5647,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"tao_id_of_patsorn\", idRes.id);",
+													"    pm.environment.set(\"tao_id_of_patsorn\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -5779,7 +5779,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"toey_id_of_patsorn\", idRes.id);",
+													"    pm.environment.set(\"toey_id_of_patsorn\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -7124,7 +7124,7 @@
 													"    ",
 													"    //set house_id to global variable for later use",
 													"    var jsonData = pm.response.json();",
-													"    pm.globals.set(\"house_id_of_monrudee\", jsonData[0].id);",
+													"    pm.environment.set(\"house_id_of_monrudee\", jsonData[0].id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -7287,7 +7287,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"sukit_id_of_monrudee\", idRes.id);",
+													"    pm.environment.set(\"sukit_id_of_monrudee\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -7419,7 +7419,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"pranee_id_of_monrudee\", idRes.id);",
+													"    pm.environment.set(\"pranee_id_of_monrudee\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -7551,7 +7551,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"monrudee_id_of_monrudee\", idRes.id);",
+													"    pm.environment.set(\"monrudee_id_of_monrudee\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -7683,7 +7683,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"kwayteow_id_of_monrudee\", idRes.id);",
+													"    pm.environment.set(\"kwayteow_id_of_monrudee\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -8864,7 +8864,7 @@
 													"    ",
 													"    //set house_id to global variable for later use",
 													"    var jsonData = pm.response.json();",
-													"    pm.globals.set(\"house_id_kornkan\", jsonData[0].id);",
+													"    pm.environment.set(\"house_id_kornkan\", jsonData[0].id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9027,7 +9027,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"sukit_id_of_kornkan\", idRes.id);",
+													"    pm.environment.set(\"sukit_id_of_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9159,7 +9159,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"pranee_id_of_kornkan\", idRes.id);",
+													"    pm.environment.set(\"pranee_id_of_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9291,7 +9291,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"kornkan_id_of_kornkan\", idRes.id);",
+													"    pm.environment.set(\"kornkan_id_of_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9423,7 +9423,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"nampung_id_of_kornkan\", idRes.id);",
+													"    pm.environment.set(\"nampung_id_of_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9555,7 +9555,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"vegas_id_of_kornkan\", idRes.id);",
+													"    pm.environment.set(\"vegas_id_of_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -9687,7 +9687,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"macau_id_of_kornkan\", idRes.id);",
+													"    pm.environment.set(\"macau_id_of_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -11348,7 +11348,7 @@
 													"    ",
 													"    //set house_id to global variable for later use",
 													"    var jsonData = pm.response.json();",
-													"    pm.globals.set(\"house_id_of_sorn_kan_sert_has_no_cris\", jsonData[0].id);",
+													"    pm.environment.set(\"house_id_of_sorn_kan_sert_has_no_cris\", jsonData[0].id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -11511,7 +11511,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"sukit_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"sukit_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -11643,7 +11643,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"pranee_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"pranee_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -11775,7 +11775,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"prasert_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"prasert_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -11907,7 +11907,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"nipa_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"nipa_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -12039,7 +12039,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"chi_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"chi_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -12171,7 +12171,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"patsorn_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"patsorn_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -12303,7 +12303,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"kornkan_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"kornkan_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -12435,7 +12435,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"nampung_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"nampung_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -12567,7 +12567,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"wichean_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"wichean_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -12699,7 +12699,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"ei_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"ei_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -12831,7 +12831,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"earn_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"earn_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -12963,7 +12963,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"tao_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"tao_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -13095,7 +13095,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"toey_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"toey_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -13227,7 +13227,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"vegas_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"vegas_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -13359,7 +13359,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"macau_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
+													"    pm.environment.set(\"macau_id_of_sorn_kan_sert_has_no_cris\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -17172,7 +17172,7 @@
 													"    ",
 													"    //set house_id to global variable for later use",
 													"    var jsonData = pm.response.json();",
-													"    pm.globals.set(\"house_id_of_patsorn_kornkan\", jsonData[0].id);",
+													"    pm.environment.set(\"house_id_of_patsorn_kornkan\", jsonData[0].id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -17335,7 +17335,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"sukit_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"sukit_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -17467,7 +17467,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"pranee_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"pranee_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -17599,7 +17599,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"patsorn_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"patsorn_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -17731,7 +17731,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"kornkan_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"kornkan_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -17863,7 +17863,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"nampung_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"nampung_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -17995,7 +17995,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"wichean_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"wichean_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -18127,7 +18127,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"ei_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"ei_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -18259,7 +18259,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"earn_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"earn_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -18391,7 +18391,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"tao_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"tao_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -18523,7 +18523,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"toey_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"toey_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -18655,7 +18655,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"vegas_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"vegas_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -18787,7 +18787,7 @@
 													"    ",
 													"    //set token to global variable for later use",
 													"    var idRes = pm.response.json();",
-													"    pm.globals.set(\"macau_id_of_patsorn_kornkan\", idRes.id);",
+													"    pm.environment.set(\"macau_id_of_patsorn_kornkan\", idRes.id);",
 													"});"
 												],
 												"type": "text/javascript"
@@ -20640,7 +20640,7 @@
 							"    ",
 							"    //set house_id to global variable for later use",
 							"    var jsonData = pm.response.json();",
-							"    pm.globals.set(\"house_id\", jsonData[0].id);",
+							"    pm.environment.set(\"house_id\", jsonData[0].id);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -20796,7 +20796,7 @@
 							"    ",
 							"    //set token to global variable for later use",
 							"    var idRes = pm.response.json();",
-							"    pm.globals.set(\"person_id\", idRes[3].id);",
+							"    pm.environment.set(\"person_id\", idRes[3].id);",
 							"    ",
 							"});"
 						],
@@ -20929,7 +20929,7 @@
 							"    ",
 							"    //set token to global variable for later use",
 							"    var idRes = pm.response.json();",
-							"    pm.globals.set(\"person_id_death\", idRes.id);",
+							"    pm.environment.set(\"person_id_death\", idRes.id);",
 							"    ",
 							"});"
 						],
@@ -22133,7 +22133,7 @@
 							"    ",
 							"    //set house_id to global variable for later use",
 							"    var jsonData = pm.response.json();",
-							"    pm.globals.set(\"house_id_no_coordinates\", jsonData[0].id);",
+							"    pm.environment.set(\"house_id_no_coordinates\", jsonData[0].id);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -22289,7 +22289,7 @@
 							"    ",
 							"    //set token to global variable for later use",
 							"    var orgRes = pm.response.json();",
-							"    pm.globals.set(\"org_id_2\", orgRes.id);",
+							"    pm.environment.set(\"org_id_2\", orgRes.id);",
 							"});",
 							"",
 							"pm.test(\"Response have pcucode\", function () {",
@@ -22380,7 +22380,7 @@
 							"    ",
 							"    //set token to global variable for later use",
 							"    var orgRes = pm.response.json();",
-							"    pm.globals.set(\"org_token_2\", orgRes.token);",
+							"    pm.environment.set(\"org_token_2\", orgRes.token);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -22599,7 +22599,7 @@
 							"    ",
 							"    //set token to global variable for later use",
 							"    var loginRes = pm.response.json();",
-							"    pm.globals.set(\"mobile_token\", loginRes.token);",
+							"    pm.environment.set(\"mobile_token\", loginRes.token);",
 							"    ",
 							"});",
 							"",

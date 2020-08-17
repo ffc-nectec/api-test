@@ -26,7 +26,7 @@
 									"",
 									"    //set house_id to global variable for later use",
 									"    var jsonData = pm.response.json();",
-									"    pm.globals.set(\"house_id_sara\", jsonData[0].id);",
+									"    pm.environment.set(\"house_id_sara\", jsonData[0].id);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -182,7 +182,7 @@
 									"",
 									"    //set house_id to global variable for later use",
 									"    var jsonData = pm.response.json();",
-									"    pm.globals.set(\"house_id_david\", jsonData[0].id);",
+									"    pm.environment.set(\"house_id_david\", jsonData[0].id);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -345,7 +345,7 @@
 									"",
 									"    //set token to global variable for later use",
 									"    var idRes = pm.response.json();",
-									"    pm.globals.set(\"sara_id\", idRes.id);",
+									"    pm.environment.set(\"sara_id\", idRes.id);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -477,7 +477,7 @@
 									"",
 									"    //set token to global variable for later use",
 									"    var idRes = pm.response.json();",
-									"    pm.globals.set(\"david_id\", idRes.id);",
+									"    pm.environment.set(\"david_id\", idRes.id);",
 									"});"
 								],
 								"type": "text/javascript"

@@ -910,7 +910,7 @@
 									"    ",
 									"    //set token to global variable for later use",
 									"    var orgRes = pm.response.json();",
-									"    pm.globals.set(\"org_id\", orgRes.id);",
+									"    pm.environment.set(\"org_id\", orgRes.id);",
 									"    ",
 									"});",
 									""
@@ -995,7 +995,7 @@
 									"    ",
 									"    //set token to global variable for later use",
 									"    var orgRes = pm.response.json();",
-									"    pm.globals.set(\"org_token\", orgRes.token);",
+									"    pm.environment.set(\"org_token\", orgRes.token);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -1652,7 +1652,7 @@
 									"    ",
 									"    //set token to global variable for later use",
 									"    var orgRes = pm.response.json();",
-									"    pm.globals.set(\"mobile_token\", orgRes.token);",
+									"    pm.environment.set(\"mobile_token\", orgRes.token);",
 									"    ",
 									"});",
 									""
@@ -3788,7 +3788,7 @@
 									"    ",
 									"    //set house_id to global variable for later use",
 									"    var jsonData = pm.response.json();",
-									"    pm.globals.set(\"house_id\", jsonData.id);",
+									"    pm.environment.set(\"house_id\", jsonData.id);",
 									"});",
 									"",
 									""
@@ -4929,7 +4929,7 @@
 									"    ",
 									"    //set house_id to global variable for later use",
 									"    var jsonData = pm.response.json();",
-									"    pm.globals.set(\"house_id\", jsonData.id);",
+									"    pm.environment.set(\"house_id\", jsonData.id);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -7561,7 +7561,7 @@
 											"    ",
 											"    //set token to global variable for later use",
 											"    var orgRes = pm.response.json();",
-											"    pm.globals.set(\"org_id_a\", orgRes.id);",
+											"    pm.environment.set(\"org_id_a\", orgRes.id);",
 											"    ",
 											"});",
 											""
@@ -7646,7 +7646,7 @@
 											"    ",
 											"    //set token to global variable for later use",
 											"    var orgRes = pm.response.json();",
-											"    pm.globals.set(\"org_a_token\", orgRes.token);",
+											"    pm.environment.set(\"org_a_token\", orgRes.token);",
 											"});"
 										],
 										"type": "text/javascript"
@@ -8303,7 +8303,7 @@
 											"    ",
 											"    //set token to global variable for later use",
 											"    var orgRes = pm.response.json();",
-											"    pm.globals.set(\"mobile_token_of_org_a\", orgRes.token);",
+											"    pm.environment.set(\"mobile_token_of_org_a\", orgRes.token);",
 											"    ",
 											"});",
 											""
@@ -8512,7 +8512,7 @@
 											"    ",
 											"    //set house_id to global variable for later use",
 											"    var jsonData = pm.response.json();",
-											"    pm.globals.set(\"house_id_a\", jsonData[0].id);",
+											"    pm.environment.set(\"house_id_a\", jsonData[0].id);",
 											"});",
 											"",
 											""
@@ -8823,7 +8823,7 @@
 											"    ",
 											"    //set token to global variable for later use",
 											"    var idRes = pm.response.json();",
-											"    pm.globals.set(\"person_id_org_a\", idRes.id);",
+											"    pm.environment.set(\"person_id_org_a\", idRes.id);",
 											"    ",
 											"});"
 										],
@@ -9080,7 +9080,7 @@
 											"    ",
 											"    //set id to global variable for later use",
 											"    var idRes = pm.response.json();",
-											"    pm.globals.set(\"visit_id_org_a\", idRes.id);",
+											"    pm.environment.set(\"visit_id_org_a\", idRes.id);",
 											"    ",
 											"});"
 										],
@@ -9469,7 +9469,7 @@
 											"    ",
 											"    //set token to global variable for later use",
 											"    var orgRes = pm.response.json();",
-											"    pm.globals.set(\"org_id_b\", orgRes.id);",
+											"    pm.environment.set(\"org_id_b\", orgRes.id);",
 											"    ",
 											"});",
 											""
@@ -9554,7 +9554,7 @@
 											"    ",
 											"    //set token to global variable for later use",
 											"    var orgRes = pm.response.json();",
-											"    pm.globals.set(\"org_b_token\", orgRes.token);",
+											"    pm.environment.set(\"org_b_token\", orgRes.token);",
 											"});"
 										],
 										"type": "text/javascript"
@@ -9940,7 +9940,7 @@
 											"    ",
 											"    //set token to global variable for later use",
 											"    var orgRes = pm.response.json();",
-											"    pm.globals.set(\"mobile_token_of_org_b\", orgRes.token);",
+											"    pm.environment.set(\"mobile_token_of_org_b\", orgRes.token);",
 											"    ",
 											"});",
 											""

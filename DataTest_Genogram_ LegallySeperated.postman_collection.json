@@ -26,7 +26,7 @@
 									"",
 									"    //set house_id to global variable for later use",
 									"    var jsonData = pm.response.json();",
-									"    pm.globals.set(\"house_id_no_2\", jsonData[0].id);",
+									"    pm.environment.set(\"house_id_no_2\", jsonData[0].id);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -189,7 +189,7 @@
 									"",
 									"    //set token to global variable for later use",
 									"    var idRes = pm.response.json();",
-									"    pm.globals.set(\"nana_id\", idRes.id);",
+									"    pm.environment.set(\"nana_id\", idRes.id);",
 									"});"
 								],
 								"type": "text/javascript"
@@ -321,7 +321,7 @@
 									"",
 									"    //set token to global variable for later use",
 									"    var idRes = pm.response.json();",
-									"    pm.globals.set(\"tyler_id\", idRes.id);",
+									"    pm.environment.set(\"tyler_id\", idRes.id);",
 									"});"
 								],
 								"type": "text/javascript"
